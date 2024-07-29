@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Hello World</title>
+    <url>/2024/07/28/hello-world/</url>
+    <content><![CDATA[<p>大家好，我们是什么都会亿点点的毛毛张！，欢迎来到我的博客！</p>
+]]></content>
+  </entry>
+  <entry>
     <title>LeetCode 441-排列硬币</title>
     <url>/2024/07/28/algorithm/leetcode/%E6%95%B0%E7%BB%84/441-%E6%8E%92%E5%88%97%E7%A1%AC%E5%B8%81/</url>
     <content><![CDATA[<h1 id="441-排列硬币"><a href="#441-排列硬币" class="headerlink" title="441. 排列硬币"></a><a href="https://leetcode.cn/problems/arranging-coins/">441. 排列硬币</a></h1><h2 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h2><p>你总共有 <code>n</code> 枚硬币，并计划将它们按阶梯状排列。对于一个由 <code>k</code> 行组成的阶梯，其第 <code>i</code> 行必须正好有 <code>i</code> 枚硬币。阶梯的最后一行 <strong>可能</strong> 是不完整的。</p>
@@ -2192,12 +2198,6 @@
 <li><a href="https://blog.csdn.net/qq_35091353/article/details/124277017">https://blog.csdn.net/qq_35091353/article/details/124277017</a></li>
 <li><a href="https://blog.csdn.net/qq_43827595/article/details/102298686">https://blog.csdn.net/qq_43827595/article/details/102298686</a></li>
 </ul>
-]]></content>
-  </entry>
-  <entry>
-    <title>Hello World</title>
-    <url>/2024/07/28/hello-world/</url>
-    <content><![CDATA[<p>大家好，我们是什么都会亿点点的毛毛张！，欢迎来到我的博客！</p>
 ]]></content>
   </entry>
   <entry>
