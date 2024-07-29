@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Hello World</title>
+    <url>/2024/07/28/hello-world/</url>
+    <content><![CDATA[<p>大家好，我们是什么都会亿点点的毛毛张！，欢迎来到我的博客！</p>
+]]></content>
+  </entry>
+  <entry>
     <title>csdn语法</title>
     <url>/2024/07/27/csdn%E8%AF%AD%E6%B3%95/</url>
     <content><![CDATA[<blockquote>
@@ -2164,43 +2170,6 @@
 ]]></content>
   </entry>
   <entry>
-    <title>LeetCode 441-排列硬币</title>
-    <url>/2024/07/28/algorithm/leetcode/%E6%95%B0%E7%BB%84/441-%E6%8E%92%E5%88%97%E7%A1%AC%E5%B8%81/</url>
-    <content><![CDATA[<h1 id="441-排列硬币"><a href="#441-排列硬币" class="headerlink" title="441. 排列硬币"></a><a href="https://leetcode.cn/problems/arranging-coins/">441. 排列硬币</a></h1><h2 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h2><p>你总共有 <code>n</code> 枚硬币，并计划将它们按阶梯状排列。对于一个由 <code>k</code> 行组成的阶梯，其第 <code>i</code> 行必须正好有 <code>i</code> 枚硬币。阶梯的最后一行 <strong>可能</strong> 是不完整的。</p>
-<p>给你一个数字 <code>n</code> ，计算并返回可形成 <strong>完整阶梯行</strong> 的总行数。</p>
-<p><strong>示例 1：</strong></p>
-<p><img src="https://assets.leetcode.com/uploads/2021/04/09/arrangecoins1-grid.jpg" alt="img"></p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">输入：n = 5</span><br><span class="line">输出：2</span><br><span class="line">解释：因为第三行不完整，所以返回 2 。</span><br></pre></td></tr></table></figure>
-
-<p><strong>示例 2：</strong></p>
-<p><img src="https://assets.leetcode.com/uploads/2021/04/09/arrangecoins2-grid.jpg" alt="img"></p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">输入：n = 8</span><br><span class="line">输出：3</span><br><span class="line">解释：因为第四行不完整，所以返回 3 。</span><br></pre></td></tr></table></figure>
-
-<p><strong>提示：</strong></p>
-<ul>
-<li>$1 &lt;&#x3D; n &lt;&#x3D; 2^{31} - 1$</li>
-</ul>
-<h2 id="题解"><a href="#题解" class="headerlink" title="题解"></a>题解</h2><p>暴力解法</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="type">int</span> <span class="title function_">arrangeCoins</span><span class="params">(<span class="type">int</span> n)</span> &#123;</span><br><span class="line">        <span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">while</span> (i &lt;= n) &#123;</span><br><span class="line">            i++;</span><br><span class="line">            <span class="type">long</span> <span class="variable">coins</span> <span class="operator">=</span> (<span class="type">long</span>) i * (<span class="number">1</span> + i) / <span class="number">2</span>;</span><br><span class="line">            <span class="keyword">if</span> (coins &gt; n) <span class="keyword">break</span>;</span><br><span class="line">            </span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> i - <span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-
-
-
-
-
-<p><strong>二分查找</strong></p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="type">int</span> <span class="title function_">arrangeCoins</span><span class="params">(<span class="type">int</span> n)</span> &#123;</span><br><span class="line">        <span class="type">int</span> <span class="variable">left</span> <span class="operator">=</span> <span class="number">1</span>, right = n;</span><br><span class="line">        <span class="keyword">while</span> (left &lt;= right) &#123;</span><br><span class="line">            <span class="type">int</span> <span class="variable">mid</span> <span class="operator">=</span> left + (right - left) / <span class="number">2</span>;</span><br><span class="line">            <span class="type">long</span> <span class="variable">num</span> <span class="operator">=</span> (<span class="type">long</span>) mid * (<span class="number">1</span> + mid) / <span class="number">2</span>;</span><br><span class="line">            <span class="keyword">if</span> (num &lt;= n) &#123;</span><br><span class="line">                left = mid + <span class="number">1</span>;</span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                right = mid - <span class="number">1</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> right;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-]]></content>
-  </entry>
-  <entry>
-    <title>Hello World</title>
-    <url>/2024/07/28/hello-world/</url>
-    <content><![CDATA[<p>大家好，我们是什么都会亿点点的毛毛张！，欢迎来到我的博客！</p>
-]]></content>
-  </entry>
-  <entry>
     <title>树的多种遍历方式</title>
     <url>/2024/07/28/algorithm/leetcode/%E6%A0%91/LeetCode%E5%88%B7%E9%A2%98%E7%AC%94%E8%AE%B01/</url>
     <content><![CDATA[<blockquote>
@@ -2492,6 +2461,37 @@
 <p><a href="https://www.51cto.com/article/614590.html">https://www.51cto.com/article/614590.html</a></p>
 <p><a href="https://blog.csdn.net/weixin_44027397/article/details/113735310?ops_request_misc=&request_id=&biz_id=102&utm_term=%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E8%BF%AD%E4%BB%A3%E9%81%8D%E5%8E%86java&utm_medium=distribute.pc_search_result.none-task-blog-2~all~sobaiduweb~default-3-113735310.142%5Ev100%5Econtrol&spm=1018.2226.3001.4187">2</a></p>
 <p><a href="https://blog.csdn.net/qq_64257622/article/details/131112998?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522171517933116800222816298%2522%252C%2522scm%2522%253A%252220140713.130102334..%2522%257D&request_id=171517933116800222816298&biz_id=0&utm_medium=distribute.pc_search_result.none-task-blog-2~all~sobaiduend~default-2-131112998-null-null.142%5Ev100%5Econtrol&utm_term=%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E8%BF%AD%E4%BB%A3%E9%81%8D%E5%8E%86java&spm=1018.2226.3001.4187">3</a></p>
+]]></content>
+  </entry>
+  <entry>
+    <title>LeetCode 441-排列硬币</title>
+    <url>/2024/07/28/algorithm/leetcode/%E6%95%B0%E7%BB%84/441-%E6%8E%92%E5%88%97%E7%A1%AC%E5%B8%81/</url>
+    <content><![CDATA[<h1 id="441-排列硬币"><a href="#441-排列硬币" class="headerlink" title="441. 排列硬币"></a><a href="https://leetcode.cn/problems/arranging-coins/">441. 排列硬币</a></h1><h2 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h2><p>你总共有 <code>n</code> 枚硬币，并计划将它们按阶梯状排列。对于一个由 <code>k</code> 行组成的阶梯，其第 <code>i</code> 行必须正好有 <code>i</code> 枚硬币。阶梯的最后一行 <strong>可能</strong> 是不完整的。</p>
+<p>给你一个数字 <code>n</code> ，计算并返回可形成 <strong>完整阶梯行</strong> 的总行数。</p>
+<p><strong>示例 1：</strong></p>
+<p><img src="https://assets.leetcode.com/uploads/2021/04/09/arrangecoins1-grid.jpg" alt="img"></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">输入：n = 5</span><br><span class="line">输出：2</span><br><span class="line">解释：因为第三行不完整，所以返回 2 。</span><br></pre></td></tr></table></figure>
+
+<p><strong>示例 2：</strong></p>
+<p><img src="https://assets.leetcode.com/uploads/2021/04/09/arrangecoins2-grid.jpg" alt="img"></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">输入：n = 8</span><br><span class="line">输出：3</span><br><span class="line">解释：因为第四行不完整，所以返回 3 。</span><br></pre></td></tr></table></figure>
+
+<p><strong>提示：</strong></p>
+<ul>
+<li>$1 &lt;&#x3D; n &lt;&#x3D; 2^{31} - 1$</li>
+</ul>
+<h2 id="题解"><a href="#题解" class="headerlink" title="题解"></a>题解</h2><p>暴力解法</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="type">int</span> <span class="title function_">arrangeCoins</span><span class="params">(<span class="type">int</span> n)</span> &#123;</span><br><span class="line">        <span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">while</span> (i &lt;= n) &#123;</span><br><span class="line">            i++;</span><br><span class="line">            <span class="type">long</span> <span class="variable">coins</span> <span class="operator">=</span> (<span class="type">long</span>) i * (<span class="number">1</span> + i) / <span class="number">2</span>;</span><br><span class="line">            <span class="keyword">if</span> (coins &gt; n) <span class="keyword">break</span>;</span><br><span class="line">            </span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> i - <span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+
+
+<p><strong>二分查找</strong></p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="type">int</span> <span class="title function_">arrangeCoins</span><span class="params">(<span class="type">int</span> n)</span> &#123;</span><br><span class="line">        <span class="type">int</span> <span class="variable">left</span> <span class="operator">=</span> <span class="number">1</span>, right = n;</span><br><span class="line">        <span class="keyword">while</span> (left &lt;= right) &#123;</span><br><span class="line">            <span class="type">int</span> <span class="variable">mid</span> <span class="operator">=</span> left + (right - left) / <span class="number">2</span>;</span><br><span class="line">            <span class="type">long</span> <span class="variable">num</span> <span class="operator">=</span> (<span class="type">long</span>) mid * (<span class="number">1</span> + mid) / <span class="number">2</span>;</span><br><span class="line">            <span class="keyword">if</span> (num &lt;= n) &#123;</span><br><span class="line">                left = mid + <span class="number">1</span>;</span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                right = mid - <span class="number">1</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> right;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
 ]]></content>
   </entry>
 </search>
