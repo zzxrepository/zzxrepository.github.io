@@ -1,23 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>Hello World</title>
-    <url>/2024/07/28/hello-world/</url>
-    <content><![CDATA[<p>大家好，我们是什么都会亿点点的毛毛张！，欢迎来到我的博客！</p>
-]]></content>
-  </entry>
-  <entry>
     <title>LeetCode 441-排列硬币</title>
     <url>/2024/07/28/algorithm/leetcode/%E6%95%B0%E7%BB%84/441-%E6%8E%92%E5%88%97%E7%A1%AC%E5%B8%81/</url>
-    <content><![CDATA[<h1 id="441-排列硬币"><a href="#441-排列硬币" class="headerlink" title="441. 排列硬币"></a><a href="https://leetcode.cn/problems/arranging-coins/">441. 排列硬币</a></h1><h2 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h2><p>你总共有 <code>n</code> 枚硬币，并计划将它们按阶梯状排列。对于一个由 <code>k</code> 行组成的阶梯，其第 <code>i</code> 行必须正好有 <code>i</code> 枚硬币。阶梯的最后一行 <strong>可能</strong> 是不完整的。</p>
+    <content><![CDATA[<blockquote>
+<p>LeetCode441题详解</p>
+</blockquote>
+<span id="more"></span>
+
+<h1 id="441-排列硬币"><a href="#441-排列硬币" class="headerlink" title="441. 排列硬币"></a><a href="https://leetcode.cn/problems/arranging-coins/">441. 排列硬币</a></h1><h2 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h2><p>你总共有 <code>n</code> 枚硬币，并计划将它们按阶梯状排列。对于一个由 <code>k</code> 行组成的阶梯，其第 <code>i</code> 行必须正好有 <code>i</code> 枚硬币。阶梯的最后一行 <strong>可能</strong> 是不完整的。</p>
 <p>给你一个数字 <code>n</code> ，计算并返回可形成 <strong>完整阶梯行</strong> 的总行数。</p>
 <p><strong>示例 1：</strong></p>
 <p><img src="https://assets.leetcode.com/uploads/2021/04/09/arrangecoins1-grid.jpg" alt="img"></p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">输入：n = 5</span><br><span class="line">输出：2</span><br><span class="line">解释：因为第三行不完整，所以返回 2 。</span><br></pre></td></tr></table></figure>
+<figure class="highlight abnf"><table><tr><td class="code"><pre><span class="line">输入：n <span class="operator">=</span> <span class="number">5</span></span><br><span class="line">输出：<span class="number">2</span></span><br><span class="line">解释：因为第三行不完整，所以返回 <span class="number">2</span> 。</span><br></pre></td></tr></table></figure>
 
 <p><strong>示例 2：</strong></p>
 <p><img src="https://assets.leetcode.com/uploads/2021/04/09/arrangecoins2-grid.jpg" alt="img"></p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">输入：n = 8</span><br><span class="line">输出：3</span><br><span class="line">解释：因为第四行不完整，所以返回 3 。</span><br></pre></td></tr></table></figure>
+<figure class="highlight abnf"><table><tr><td class="code"><pre><span class="line">输入：n <span class="operator">=</span> <span class="number">8</span></span><br><span class="line">输出：<span class="number">3</span></span><br><span class="line">解释：因为第四行不完整，所以返回 <span class="number">3</span> 。</span><br></pre></td></tr></table></figure>
 
 <p><strong>提示：</strong></p>
 <ul>
@@ -36,14 +35,24 @@
 <figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="type">int</span> <span class="title function_">arrangeCoins</span><span class="params">(<span class="type">int</span> n)</span> &#123;</span><br><span class="line">        <span class="type">int</span> <span class="variable">left</span> <span class="operator">=</span> <span class="number">1</span>, right = n;</span><br><span class="line">        <span class="keyword">while</span> (left &lt;= right) &#123;</span><br><span class="line">            <span class="type">int</span> <span class="variable">mid</span> <span class="operator">=</span> left + (right - left) / <span class="number">2</span>;</span><br><span class="line">            <span class="type">long</span> <span class="variable">num</span> <span class="operator">=</span> (<span class="type">long</span>) mid * (<span class="number">1</span> + mid) / <span class="number">2</span>;</span><br><span class="line">            <span class="keyword">if</span> (num &lt;= n) &#123;</span><br><span class="line">                left = mid + <span class="number">1</span>;</span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                right = mid - <span class="number">1</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> right;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 ]]></content>
+      <categories>
+        <category>algorithm</category>
+        <category>LeetCode</category>
+        <category>方法</category>
+        <category>二分法</category>
+      </categories>
+      <tags>
+        <tag>算法题</tag>
+      </tags>
   </entry>
   <entry>
-    <title>csdn语法</title>
-    <url>/2024/07/27/csdn%E8%AF%AD%E6%B3%95/</url>
+    <title>CSDN语法详解</title>
+    <url>/2024/07/29/csdn%E8%AF%AD%E6%B3%95/</url>
     <content><![CDATA[<blockquote>
 <p><font color = #40A41D>🍎你是否总是在收藏❓🗄却从未整理⁉️🖊那还等什么呢❓块进来看看毛毛张今天分享的这款编辑器吧❗</font></p>
 </blockquote>
-<p>[toc]</p>
+<span id="more"></span>
+
 <h1 id="0-概述"><a href="#0-概述" class="headerlink" title="0.概述"></a>0.概述</h1><ul>
 <li>💧<font color = gray><code>Typora</code>是一款轻便简洁的 <code>Markdown </code>编辑器，支持即时渲染技术，这也是与其他<code>Markdown</code>编辑器最显著的区别，将写作与预览窗口相结合，为用户呈现所见即所得的编辑模式，支持<code>Markdown</code>的各种基础语法，支持快捷键操作，是好用的一款<code>Markdown</code>编辑器。即时渲染功能使得你写<code>Markdown文件</code>就想是写<code>Word文档</code>一样流畅自如✅，不像其他编辑器的有编辑栏和显示栏。🍇<code>Typora</code>使用的是<code>GitHub</code> 风格的<code>Markdown</code> 语法，扩展了任务列表、表格、表情符号、数学公式、代码高亮等常用功能。</font></li>
 <li><font color = pink>☘️毛毛张在本篇博客中试图将<code>Typora</code>中的使用技巧进行一个详细的介绍，包括快捷键和语法，掌握这些技巧可以帮助我们更好更快的编写<code>markdown文档</code>。有些语法只有在购买的正版中才能适用，例如高亮、上下标和数学公式等</font></li>
@@ -150,7 +159,7 @@
 </blockquote>
 <p>语法：<code>&lt;center&gt; 居中文本 &lt;/center&gt;</code></p>
 <p>代码：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;center&gt; 1.这是一段居中显示的文本 &lt;/center&gt;</span><br><span class="line"># 下面中格式只能在Typora编辑器中支持，在CSDN编辑器中是不支持的</span><br><span class="line">&lt;p style=&quot;text-align: center; color: blue ;size:6;&quot;&gt;2.这是居中的蓝色文字&lt;/p&gt;</span><br><span class="line">&lt;div style=&quot;text-align: center; color: blue;&quot;&gt;3.这是居中的蓝色文字&lt;/div&gt;</span><br></pre></td></tr></table></figure>
+<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">center</span>&gt;</span> 1.这是一段居中显示的文本 <span class="tag">&lt;/<span class="name">center</span>&gt;</span></span><br><span class="line"># 下面中格式只能在Typora编辑器中支持，在CSDN编辑器中是不支持的</span><br><span class="line"><span class="tag">&lt;<span class="name">p</span> <span class="attr">style</span>=<span class="string">&quot;text-align: center; color: blue ;size:6;&quot;</span>&gt;</span>2.这是居中的蓝色文字<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">style</span>=<span class="string">&quot;text-align: center; color: blue;&quot;</span>&gt;</span>3.这是居中的蓝色文字<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
 <p>效果展示:</p>
 <center> 1.这是一段居中显示的文本 </center>
@@ -169,7 +178,7 @@
 <li>注意：如需要多使用几个段落缩进与段落空格，就需要多打几个，并用分号<code>;</code>隔开</li>
 </ul>
 <p>代码：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&amp;emsp;&amp;emsp;1.全角缩进，相当于缩进2个汉字</span><br><span class="line">&amp;ensp;&amp;ensp;2.半角缩进，相当于缩进2个英文标点</span><br><span class="line">&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;3.空格，缩进4个空格</span><br><span class="line">&gt; 下面这种方式属于html语言的缩进语法，在CSDN中不支持</span><br><span class="line">&lt;p&gt;  4.这种缩进是属于html语言的缩进语法&lt;/p&gt;</span><br></pre></td></tr></table></figure>
+<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="symbol">&amp;emsp;</span><span class="symbol">&amp;emsp;</span>1.全角缩进，相当于缩进2个汉字</span><br><span class="line"><span class="symbol">&amp;ensp;</span><span class="symbol">&amp;ensp;</span>2.半角缩进，相当于缩进2个英文标点</span><br><span class="line"><span class="symbol">&amp;nbsp;</span><span class="symbol">&amp;nbsp;</span><span class="symbol">&amp;nbsp;</span><span class="symbol">&amp;nbsp;</span>3.空格，缩进4个空格</span><br><span class="line">&gt; 下面这种方式属于html语言的缩进语法，在CSDN中不支持</span><br><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span>  4.这种缩进是属于html语言的缩进语法<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
 <p>实战演示：</p>
 <p>&emsp;&emsp;1.全角缩进，相当于缩进2个汉字<br>&ensp;&ensp;2.半角缩进，相当于缩进2个英文标点<br>&nbsp;&nbsp;&nbsp;&nbsp;3.空格，缩进4个空格</p>
@@ -249,11 +258,11 @@
 </ul>
 <p><img src="https://cdn.jsdelivr.net/gh/zzxrepository/image_bed@master/typora/image-20240125200711543.png" alt="image-20240125200711543"></p>
 <h3 id="3-5-2-上标"><a href="#3-5-2-上标" class="headerlink" title="3.5.2 上标"></a>3.5.2 上标</h3><p><strong>代码：</strong></p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">10^9^</span><br><span class="line">10^-1^</span><br></pre></td></tr></table></figure>
+<figure class="highlight apache"><table><tr><td class="code"><pre><span class="line"><span class="attribute">10</span>^<span class="number">9</span>^</span><br><span class="line"><span class="attribute">10</span>^-<span class="number">1</span>^</span><br></pre></td></tr></table></figure>
 
 <p><strong>效果展示：</strong><br>10^9^<br>10^-1^</p>
 <h3 id="3-5-3-下标"><a href="#3-5-3-下标" class="headerlink" title="3.5.3 下标"></a>3.5.3 下标</h3><p><strong>代码：</strong></p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">M~K~</span><br><span class="line">H~2~O</span><br></pre></td></tr></table></figure>
+<figure class="highlight mathematica"><table><tr><td class="code"><pre><span class="line"><span class="variable">M</span><span class="operator">~</span><span class="built_in">K</span><span class="operator">~</span></span><br><span class="line"><span class="variable">H</span><span class="operator">~</span><span class="number">2</span><span class="operator">~</span><span class="built_in">O</span></span><br></pre></td></tr></table></figure>
 
 <p><strong>效果展示：</strong><br>M<del>K</del><br>H<del>2</del>O</p>
 <h3 id="3-5-4-LaTex数学公式"><a href="#3-5-4-LaTex数学公式" class="headerlink" title="3.5.4 LaTex数学公式"></a>3.5.4 LaTex数学公式</h3><blockquote>
@@ -262,7 +271,7 @@
 </blockquote>
 <p>语法：<code>$公式$</code>或<code>$$公式$$</code>，即用1个或者2个<code>$</code>进行包裹</p>
 <p>代码：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$\frac &#123;1&#125; &#123;100&#125;$</span><br><span class="line">$M^n_&#123;kernel&#125;$</span><br></pre></td></tr></table></figure>
+<figure class="highlight gams"><table><tr><td class="code"><pre><span class="line"><span class="symbol">$</span>\<span class="built_in">frac</span> &#123;<span class="number">1</span>&#125; &#123;<span class="number">100</span>&#125;<span class="symbol">$</span></span><br><span class="line"><span class="meta"><span class="keyword">$M</span>^n_&#123;kernel&#125;$</span></span><br></pre></td></tr></table></figure>
 
 <p>输出显示:<br>$\frac {1} {100}$<br>$M^n_{kernel}$</p>
 <blockquote>
@@ -271,7 +280,7 @@
 <p>说明：</p>
 <p>（1）公式的编辑都在两个符号中间<code>$$</code><br>（2）<code>^</code>符号后接的字符为上标<br>（3）<code>_</code>符号后接的字符为下标<br>（4）如果同时有两个下标，则需要使用<code>&#123;&#125;</code>来将符号括起来</p>
 <p>代码：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$x^p_&#123;ij&#125;$</span><br></pre></td></tr></table></figure>
+<figure class="highlight cos"><table><tr><td class="code"><pre><span class="line"><span class="built_in">$x</span><span class="symbol">^p_</span>&#123;ij&#125;$</span><br></pre></td></tr></table></figure>
 
 <p>效果展示：</p>
 <p>$x^p_{ij}$</p>
@@ -465,7 +474,7 @@
 
 <h2 id="3-12-彩蛋"><a href="#3-12-彩蛋" class="headerlink" title="3.12 彩蛋"></a>3.12 彩蛋</h2><p>我猜你们 <code>最想要</code> 的应该是这个吧：<code>对不对</code></p>
 <p>代码：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">`` 你们最想要的文字特效 ``</span><br></pre></td></tr></table></figure>
+<figure class="highlight arcade"><table><tr><td class="code"><pre><span class="line"><span class="string">``</span> 你们最想要的文字特效 <span class="string">``</span></span><br></pre></td></tr></table></figure>
 
 <p>效果展示：<br><code>你们最想要的文字特效</code></p>
 <h1 id="4-特殊符号"><a href="#4-特殊符号" class="headerlink" title="4.特殊符号"></a>4.特殊符号</h1><table>
@@ -2199,6 +2208,13 @@
 <li><a href="https://blog.csdn.net/qq_43827595/article/details/102298686">https://blog.csdn.net/qq_43827595/article/details/102298686</a></li>
 </ul>
 ]]></content>
+      <categories>
+        <category>CSDN</category>
+        <category>Typora</category>
+      </categories>
+      <tags>
+        <tag>软件安装</tag>
+      </tags>
   </entry>
   <entry>
     <title>树的多种遍历方式</title>
@@ -2206,7 +2222,8 @@
     <content><![CDATA[<blockquote>
 <p><strong>今天毛毛张要分享的内容是LeetCode的刷题笔记，主要介绍的二叉树前序遍历、中序遍历、后序遍历和层序遍历思想和多种代码实现，二叉树的遍历对于二叉树后面的题目的实现具有很重要的意义</strong></p>
 </blockquote>
-<p>[TOC]</p>
+<span id="more"></span>
+
 <h1 id="1-概述"><a href="#1-概述" class="headerlink" title="1.概述"></a>1.概述</h1><ul>
 <li><p>LeetCode题目链接：</p>
 <ul>
@@ -2493,5 +2510,14 @@
 <p><a href="https://blog.csdn.net/weixin_44027397/article/details/113735310?ops_request_misc=&request_id=&biz_id=102&utm_term=%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E8%BF%AD%E4%BB%A3%E9%81%8D%E5%8E%86java&utm_medium=distribute.pc_search_result.none-task-blog-2~all~sobaiduweb~default-3-113735310.142%5Ev100%5Econtrol&spm=1018.2226.3001.4187">2</a></p>
 <p><a href="https://blog.csdn.net/qq_64257622/article/details/131112998?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522171517933116800222816298%2522%252C%2522scm%2522%253A%252220140713.130102334..%2522%257D&request_id=171517933116800222816298&biz_id=0&utm_medium=distribute.pc_search_result.none-task-blog-2~all~sobaiduend~default-2-131112998-null-null.142%5Ev100%5Econtrol&utm_term=%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E8%BF%AD%E4%BB%A3%E9%81%8D%E5%8E%86java&spm=1018.2226.3001.4187">3</a></p>
 ]]></content>
+      <categories>
+        <category>algorithm</category>
+        <category>LeetCode</category>
+        <category>方法</category>
+        <category>递归</category>
+      </categories>
+      <tags>
+        <tag>算法题</tag>
+      </tags>
   </entry>
 </search>
