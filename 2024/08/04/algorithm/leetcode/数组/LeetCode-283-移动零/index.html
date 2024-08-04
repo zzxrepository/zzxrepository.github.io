@@ -20,29 +20,30 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"example.com","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.20.0","exturl":false,"sidebar":{"position":"left","width_expanded":400,"width_dual_column":300,"display":"post","padding":18,"offset":12},"hljswrap":true,"copycode":{"enable":true,"style":"flat","show_result":true},"fold":{"enable":true,"height":500},"bookmark":{"enable":true,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":false,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="双指针在一定条件下可以转化成滑动窗口，这道题就是个很好的例子">
+    <meta name="description" content="原地移除元素1">
 <meta property="og:type" content="article">
-<meta property="og:title" content="LeetCode | 643 | 子数组最大平均数 | 双指针 | 滑动窗口">
-<meta property="og:url" content="http://example.com/2024/08/02/algorithm/leetcode/%E6%95%B0%E7%BB%84/LeetCode-643-%E5%AD%90%E6%95%B0%E7%BB%84%E6%9C%80%E5%A4%A7%E5%B9%B3%E5%9D%87%E6%95%B0/index.html">
+<meta property="og:title" content="LeetCode | 283 | 移动零 | 双指针">
+<meta property="og:url" content="http://example.com/2024/08/04/algorithm/leetcode/%E6%95%B0%E7%BB%84/LeetCode-283-%E7%A7%BB%E5%8A%A8%E9%9B%B6/index.html">
 <meta property="og:site_name" content="神马都会亿点点的毛毛张">
-<meta property="og:description" content="双指针在一定条件下可以转化成滑动窗口，这道题就是个很好的例子">
+<meta property="og:description" content="原地移除元素1">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2024-08-02T01:48:59.000Z">
-<meta property="article:modified_time" content="2024-08-02T07:41:21.162Z">
+<meta property="article:published_time" content="2024-08-04T00:48:59.000Z">
+<meta property="article:modified_time" content="2024-08-04T09:18:39.211Z">
 <meta property="article:author" content="毛毛张">
-<meta property="article:tag" content="滑动窗口">
 <meta property="article:tag" content="双指针">
+<meta property="article:tag" content="简单">
+<meta property="article:tag" content="原地移除元素">
 <meta name="twitter:card" content="summary">
 
 
-<link rel="canonical" href="http://example.com/2024/08/02/algorithm/leetcode/%E6%95%B0%E7%BB%84/LeetCode-643-%E5%AD%90%E6%95%B0%E7%BB%84%E6%9C%80%E5%A4%A7%E5%B9%B3%E5%9D%87%E6%95%B0/">
+<link rel="canonical" href="http://example.com/2024/08/04/algorithm/leetcode/%E6%95%B0%E7%BB%84/LeetCode-283-%E7%A7%BB%E5%8A%A8%E9%9B%B6/">
 
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"http://example.com/2024/08/02/algorithm/leetcode/%E6%95%B0%E7%BB%84/LeetCode-643-%E5%AD%90%E6%95%B0%E7%BB%84%E6%9C%80%E5%A4%A7%E5%B9%B3%E5%9D%87%E6%95%B0/","path":"2024/08/02/algorithm/leetcode/数组/LeetCode-643-子数组最大平均数/","title":"LeetCode | 643 | 子数组最大平均数 | 双指针 | 滑动窗口"}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"http://example.com/2024/08/04/algorithm/leetcode/%E6%95%B0%E7%BB%84/LeetCode-283-%E7%A7%BB%E5%8A%A8%E9%9B%B6/","path":"2024/08/04/algorithm/leetcode/数组/LeetCode-283-移动零/","title":"LeetCode | 283 | 移动零 | 双指针"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>LeetCode | 643 | 子数组最大平均数 | 双指针 | 滑动窗口 | 神马都会亿点点的毛毛张</title>
+<title>LeetCode | 283 | 移动零 | 双指针 | 神马都会亿点点的毛毛张</title>
   
 
 
@@ -143,7 +144,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#1-%E9%A2%98%E7%9B%AE%E6%8F%8F%E8%BF%B0"><span class="nav-text">1.题目描述</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2-%E9%A2%98%E8%A7%A3"><span class="nav-text">2.题解</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#2-1-%E6%9A%B4%E5%8A%9B%E8%A7%A3%E6%B3%95%EF%BC%88%E8%B6%85%E5%87%BA%E6%97%B6%E9%97%B4%E9%99%90%E5%88%B6%EF%BC%89"><span class="nav-text">2.1 暴力解法（超出时间限制）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-2-%E5%8F%8C%E6%8C%87%E9%92%88"><span class="nav-text">2.2 双指针</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-3-%E5%8F%8C%E6%8C%87%E9%92%88%E4%BC%98%E5%8C%96-gt-%E6%BB%91%E5%8A%A8%E7%AA%97%E5%8F%A3"><span class="nav-text">2.3 双指针优化&#x3D;&gt;滑动窗口</span></a></li></ol></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#1-%E9%A2%98%E7%9B%AE%E6%8F%8F%E8%BF%B0"><span class="nav-text">1.题目描述</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2-%E9%A2%98%E8%A7%A3"><span class="nav-text">2.题解</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#2-1-%E5%8F%8C%E6%8C%87%E9%92%88-%E4%B8%80%E6%AC%A1%E9%81%8D%E5%8E%86-%E6%93%8D%E4%BD%9C%E6%AC%A1%E6%95%B0%E5%A4%9A"><span class="nav-text">2.1 双指针 | 一次遍历 | 操作次数多</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-2-%E5%8F%8C%E6%8C%87%E9%92%88-%E4%B8%A4%E6%AC%A1%E9%81%8D%E5%8E%86-%E6%93%8D%E4%BD%9C%E6%AC%A1%E6%95%B0%E5%B0%91"><span class="nav-text">2.2  双指针 | 两次遍历 | 操作次数少</span></a></li></ol></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -224,7 +225,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2024/08/02/algorithm/leetcode/%E6%95%B0%E7%BB%84/LeetCode-643-%E5%AD%90%E6%95%B0%E7%BB%84%E6%9C%80%E5%A4%A7%E5%B9%B3%E5%9D%87%E6%95%B0/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2024/08/04/algorithm/leetcode/%E6%95%B0%E7%BB%84/LeetCode-283-%E7%A7%BB%E5%8A%A8%E9%9B%B6/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/mmz.png">
@@ -237,12 +238,12 @@
     </span>
 
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="LeetCode | 643 | 子数组最大平均数 | 双指针 | 滑动窗口 | 神马都会亿点点的毛毛张">
+      <meta itemprop="name" content="LeetCode | 283 | 移动零 | 双指针 | 神马都会亿点点的毛毛张">
       <meta itemprop="description" content="">
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          LeetCode | 643 | 子数组最大平均数 | 双指针 | 滑动窗口
+          LeetCode | 283 | 移动零 | 双指针
         </h1>
 
         <div class="post-meta-container">
@@ -254,7 +255,7 @@
       <span class="post-meta-item-text">发表于</span>
       
 
-      <time title="创建时间：2024-08-02 09:48:59 / 修改时间：15:41:21" itemprop="dateCreated datePublished" datetime="2024-08-02T09:48:59+08:00">2024-08-02</time>
+      <time title="创建时间：2024-08-04 08:48:59 / 修改时间：17:18:39" itemprop="dateCreated datePublished" datetime="2024-08-04T08:48:59+08:00">2024-08-04</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -290,8 +291,8 @@
     </span>
     <span class="post-meta-item-text">Waline：</span>
   
-    <a title="waline" href="/2024/08/02/algorithm/leetcode/%E6%95%B0%E7%BB%84/LeetCode-643-%E5%AD%90%E6%95%B0%E7%BB%84%E6%9C%80%E5%A4%A7%E5%B9%B3%E5%9D%87%E6%95%B0/#waline" itemprop="discussionUrl">
-      <span class="post-comments-count waline-comment-count" data-path="/2024/08/02/algorithm/leetcode/%E6%95%B0%E7%BB%84/LeetCode-643-%E5%AD%90%E6%95%B0%E7%BB%84%E6%9C%80%E5%A4%A7%E5%B9%B3%E5%9D%87%E6%95%B0/" itemprop="commentCount"></span>
+    <a title="waline" href="/2024/08/04/algorithm/leetcode/%E6%95%B0%E7%BB%84/LeetCode-283-%E7%A7%BB%E5%8A%A8%E9%9B%B6/#waline" itemprop="discussionUrl">
+      <span class="post-comments-count waline-comment-count" data-path="/2024/08/04/algorithm/leetcode/%E6%95%B0%E7%BB%84/LeetCode-283-%E7%A7%BB%E5%8A%A8%E9%9B%B6/" itemprop="commentCount"></span>
     </a>
   </span>
   
@@ -302,14 +303,14 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>1.9k</span>
+      <span>971</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
         <i class="far fa-clock"></i>
       </span>
       <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>2 分钟</span>
+      <span>1 分钟</span>
     </span>
 </div>
 
@@ -319,37 +320,32 @@
     
     
     
-    <div class="post-body" itemprop="articleBody"><center><b>双指针在一定条件下可以转化成滑动窗口，这道题就是个很好的例子</b></center>
+    <div class="post-body" itemprop="articleBody"><center><b>原地移除元素1</b></center>
 
 <span id="more"></span>
 <hr>
 <center>
-    <b>LeetCode链接：<a target="_blank" rel="noopener" href="https://leetcode.cn/problems/maximum-average-subarray-i/">643. 子数组最大平均数 I<a></a></a></b>
+    <b>LeetCode链接：<a target="_blank" rel="noopener" href="https://leetcode.cn/problems/move-zeroes/">283. 移动零<a></a></a></b>
 </center>
 
 <hr>
-<h1 id="1-题目描述"><a href="#1-题目描述" class="headerlink" title="1.题目描述"></a>1.题目描述</h1><p>给你一个由 <code>n</code> 个元素组成的整数数组 <code>nums</code> 和一个整数 <code>k</code> 。</p>
-<p>请你找出平均数最大且 <strong>长度为 <code>k</code></strong> 的连续子数组，并输出该最大平均数。</p>
-<p>任何误差小于 <code>10-5</code> 的答案都将被视为正确答案。</p>
-<p><strong>示例 1：</strong></p>
-<figure class="highlight subunit"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">输入：nums = [1,12,<span class="string">-5</span>,<span class="string">-6</span>,50,3], k = 4</span><br><span class="line">输出：12.75</span><br><span class="line">解释：最大平均数 (12<span class="string">-5</span><span class="string">-6</span><span class="string">+50</span>)/4 = 51/4 = 12.75</span><br></pre></td></tr></table></figure>
-<p><strong>示例 2：</strong></p>
-<figure class="highlight dns"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">输入：nums = [<span class="number">5</span>], k = <span class="number">1</span></span><br><span class="line">输出：<span class="number">5.00000</span></span><br></pre></td></tr></table></figure>
-<p><strong>提示：</strong></p>
+<h1 id="1-题目描述"><a href="#1-题目描述" class="headerlink" title="1.题目描述"></a>1.题目描述</h1><p>给定一个数组 <code>nums</code>，编写一个函数将所有 <code>0</code> 移动到数组的末尾，同时保持非零元素的相对顺序。</p>
+<p><strong>请注意</strong> ，必须在不复制数组的情况下原地对数组进行操作。</p>
+<p><strong>示例 1:</strong></p>
+<figure class="highlight accesslog"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">输入: nums = <span class="string">[0,1,0,3,12]</span></span><br><span class="line">输出: <span class="string">[1,3,12,0,0]</span></span><br></pre></td></tr></table></figure>
+<p><strong>示例 2:</strong></p>
+<figure class="highlight inform7"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">输入: nums = <span class="comment">[0]</span></span><br><span class="line">输出: <span class="comment">[0]</span></span><br></pre></td></tr></table></figure>
+<p><strong>提示</strong>:</p>
 <ul>
-<li><code>n == nums.length</code></li>
-<li>$1 &lt;= k &lt;= n &lt;= 10^5$</li>
-<li>$-10^4 &lt;= nums[i] &lt;= 10^4$</li>
+<li>$1 &lt;= nums.length &lt;= 10^4$</li>
+<li>$-2^{31} &lt;= nums[i] &lt;= 2^{31} - 1$</li>
 </ul>
-<h1 id="2-题解"><a href="#2-题解" class="headerlink" title="2.题解"></a>2.题解</h1><h2 id="2-1-暴力解法（超出时间限制）"><a href="#2-1-暴力解法（超出时间限制）" class="headerlink" title="2.1 暴力解法（超出时间限制）"></a>2.1 暴力解法（超出时间限制）</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="type">double</span> <span class="title function_">findMaxAverage</span><span class="params">(<span class="type">int</span>[] nums, <span class="type">int</span> k)</span> &#123;</span><br><span class="line">        <span class="comment">// 初始化最大平均值为负无穷</span></span><br><span class="line">        <span class="type">double</span> <span class="variable">maxAverage</span> <span class="operator">=</span> Double.NEGATIVE_INFINITY;</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 遍历数组中的所有可能的长度为 k 的连续子数组</span></span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>; i &lt;= nums.length - k; i++) &#123;</span><br><span class="line">            <span class="comment">// 计算当前子数组的和</span></span><br><span class="line">            <span class="type">int</span> <span class="variable">sum</span> <span class="operator">=</span> <span class="number">0</span>;</span><br><span class="line">            <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">j</span> <span class="operator">=</span> i; j &lt; i + k; j++) &#123;</span><br><span class="line">                sum += nums[j];</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="comment">// 计算当前子数组的平均值</span></span><br><span class="line">            <span class="type">double</span> <span class="variable">average</span> <span class="operator">=</span> (<span class="type">double</span>) sum / k;</span><br><span class="line">            <span class="comment">// 更新最大平均值</span></span><br><span class="line">            maxAverage = average &gt; maxAverage ? average : maxAverage;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 返回最大平均值</span></span><br><span class="line">        <span class="keyword">return</span> maxAverage;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="2-2-双指针"><a href="#2-2-双指针" class="headerlink" title="2.2 双指针"></a>2.2 双指针</h2><ul>
-<li>由于每次都要计算平均值，所以在这里做一个处理，先求出长度为<code>k</code>的区间和的最大值，返回时再求平均</li>
+<p><strong>进阶：</strong>你能尽量减少完成的操作次数吗？</p>
+<h1 id="2-题解"><a href="#2-题解" class="headerlink" title="2.题解"></a>2.题解</h1><ul>
+<li>注意这道题目需要保证非零元素的相对顺序，而这道题目的相对顺序不能改变</li>
 </ul>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="type">double</span> <span class="title function_">findMaxAverage</span><span class="params">(<span class="type">int</span>[] nums, <span class="type">int</span> k)</span> &#123;</span><br><span class="line">        <span class="comment">// 初始化最大和为最小整数值</span></span><br><span class="line">        <span class="type">int</span> <span class="variable">maxSum</span> <span class="operator">=</span> Integer.MIN_VALUE;</span><br><span class="line">        <span class="comment">// 左右指针初始化</span></span><br><span class="line">        <span class="type">int</span> left, right;</span><br><span class="line">        <span class="comment">// 当前窗口的和</span></span><br><span class="line">        <span class="type">int</span> <span class="variable">sum</span> <span class="operator">=</span> <span class="number">0</span>;</span><br><span class="line">        </span><br><span class="line">        <span class="comment">// 遍历数组</span></span><br><span class="line">        <span class="keyword">for</span> (left = <span class="number">0</span>, right = <span class="number">0</span>; right &lt; nums.length; right++) &#123;</span><br><span class="line">            <span class="comment">// 将当前元素加入窗口和</span></span><br><span class="line">            sum += nums[right];</span><br><span class="line">            </span><br><span class="line">            <span class="comment">// 如果当前窗口大小等于 k，更新最大和</span></span><br><span class="line">            <span class="keyword">if</span> (right - left + <span class="number">1</span> == k) &#123;</span><br><span class="line">                maxSum = Math.max(maxSum, sum);</span><br><span class="line">            &#125;</span><br><span class="line">            </span><br><span class="line">            <span class="comment">// 当窗口大小大于等于 k 时，移动左指针</span></span><br><span class="line">            <span class="keyword">while</span> (right - left + <span class="number">1</span> &gt;= k) &#123;</span><br><span class="line">                <span class="comment">// 将窗口左边界的元素移出和</span></span><br><span class="line">                sum -= nums[left];</span><br><span class="line">                <span class="comment">// 移动左指针</span></span><br><span class="line">                left++;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">        <span class="comment">// 返回最大和对应的平均值</span></span><br><span class="line">        <span class="keyword">return</span> (<span class="type">double</span>) maxSum / k;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="2-3-双指针优化-gt-滑动窗口"><a href="#2-3-双指针优化-gt-滑动窗口" class="headerlink" title="2.3 双指针优化=&gt;滑动窗口"></a>2.3 双指针优化=&gt;滑动窗口</h2><ul>
-<li>由于所求的窗口的长度是固定的，因此首先计算出数组前<code>k</code>个区间的和，然后再向后滑动区间</li>
-</ul>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="type">double</span> <span class="title function_">findMaxAverage</span><span class="params">(<span class="type">int</span>[] nums, <span class="type">int</span> k)</span> &#123;</span><br><span class="line">        <span class="comment">// 计算第一个长度为 k 的子数组的和</span></span><br><span class="line">        <span class="type">int</span> <span class="variable">maxSum</span> <span class="operator">=</span> <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>; i &lt; k; i++) &#123;</span><br><span class="line">            maxSum += nums[i];</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 当前子数组的和</span></span><br><span class="line">        <span class="type">int</span> <span class="variable">currentSum</span> <span class="operator">=</span> maxSum;</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 使用滑动窗口遍历数组中的其他可能的长度为 k 的连续子数组</span></span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> k; i &lt; nums.length; i++) &#123;</span><br><span class="line">            <span class="comment">// 更新当前子数组的和</span></span><br><span class="line">            currentSum = currentSum - nums[i - k] + nums[i];</span><br><span class="line"></span><br><span class="line">            <span class="comment">// 更新最大和</span></span><br><span class="line">            <span class="keyword">if</span> (currentSum &gt; maxSum) &#123;</span><br><span class="line">                maxSum = currentSum;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 返回最大平均值</span></span><br><span class="line">        <span class="keyword">return</span> (<span class="type">double</span>) maxSum / k;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="2-1-双指针-一次遍历-操作次数多"><a href="#2-1-双指针-一次遍历-操作次数多" class="headerlink" title="2.1 双指针 | 一次遍历 | 操作次数多"></a>2.1 双指针 | 一次遍历 | 操作次数多</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">moveZeroes</span><span class="params">(<span class="type">int</span>[] nums)</span> &#123;</span><br><span class="line">        <span class="comment">// 使用双指针方法，一次遍历数组</span></span><br><span class="line">        <span class="type">int</span> <span class="variable">left</span> <span class="operator">=</span> <span class="number">0</span>, right = <span class="number">0</span>;</span><br><span class="line">        </span><br><span class="line">        <span class="comment">// 遍历整个数组</span></span><br><span class="line">        <span class="keyword">for</span> (right = <span class="number">0</span>; right &lt; nums.length; right++) &#123;</span><br><span class="line">            <span class="comment">// 如果当前元素不是0</span></span><br><span class="line">            <span class="keyword">if</span> (nums[right] != <span class="number">0</span>) &#123;</span><br><span class="line">                <span class="comment">// 交换当前元素和左指针指向的元素</span></span><br><span class="line">                <span class="type">int</span> <span class="variable">temp</span> <span class="operator">=</span> nums[right];</span><br><span class="line">                nums[right] = nums[left];</span><br><span class="line">                nums[left] = temp;</span><br><span class="line">                <span class="comment">// 左指针右移</span></span><br><span class="line">                left++;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="2-2-双指针-两次遍历-操作次数少"><a href="#2-2-双指针-两次遍历-操作次数少" class="headerlink" title="2.2  双指针 | 两次遍历 | 操作次数少"></a>2.2  双指针 | 两次遍历 | 操作次数少</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">moveZeroes</span><span class="params">(<span class="type">int</span>[] nums)</span> &#123;</span><br><span class="line">        <span class="comment">// 第一次遍历，使用 j 指针记录非零元素的个数</span></span><br><span class="line">        <span class="comment">// 只要是非零元素，就将其赋给 nums[j]</span></span><br><span class="line">        <span class="type">int</span> <span class="variable">j</span> <span class="operator">=</span> <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>; i &lt; nums.length; ++i) &#123;</span><br><span class="line">            <span class="keyword">if</span> (nums[i] != <span class="number">0</span>) &#123;</span><br><span class="line">                nums[j++] = nums[i];</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">        <span class="comment">// 非零元素统计完了，剩下的元素都是零</span></span><br><span class="line">        <span class="comment">// 第二次遍历，将数组末尾的元素都赋值为零</span></span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> j; i &lt; nums.length; ++i) &#123;</span><br><span class="line">            nums[i] = <span class="number">0</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
     </div>
     
@@ -397,7 +393,7 @@
   </li>
   <li class="post-copyright-link">
       <strong>本文链接：</strong>
-      <a href="http://example.com/2024/08/02/algorithm/leetcode/%E6%95%B0%E7%BB%84/LeetCode-643-%E5%AD%90%E6%95%B0%E7%BB%84%E6%9C%80%E5%A4%A7%E5%B9%B3%E5%9D%87%E6%95%B0/" title="LeetCode | 643 | 子数组最大平均数 | 双指针 | 滑动窗口">http://example.com/2024/08/02/algorithm/leetcode/数组/LeetCode-643-子数组最大平均数/</a>
+      <a href="http://example.com/2024/08/04/algorithm/leetcode/%E6%95%B0%E7%BB%84/LeetCode-283-%E7%A7%BB%E5%8A%A8%E9%9B%B6/" title="LeetCode | 283 | 移动零 | 双指针">http://example.com/2024/08/04/algorithm/leetcode/数组/LeetCode-283-移动零/</a>
   </li>
   <li class="post-copyright-license">
       <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
@@ -406,21 +402,22 @@
 </div>
 
           <div class="post-tags">
-              <a href="/tags/%E6%BB%91%E5%8A%A8%E7%AA%97%E5%8F%A3/" rel="tag"><i class="fa fa-tag"></i> 滑动窗口</a>
               <a href="/tags/%E5%8F%8C%E6%8C%87%E9%92%88/" rel="tag"><i class="fa fa-tag"></i> 双指针</a>
+              <a href="/tags/%E7%AE%80%E5%8D%95/" rel="tag"><i class="fa fa-tag"></i> 简单</a>
+              <a href="/tags/%E5%8E%9F%E5%9C%B0%E7%A7%BB%E9%99%A4%E5%85%83%E7%B4%A0/" rel="tag"><i class="fa fa-tag"></i> 原地移除元素</a>
           </div>
 
         
 
           <div class="post-nav">
             <div class="post-nav-item">
-                <a href="/2024/08/01/algorithm/leetcode/%E5%AD%97%E7%AC%A6%E4%B8%B2/LeetCode-76-%E6%9C%80%E5%B0%8F%E8%A6%86%E7%9B%96%E5%AD%90%E4%B8%B2/" rel="prev" title="LeetCode | 76 | 最小覆盖子串 | 双指针 | 滑动窗口 | 哈希集合">
-                  <i class="fa fa-angle-left"></i> LeetCode | 76 | 最小覆盖子串 | 双指针 | 滑动窗口 | 哈希集合
+                <a href="/2024/08/02/algorithm/leetcode/%E6%95%B0%E7%BB%84/LeetCode-167-%E4%B8%A4%E6%95%B0%E4%B9%8B%E5%92%8C2/" rel="prev" title="LeetCode | 167 | 两数之和2-输入有序数组 | 二分法 | 双指针">
+                  <i class="fa fa-angle-left"></i> LeetCode | 167 | 两数之和2-输入有序数组 | 二分法 | 双指针
                 </a>
             </div>
             <div class="post-nav-item">
-                <a href="/2024/08/02/algorithm/leetcode/%E6%95%B0%E7%BB%84/LeetCode-167-%E4%B8%A4%E6%95%B0%E4%B9%8B%E5%92%8C2/" rel="next" title="LeetCode | 167 | 两数之和2-输入有序数组 | 二分法 | 双指针">
-                  LeetCode | 167 | 两数之和2-输入有序数组 | 二分法 | 双指针 <i class="fa fa-angle-right"></i>
+                <a href="/2024/08/04/algorithm/leetcode/%E5%AD%97%E7%AC%A6%E4%B8%B2/LeetCode-3-%E6%97%A0%E9%87%8D%E5%A4%8D%E5%AD%97%E7%AC%A6%E7%9A%84%E6%9C%80%E9%95%BF%E5%AD%90%E4%B8%B2/" rel="next" title="LeetCode | 3 | 无重复字符的最长子串 | 双指针 | 滑动窗口 | 2025兴业银行秋招笔试题 | 哈希集合">
+                  LeetCode | 3 | 无重复字符的最长子串 | 双指针 | 滑动窗口 | 2025兴业银行秋招笔试题 | 哈希集合 <i class="fa fa-angle-right"></i>
                 </a>
             </div>
           </div>
@@ -571,7 +568,7 @@
 <script src="/js/third-party/math/mathjax.js"></script>
 
 
-<script class="next-config" data-name="waline" type="application/json">{"lang":"zh-cn","enable":true,"serverURL":"blogcomments-eta.vercel.app","cssUrl":"https://unpkg.com/@waline/client@v2/dist/waline.css","commentCount":true,"pageview":false,"placeholder":"请文明评论呀!","avatar":"mm","meta":["nick","mail","link"],"pageSize":10,"visitor":true,"comment_count":true,"requiredFields":[],"libUrl":"//unpkg.com/@waline/client@v2/dist/waline.js","el":"#waline","comment":true,"path":"/2024/08/02/algorithm/leetcode/%E6%95%B0%E7%BB%84/LeetCode-643-%E5%AD%90%E6%95%B0%E7%BB%84%E6%9C%80%E5%A4%A7%E5%B9%B3%E5%9D%87%E6%95%B0/"}</script>
+<script class="next-config" data-name="waline" type="application/json">{"lang":"zh-cn","enable":true,"serverURL":"blogcomments-eta.vercel.app","cssUrl":"https://unpkg.com/@waline/client@v2/dist/waline.css","commentCount":true,"pageview":false,"placeholder":"请文明评论呀!","avatar":"mm","meta":["nick","mail","link"],"pageSize":10,"visitor":true,"comment_count":true,"requiredFields":[],"libUrl":"//unpkg.com/@waline/client@v2/dist/waline.js","el":"#waline","comment":true,"path":"/2024/08/04/algorithm/leetcode/%E6%95%B0%E7%BB%84/LeetCode-283-%E7%A7%BB%E5%8A%A8%E9%9B%B6/"}</script>
 <link rel="stylesheet" href="https://unpkg.com/@waline/client@v2/dist/waline.css">
 <script>
 document.addEventListener('page:loaded', () => {
