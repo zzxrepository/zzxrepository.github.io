@@ -71,6 +71,31 @@
   </entry>
   
   <entry>
+    <title>LeetCOde | 76 | 最小覆盖子串 | 双指针 | 滑动窗口</title>
+    <link href="http://example.com/2024/08/01/algorithm/leetcode/%E5%AD%97%E7%AC%A6%E4%B8%B2/LeetCode-76-%E6%9C%80%E5%B0%8F%E8%A6%86%E7%9B%96%E5%AD%90%E4%B8%B2/"/>
+    <id>http://example.com/2024/08/01/algorithm/leetcode/%E5%AD%97%E7%AC%A6%E4%B8%B2/LeetCode-76-%E6%9C%80%E5%B0%8F%E8%A6%86%E7%9B%96%E5%AD%90%E4%B8%B2/</id>
+    <published>2024-08-01T13:48:59.000Z</published>
+    <updated>2024-08-04T08:03:54.191Z</updated>
+    
+    
+    <summary type="html">&lt;center&gt;&lt;b&gt;这道题在LeetCode上的难度标签为：&lt;font color=&quot;red&quot;&gt;困难&lt;/font&gt;！你能看出来这是一道用双指针就可以解决的题目吗？&lt;/b&gt;&lt;/center&gt;</summary>
+    
+    
+    
+    <category term="算法" scheme="http://example.com/categories/%E7%AE%97%E6%B3%95/"/>
+    
+    <category term="LeetCode" scheme="http://example.com/categories/LeetCode/"/>
+    
+    <category term="字符串" scheme="http://example.com/categories/%E5%AD%97%E7%AC%A6%E4%B8%B2/"/>
+    
+    
+    <category term="二分法" scheme="http://example.com/tags/%E4%BA%8C%E5%88%86%E6%B3%95/"/>
+    
+    <category term="双指针" scheme="http://example.com/tags/%E5%8F%8C%E6%8C%87%E9%92%88/"/>
+    
+  </entry>
+  
+  <entry>
     <title>网站声明</title>
     <link href="http://example.com/2024/08/01/%E7%BD%AE%E9%A1%B6%E5%A3%B0%E6%98%8E/"/>
     <id>http://example.com/2024/08/01/%E7%BD%AE%E9%A1%B6%E5%A3%B0%E6%98%8E/</id>
@@ -79,11 +104,11 @@
     
     
     <summary type="html">&lt;center&gt;
-    &lt;font color=&quot;orange&quot; size=3&gt;&lt;b&gt;🌈大家好！我是神马都会亿点点的毛毛张👋&lt;br&gt;&lt;/font&gt;
-    &lt;font color=&quot;green&quot; size=3&gt;🍏本站发布的全部博客是毛毛张整理的笔记，内容全部根据互联网上可以检索到的资源整理而来！🍒&lt;br&gt;
+    &lt;font color=&quot;orange&quot; size=&quot;3&quot;&gt;&lt;b&gt;🌈大家好！我是神马都会亿点点的毛毛张👋&lt;br&gt;&lt;/b&gt;&lt;/font&gt;
+    &lt;font color=&quot;green&quot; size=&quot;3&quot;&gt;🍏本站发布的全部博客是毛毛张整理的笔记，内容全部根据互联网上可以检索到的资源整理而来！🍒&lt;br&gt;
     🥝毛毛张在写博客的过程中尽量标注全部应用的参考文献或者资源！🍓&lt;br&gt;
     🥑如果在文章中引用的内容涉及到侵权、版权问题、或者应用内容禁止被转载了🍎&lt;br&gt;&lt;/font&gt;
-    &lt;font color=&quot;red&quot; size=3&gt;🍉请通过首页的邮箱📩联系毛毛张，立马修改！🍊&lt;/b&gt;&lt;/font&gt;
+    &lt;font color=&quot;red&quot; size=&quot;3&quot;&gt;🍉请通过首页的邮箱📩联系毛毛张，立马修改！🍊&lt;/font&gt;
 &lt;/center&gt;</summary>
     
     
@@ -141,9 +166,9 @@
     <category term="数学" scheme="http://example.com/categories/%E7%AE%97%E6%B3%95/LeetCode/%E6%95%B0%E5%AD%A6/"/>
     
     
-    <category term="二分法" scheme="http://example.com/tags/%E4%BA%8C%E5%88%86%E6%B3%95/"/>
-    
     <category term="简单" scheme="http://example.com/tags/%E7%AE%80%E5%8D%95/"/>
+    
+    <category term="二分法" scheme="http://example.com/tags/%E4%BA%8C%E5%88%86%E6%B3%95/"/>
     
   </entry>
   
