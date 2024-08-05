@@ -6,7 +6,7 @@
   <link href="https://zzxrepository.github.io/atom.xml" rel="self"/>
   
   <link href="https://zzxrepository.github.io/"/>
-  <updated>2024-08-05T00:48:17.817Z</updated>
+  <updated>2024-08-05T12:52:19.452Z</updated>
   <id>https://zzxrepository.github.io/</id>
   
   <author>
@@ -17,14 +17,14 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>LeetCode | 283 | 移动零 | 双指针</title>
-    <link href="https://zzxrepository.github.io/posts/79ae5266/"/>
-    <id>https://zzxrepository.github.io/posts/79ae5266/</id>
-    <published>2024-08-04T00:48:59.000Z</published>
-    <updated>2024-08-05T00:48:17.817Z</updated>
+    <title>LeetCode | 19 | 删除链表的倒数第 N 个结点 | 双指针 | 递归 | 栈</title>
+    <link href="https://zzxrepository.github.io/posts/e5b5aa05/"/>
+    <id>https://zzxrepository.github.io/posts/e5b5aa05/</id>
+    <published>2024-08-05T01:48:59.000Z</published>
+    <updated>2024-08-05T12:52:19.452Z</updated>
     
     
-    <summary type="html">&lt;center&gt;&lt;b&gt;原地移除元素1&lt;/b&gt;&lt;/center&gt;</summary>
+    <summary type="html">&lt;center&gt;&lt;font color=&quot;green&quot;&gt;&lt;b&gt;这道题还可以用递归法，你想到了吗？&lt;/b&gt;&lt;/font&gt;&lt;/center&gt;</summary>
     
     
     
@@ -32,14 +32,16 @@
     
     <category term="LeetCode" scheme="https://zzxrepository.github.io/categories/%E7%AE%97%E6%B3%95/LeetCode/"/>
     
-    <category term="数组" scheme="https://zzxrepository.github.io/categories/%E7%AE%97%E6%B3%95/LeetCode/%E6%95%B0%E7%BB%84/"/>
+    <category term="链表" scheme="https://zzxrepository.github.io/categories/%E7%AE%97%E6%B3%95/LeetCode/%E9%93%BE%E8%A1%A8/"/>
     
-    
-    <category term="简单" scheme="https://zzxrepository.github.io/tags/%E7%AE%80%E5%8D%95/"/>
     
     <category term="双指针" scheme="https://zzxrepository.github.io/tags/%E5%8F%8C%E6%8C%87%E9%92%88/"/>
     
-    <category term="原地移除元素" scheme="https://zzxrepository.github.io/tags/%E5%8E%9F%E5%9C%B0%E7%A7%BB%E9%99%A4%E5%85%83%E7%B4%A0/"/>
+    <category term="中等" scheme="https://zzxrepository.github.io/tags/%E4%B8%AD%E7%AD%89/"/>
+    
+    <category term="递归" scheme="https://zzxrepository.github.io/tags/%E9%80%92%E5%BD%92/"/>
+    
+    <category term="栈" scheme="https://zzxrepository.github.io/tags/%E6%A0%88/"/>
     
   </entry>
   
@@ -62,13 +64,13 @@
     <category term="字符串" scheme="https://zzxrepository.github.io/categories/%E7%AE%97%E6%B3%95/LeetCode/%E5%AD%97%E7%AC%A6%E4%B8%B2/"/>
     
     
-    <category term="双指针" scheme="https://zzxrepository.github.io/tags/%E5%8F%8C%E6%8C%87%E9%92%88/"/>
-    
-    <category term="中等" scheme="https://zzxrepository.github.io/tags/%E4%B8%AD%E7%AD%89/"/>
-    
     <category term="滑动窗口" scheme="https://zzxrepository.github.io/tags/%E6%BB%91%E5%8A%A8%E7%AA%97%E5%8F%A3/"/>
     
+    <category term="双指针" scheme="https://zzxrepository.github.io/tags/%E5%8F%8C%E6%8C%87%E9%92%88/"/>
+    
     <category term="哈希集合" scheme="https://zzxrepository.github.io/tags/%E5%93%88%E5%B8%8C%E9%9B%86%E5%90%88/"/>
+    
+    <category term="中等" scheme="https://zzxrepository.github.io/tags/%E4%B8%AD%E7%AD%89/"/>
     
   </entry>
   
@@ -91,13 +93,40 @@
     <category term="字符串" scheme="https://zzxrepository.github.io/categories/%E7%AE%97%E6%B3%95/LeetCode/%E5%AD%97%E7%AC%A6%E4%B8%B2/"/>
     
     
-    <category term="双指针" scheme="https://zzxrepository.github.io/tags/%E5%8F%8C%E6%8C%87%E9%92%88/"/>
-    
     <category term="滑动窗口" scheme="https://zzxrepository.github.io/tags/%E6%BB%91%E5%8A%A8%E7%AA%97%E5%8F%A3/"/>
+    
+    <category term="双指针" scheme="https://zzxrepository.github.io/tags/%E5%8F%8C%E6%8C%87%E9%92%88/"/>
     
     <category term="哈希集合" scheme="https://zzxrepository.github.io/tags/%E5%93%88%E5%B8%8C%E9%9B%86%E5%90%88/"/>
     
     <category term="困难" scheme="https://zzxrepository.github.io/tags/%E5%9B%B0%E9%9A%BE/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>LeetCode | 283 | 移动零 | 双指针</title>
+    <link href="https://zzxrepository.github.io/posts/79ae5266/"/>
+    <id>https://zzxrepository.github.io/posts/79ae5266/</id>
+    <published>2024-08-04T00:48:59.000Z</published>
+    <updated>2024-08-05T00:48:17.817Z</updated>
+    
+    
+    <summary type="html">&lt;center&gt;&lt;b&gt;原地移除元素1&lt;/b&gt;&lt;/center&gt;</summary>
+    
+    
+    
+    <category term="算法" scheme="https://zzxrepository.github.io/categories/%E7%AE%97%E6%B3%95/"/>
+    
+    <category term="LeetCode" scheme="https://zzxrepository.github.io/categories/%E7%AE%97%E6%B3%95/LeetCode/"/>
+    
+    <category term="数组" scheme="https://zzxrepository.github.io/categories/%E7%AE%97%E6%B3%95/LeetCode/%E6%95%B0%E7%BB%84/"/>
+    
+    
+    <category term="双指针" scheme="https://zzxrepository.github.io/tags/%E5%8F%8C%E6%8C%87%E9%92%88/"/>
+    
+    <category term="简单" scheme="https://zzxrepository.github.io/tags/%E7%AE%80%E5%8D%95/"/>
+    
+    <category term="原地移除元素" scheme="https://zzxrepository.github.io/tags/%E5%8E%9F%E5%9C%B0%E7%A7%BB%E9%99%A4%E5%85%83%E7%B4%A0/"/>
     
   </entry>
   
@@ -120,11 +149,11 @@
     <category term="数组" scheme="https://zzxrepository.github.io/categories/%E7%AE%97%E6%B3%95/LeetCode/%E6%95%B0%E7%BB%84/"/>
     
     
-    <category term="二分法" scheme="https://zzxrepository.github.io/tags/%E4%BA%8C%E5%88%86%E6%B3%95/"/>
-    
     <category term="双指针" scheme="https://zzxrepository.github.io/tags/%E5%8F%8C%E6%8C%87%E9%92%88/"/>
     
     <category term="中等" scheme="https://zzxrepository.github.io/tags/%E4%B8%AD%E7%AD%89/"/>
+    
+    <category term="二分法" scheme="https://zzxrepository.github.io/tags/%E4%BA%8C%E5%88%86%E6%B3%95/"/>
     
     <category term="数组" scheme="https://zzxrepository.github.io/tags/%E6%95%B0%E7%BB%84/"/>
     
@@ -149,9 +178,38 @@
     <category term="数组" scheme="https://zzxrepository.github.io/categories/%E7%AE%97%E6%B3%95/LeetCode/%E6%95%B0%E7%BB%84/"/>
     
     
+    <category term="滑动窗口" scheme="https://zzxrepository.github.io/tags/%E6%BB%91%E5%8A%A8%E7%AA%97%E5%8F%A3/"/>
+    
     <category term="双指针" scheme="https://zzxrepository.github.io/tags/%E5%8F%8C%E6%8C%87%E9%92%88/"/>
     
-    <category term="滑动窗口" scheme="https://zzxrepository.github.io/tags/%E6%BB%91%E5%8A%A8%E7%AA%97%E5%8F%A3/"/>
+  </entry>
+  
+  <entry>
+    <title>LeetCode | 203 | 移除链表元素 | 迭代法 | 虚设头节点 | 递归 | 三种方法</title>
+    <link href="https://zzxrepository.github.io/posts/daf65820/"/>
+    <id>https://zzxrepository.github.io/posts/daf65820/</id>
+    <published>2024-08-02T01:48:59.000Z</published>
+    <updated>2024-08-05T00:18:32.112Z</updated>
+    
+    
+    <summary type="html">&lt;center color=&quot;orange&quot;&gt;&lt;b&gt;链表入门题！虚设头节点做链表：屡试不爽&lt;/b&gt;&lt;/center&gt;</summary>
+    
+    
+    
+    <category term="算法" scheme="https://zzxrepository.github.io/categories/%E7%AE%97%E6%B3%95/"/>
+    
+    <category term="LeetCode" scheme="https://zzxrepository.github.io/categories/%E7%AE%97%E6%B3%95/LeetCode/"/>
+    
+    <category term="链表" scheme="https://zzxrepository.github.io/categories/%E7%AE%97%E6%B3%95/LeetCode/%E9%93%BE%E8%A1%A8/"/>
+    
+    
+    <category term="简单" scheme="https://zzxrepository.github.io/tags/%E7%AE%80%E5%8D%95/"/>
+    
+    <category term="递归" scheme="https://zzxrepository.github.io/tags/%E9%80%92%E5%BD%92/"/>
+    
+    <category term="迭代" scheme="https://zzxrepository.github.io/tags/%E8%BF%AD%E4%BB%A3/"/>
+    
+    <category term="虚设头节点" scheme="https://zzxrepository.github.io/tags/%E8%99%9A%E8%AE%BE%E5%A4%B4%E8%8A%82%E7%82%B9/"/>
     
   </entry>
   
@@ -174,9 +232,9 @@
     <category term="数组" scheme="https://zzxrepository.github.io/categories/%E7%AE%97%E6%B3%95/LeetCode/%E6%95%B0%E7%BB%84/"/>
     
     
-    <category term="简单" scheme="https://zzxrepository.github.io/tags/%E7%AE%80%E5%8D%95/"/>
-    
     <category term="双指针" scheme="https://zzxrepository.github.io/tags/%E5%8F%8C%E6%8C%87%E9%92%88/"/>
+    
+    <category term="简单" scheme="https://zzxrepository.github.io/tags/%E7%AE%80%E5%8D%95/"/>
     
     <category term="原地移除元素" scheme="https://zzxrepository.github.io/tags/%E5%8E%9F%E5%9C%B0%E7%A7%BB%E9%99%A4%E5%85%83%E7%B4%A0/"/>
     
@@ -224,9 +282,9 @@
     <category term="数组" scheme="https://zzxrepository.github.io/categories/%E7%AE%97%E6%B3%95/LeetCode/%E6%95%B0%E7%BB%84/"/>
     
     
-    <category term="二分法" scheme="https://zzxrepository.github.io/tags/%E4%BA%8C%E5%88%86%E6%B3%95/"/>
-    
     <category term="中等" scheme="https://zzxrepository.github.io/tags/%E4%B8%AD%E7%AD%89/"/>
+    
+    <category term="二分法" scheme="https://zzxrepository.github.io/tags/%E4%BA%8C%E5%88%86%E6%B3%95/"/>
     
     <category term="数组" scheme="https://zzxrepository.github.io/tags/%E6%95%B0%E7%BB%84/"/>
     
@@ -253,9 +311,9 @@
     <category term="数学" scheme="https://zzxrepository.github.io/categories/%E7%AE%97%E6%B3%95/LeetCode/%E6%95%B0%E5%AD%A6/"/>
     
     
-    <category term="简单" scheme="https://zzxrepository.github.io/tags/%E7%AE%80%E5%8D%95/"/>
-    
     <category term="二分法" scheme="https://zzxrepository.github.io/tags/%E4%BA%8C%E5%88%86%E6%B3%95/"/>
+    
+    <category term="简单" scheme="https://zzxrepository.github.io/tags/%E7%AE%80%E5%8D%95/"/>
     
   </entry>
   
