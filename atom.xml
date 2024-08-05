@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>神马都会亿点点的毛毛张</title>
-  <icon>https://www.mmz.top/images/favicon_200x200.png</icon>
+  <icon>https://zzxrepository.github.io/images/favicon_200x200.png</icon>
   <subtitle>Stay Hungry Stay Foolish</subtitle>
-  <link href="https://www.mmz.top/atom.xml" rel="self"/>
+  <link href="https://zzxrepository.github.io/atom.xml" rel="self"/>
   
-  <link href="https://www.mmz.top/"/>
+  <link href="https://zzxrepository.github.io/"/>
   <updated>2024-08-05T00:48:17.817Z</updated>
-  <id>https://www.mmz.top/</id>
+  <id>https://zzxrepository.github.io/</id>
   
   <author>
     <name>毛毛张</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>LeetCode | 283 | 移动零 | 双指针</title>
-    <link href="https://www.mmz.top/posts/79ae5266/"/>
-    <id>https://www.mmz.top/posts/79ae5266/</id>
+    <link href="https://zzxrepository.github.io/posts/79ae5266/"/>
+    <id>https://zzxrepository.github.io/posts/79ae5266/</id>
     <published>2024-08-04T00:48:59.000Z</published>
     <updated>2024-08-05T00:48:17.817Z</updated>
     
@@ -28,25 +28,25 @@
     
     
     
-    <category term="算法" scheme="https://www.mmz.top/categories/%E7%AE%97%E6%B3%95/"/>
+    <category term="算法" scheme="https://zzxrepository.github.io/categories/%E7%AE%97%E6%B3%95/"/>
     
-    <category term="LeetCode" scheme="https://www.mmz.top/categories/%E7%AE%97%E6%B3%95/LeetCode/"/>
+    <category term="LeetCode" scheme="https://zzxrepository.github.io/categories/%E7%AE%97%E6%B3%95/LeetCode/"/>
     
-    <category term="数组" scheme="https://www.mmz.top/categories/%E7%AE%97%E6%B3%95/LeetCode/%E6%95%B0%E7%BB%84/"/>
+    <category term="数组" scheme="https://zzxrepository.github.io/categories/%E7%AE%97%E6%B3%95/LeetCode/%E6%95%B0%E7%BB%84/"/>
     
     
-    <category term="简单" scheme="https://www.mmz.top/tags/%E7%AE%80%E5%8D%95/"/>
+    <category term="双指针" scheme="https://zzxrepository.github.io/tags/%E5%8F%8C%E6%8C%87%E9%92%88/"/>
     
-    <category term="双指针" scheme="https://www.mmz.top/tags/%E5%8F%8C%E6%8C%87%E9%92%88/"/>
+    <category term="简单" scheme="https://zzxrepository.github.io/tags/%E7%AE%80%E5%8D%95/"/>
     
-    <category term="原地移除元素" scheme="https://www.mmz.top/tags/%E5%8E%9F%E5%9C%B0%E7%A7%BB%E9%99%A4%E5%85%83%E7%B4%A0/"/>
+    <category term="原地移除元素" scheme="https://zzxrepository.github.io/tags/%E5%8E%9F%E5%9C%B0%E7%A7%BB%E9%99%A4%E5%85%83%E7%B4%A0/"/>
     
   </entry>
   
   <entry>
     <title>LeetCode | 3 | 无重复字符的最长子串 | 双指针 | 滑动窗口 | 2025兴业银行秋招笔试题 | 哈希集合</title>
-    <link href="https://www.mmz.top/posts/2d418fd2/"/>
-    <id>https://www.mmz.top/posts/2d418fd2/</id>
+    <link href="https://zzxrepository.github.io/posts/2d418fd2/"/>
+    <id>https://zzxrepository.github.io/posts/2d418fd2/</id>
     <published>2024-08-04T00:48:59.000Z</published>
     <updated>2024-08-05T00:48:17.813Z</updated>
     
@@ -55,27 +55,27 @@
     
     
     
-    <category term="算法" scheme="https://www.mmz.top/categories/%E7%AE%97%E6%B3%95/"/>
+    <category term="算法" scheme="https://zzxrepository.github.io/categories/%E7%AE%97%E6%B3%95/"/>
     
-    <category term="LeetCode" scheme="https://www.mmz.top/categories/%E7%AE%97%E6%B3%95/LeetCode/"/>
+    <category term="LeetCode" scheme="https://zzxrepository.github.io/categories/%E7%AE%97%E6%B3%95/LeetCode/"/>
     
-    <category term="字符串" scheme="https://www.mmz.top/categories/%E7%AE%97%E6%B3%95/LeetCode/%E5%AD%97%E7%AC%A6%E4%B8%B2/"/>
+    <category term="字符串" scheme="https://zzxrepository.github.io/categories/%E7%AE%97%E6%B3%95/LeetCode/%E5%AD%97%E7%AC%A6%E4%B8%B2/"/>
     
     
-    <category term="双指针" scheme="https://www.mmz.top/tags/%E5%8F%8C%E6%8C%87%E9%92%88/"/>
+    <category term="双指针" scheme="https://zzxrepository.github.io/tags/%E5%8F%8C%E6%8C%87%E9%92%88/"/>
     
-    <category term="中等" scheme="https://www.mmz.top/tags/%E4%B8%AD%E7%AD%89/"/>
+    <category term="中等" scheme="https://zzxrepository.github.io/tags/%E4%B8%AD%E7%AD%89/"/>
     
-    <category term="滑动窗口" scheme="https://www.mmz.top/tags/%E6%BB%91%E5%8A%A8%E7%AA%97%E5%8F%A3/"/>
+    <category term="滑动窗口" scheme="https://zzxrepository.github.io/tags/%E6%BB%91%E5%8A%A8%E7%AA%97%E5%8F%A3/"/>
     
-    <category term="哈希集合" scheme="https://www.mmz.top/tags/%E5%93%88%E5%B8%8C%E9%9B%86%E5%90%88/"/>
+    <category term="哈希集合" scheme="https://zzxrepository.github.io/tags/%E5%93%88%E5%B8%8C%E9%9B%86%E5%90%88/"/>
     
   </entry>
   
   <entry>
     <title>LeetCode | 76 | 最小覆盖子串 | 双指针 | 滑动窗口 | 哈希集合</title>
-    <link href="https://www.mmz.top/posts/a28b5bea/"/>
-    <id>https://www.mmz.top/posts/a28b5bea/</id>
+    <link href="https://zzxrepository.github.io/posts/a28b5bea/"/>
+    <id>https://zzxrepository.github.io/posts/a28b5bea/</id>
     <published>2024-08-04T00:48:59.000Z</published>
     <updated>2024-08-05T00:48:17.815Z</updated>
     
@@ -84,27 +84,27 @@
     
     
     
-    <category term="算法" scheme="https://www.mmz.top/categories/%E7%AE%97%E6%B3%95/"/>
+    <category term="算法" scheme="https://zzxrepository.github.io/categories/%E7%AE%97%E6%B3%95/"/>
     
-    <category term="LeetCode" scheme="https://www.mmz.top/categories/%E7%AE%97%E6%B3%95/LeetCode/"/>
+    <category term="LeetCode" scheme="https://zzxrepository.github.io/categories/%E7%AE%97%E6%B3%95/LeetCode/"/>
     
-    <category term="字符串" scheme="https://www.mmz.top/categories/%E7%AE%97%E6%B3%95/LeetCode/%E5%AD%97%E7%AC%A6%E4%B8%B2/"/>
+    <category term="字符串" scheme="https://zzxrepository.github.io/categories/%E7%AE%97%E6%B3%95/LeetCode/%E5%AD%97%E7%AC%A6%E4%B8%B2/"/>
     
     
-    <category term="双指针" scheme="https://www.mmz.top/tags/%E5%8F%8C%E6%8C%87%E9%92%88/"/>
+    <category term="双指针" scheme="https://zzxrepository.github.io/tags/%E5%8F%8C%E6%8C%87%E9%92%88/"/>
     
-    <category term="滑动窗口" scheme="https://www.mmz.top/tags/%E6%BB%91%E5%8A%A8%E7%AA%97%E5%8F%A3/"/>
+    <category term="滑动窗口" scheme="https://zzxrepository.github.io/tags/%E6%BB%91%E5%8A%A8%E7%AA%97%E5%8F%A3/"/>
     
-    <category term="哈希集合" scheme="https://www.mmz.top/tags/%E5%93%88%E5%B8%8C%E9%9B%86%E5%90%88/"/>
+    <category term="哈希集合" scheme="https://zzxrepository.github.io/tags/%E5%93%88%E5%B8%8C%E9%9B%86%E5%90%88/"/>
     
-    <category term="困难" scheme="https://www.mmz.top/tags/%E5%9B%B0%E9%9A%BE/"/>
+    <category term="困难" scheme="https://zzxrepository.github.io/tags/%E5%9B%B0%E9%9A%BE/"/>
     
   </entry>
   
   <entry>
     <title>LeetCode | 167 | 两数之和2-输入有序数组 | 二分法 | 双指针</title>
-    <link href="https://www.mmz.top/posts/5fceb6b/"/>
-    <id>https://www.mmz.top/posts/5fceb6b/</id>
+    <link href="https://zzxrepository.github.io/posts/5fceb6b/"/>
+    <id>https://zzxrepository.github.io/posts/5fceb6b/</id>
     <published>2024-08-02T13:48:59.000Z</published>
     <updated>2024-08-05T00:48:17.817Z</updated>
     
@@ -113,27 +113,27 @@
     
     
     
-    <category term="算法" scheme="https://www.mmz.top/categories/%E7%AE%97%E6%B3%95/"/>
+    <category term="算法" scheme="https://zzxrepository.github.io/categories/%E7%AE%97%E6%B3%95/"/>
     
-    <category term="LeetCode" scheme="https://www.mmz.top/categories/%E7%AE%97%E6%B3%95/LeetCode/"/>
+    <category term="LeetCode" scheme="https://zzxrepository.github.io/categories/%E7%AE%97%E6%B3%95/LeetCode/"/>
     
-    <category term="数组" scheme="https://www.mmz.top/categories/%E7%AE%97%E6%B3%95/LeetCode/%E6%95%B0%E7%BB%84/"/>
+    <category term="数组" scheme="https://zzxrepository.github.io/categories/%E7%AE%97%E6%B3%95/LeetCode/%E6%95%B0%E7%BB%84/"/>
     
     
-    <category term="二分法" scheme="https://www.mmz.top/tags/%E4%BA%8C%E5%88%86%E6%B3%95/"/>
+    <category term="二分法" scheme="https://zzxrepository.github.io/tags/%E4%BA%8C%E5%88%86%E6%B3%95/"/>
     
-    <category term="双指针" scheme="https://www.mmz.top/tags/%E5%8F%8C%E6%8C%87%E9%92%88/"/>
+    <category term="双指针" scheme="https://zzxrepository.github.io/tags/%E5%8F%8C%E6%8C%87%E9%92%88/"/>
     
-    <category term="中等" scheme="https://www.mmz.top/tags/%E4%B8%AD%E7%AD%89/"/>
+    <category term="中等" scheme="https://zzxrepository.github.io/tags/%E4%B8%AD%E7%AD%89/"/>
     
-    <category term="数组" scheme="https://www.mmz.top/tags/%E6%95%B0%E7%BB%84/"/>
+    <category term="数组" scheme="https://zzxrepository.github.io/tags/%E6%95%B0%E7%BB%84/"/>
     
   </entry>
   
   <entry>
     <title>LeetCode | 643 | 子数组最大平均数 | 双指针 | 滑动窗口</title>
-    <link href="https://www.mmz.top/posts/f0ac30bf/"/>
-    <id>https://www.mmz.top/posts/f0ac30bf/</id>
+    <link href="https://zzxrepository.github.io/posts/f0ac30bf/"/>
+    <id>https://zzxrepository.github.io/posts/f0ac30bf/</id>
     <published>2024-08-02T01:48:59.000Z</published>
     <updated>2024-08-05T00:48:17.818Z</updated>
     
@@ -142,23 +142,23 @@
     
     
     
-    <category term="算法" scheme="https://www.mmz.top/categories/%E7%AE%97%E6%B3%95/"/>
+    <category term="算法" scheme="https://zzxrepository.github.io/categories/%E7%AE%97%E6%B3%95/"/>
     
-    <category term="LeetCode" scheme="https://www.mmz.top/categories/%E7%AE%97%E6%B3%95/LeetCode/"/>
+    <category term="LeetCode" scheme="https://zzxrepository.github.io/categories/%E7%AE%97%E6%B3%95/LeetCode/"/>
     
-    <category term="数组" scheme="https://www.mmz.top/categories/%E7%AE%97%E6%B3%95/LeetCode/%E6%95%B0%E7%BB%84/"/>
+    <category term="数组" scheme="https://zzxrepository.github.io/categories/%E7%AE%97%E6%B3%95/LeetCode/%E6%95%B0%E7%BB%84/"/>
     
     
-    <category term="双指针" scheme="https://www.mmz.top/tags/%E5%8F%8C%E6%8C%87%E9%92%88/"/>
+    <category term="双指针" scheme="https://zzxrepository.github.io/tags/%E5%8F%8C%E6%8C%87%E9%92%88/"/>
     
-    <category term="滑动窗口" scheme="https://www.mmz.top/tags/%E6%BB%91%E5%8A%A8%E7%AA%97%E5%8F%A3/"/>
+    <category term="滑动窗口" scheme="https://zzxrepository.github.io/tags/%E6%BB%91%E5%8A%A8%E7%AA%97%E5%8F%A3/"/>
     
   </entry>
   
   <entry>
     <title>LeetCode | 27 | 移除元素 | 双指针</title>
-    <link href="https://www.mmz.top/posts/cbe15448/"/>
-    <id>https://www.mmz.top/posts/cbe15448/</id>
+    <link href="https://zzxrepository.github.io/posts/cbe15448/"/>
+    <id>https://zzxrepository.github.io/posts/cbe15448/</id>
     <published>2024-08-01T13:48:59.000Z</published>
     <updated>2024-08-05T00:48:17.816Z</updated>
     
@@ -167,25 +167,25 @@
     
     
     
-    <category term="算法" scheme="https://www.mmz.top/categories/%E7%AE%97%E6%B3%95/"/>
+    <category term="算法" scheme="https://zzxrepository.github.io/categories/%E7%AE%97%E6%B3%95/"/>
     
-    <category term="LeetCode" scheme="https://www.mmz.top/categories/%E7%AE%97%E6%B3%95/LeetCode/"/>
+    <category term="LeetCode" scheme="https://zzxrepository.github.io/categories/%E7%AE%97%E6%B3%95/LeetCode/"/>
     
-    <category term="数组" scheme="https://www.mmz.top/categories/%E7%AE%97%E6%B3%95/LeetCode/%E6%95%B0%E7%BB%84/"/>
+    <category term="数组" scheme="https://zzxrepository.github.io/categories/%E7%AE%97%E6%B3%95/LeetCode/%E6%95%B0%E7%BB%84/"/>
     
     
-    <category term="简单" scheme="https://www.mmz.top/tags/%E7%AE%80%E5%8D%95/"/>
+    <category term="双指针" scheme="https://zzxrepository.github.io/tags/%E5%8F%8C%E6%8C%87%E9%92%88/"/>
     
-    <category term="双指针" scheme="https://www.mmz.top/tags/%E5%8F%8C%E6%8C%87%E9%92%88/"/>
+    <category term="简单" scheme="https://zzxrepository.github.io/tags/%E7%AE%80%E5%8D%95/"/>
     
-    <category term="原地移除元素" scheme="https://www.mmz.top/tags/%E5%8E%9F%E5%9C%B0%E7%A7%BB%E9%99%A4%E5%85%83%E7%B4%A0/"/>
+    <category term="原地移除元素" scheme="https://zzxrepository.github.io/tags/%E5%8E%9F%E5%9C%B0%E7%A7%BB%E9%99%A4%E5%85%83%E7%B4%A0/"/>
     
   </entry>
   
   <entry>
     <title>网站声明</title>
-    <link href="https://www.mmz.top/posts/5c05fb86/"/>
-    <id>https://www.mmz.top/posts/5c05fb86/</id>
+    <link href="https://zzxrepository.github.io/posts/5c05fb86/"/>
+    <id>https://zzxrepository.github.io/posts/5c05fb86/</id>
     <published>2024-08-01T08:42:42.000Z</published>
     <updated>2024-08-05T00:48:17.811Z</updated>
     
@@ -205,8 +205,8 @@
   
   <entry>
     <title>LeetCode | 34 | 在排序数组中查找元素的第一个和最后一个位置 | 最全的解法！| 二分法优化</title>
-    <link href="https://www.mmz.top/posts/efa3d840/"/>
-    <id>https://www.mmz.top/posts/efa3d840/</id>
+    <link href="https://zzxrepository.github.io/posts/efa3d840/"/>
+    <id>https://zzxrepository.github.io/posts/efa3d840/</id>
     <published>2024-08-01T04:40:40.000Z</published>
     <updated>2024-08-05T00:48:17.817Z</updated>
     
@@ -217,25 +217,25 @@
     
     
     
-    <category term="算法" scheme="https://www.mmz.top/categories/%E7%AE%97%E6%B3%95/"/>
+    <category term="算法" scheme="https://zzxrepository.github.io/categories/%E7%AE%97%E6%B3%95/"/>
     
-    <category term="LeetCode" scheme="https://www.mmz.top/categories/%E7%AE%97%E6%B3%95/LeetCode/"/>
+    <category term="LeetCode" scheme="https://zzxrepository.github.io/categories/%E7%AE%97%E6%B3%95/LeetCode/"/>
     
-    <category term="数组" scheme="https://www.mmz.top/categories/%E7%AE%97%E6%B3%95/LeetCode/%E6%95%B0%E7%BB%84/"/>
+    <category term="数组" scheme="https://zzxrepository.github.io/categories/%E7%AE%97%E6%B3%95/LeetCode/%E6%95%B0%E7%BB%84/"/>
     
     
-    <category term="二分法" scheme="https://www.mmz.top/tags/%E4%BA%8C%E5%88%86%E6%B3%95/"/>
+    <category term="二分法" scheme="https://zzxrepository.github.io/tags/%E4%BA%8C%E5%88%86%E6%B3%95/"/>
     
-    <category term="中等" scheme="https://www.mmz.top/tags/%E4%B8%AD%E7%AD%89/"/>
+    <category term="中等" scheme="https://zzxrepository.github.io/tags/%E4%B8%AD%E7%AD%89/"/>
     
-    <category term="数组" scheme="https://www.mmz.top/tags/%E6%95%B0%E7%BB%84/"/>
+    <category term="数组" scheme="https://zzxrepository.github.io/tags/%E6%95%B0%E7%BB%84/"/>
     
   </entry>
   
   <entry>
     <title>二叉树前序遍历、中序遍历、后序遍历和层序遍历 | 递归法 | 迭代法 | 统一迭代法 | 深度优先搜索 | 广度优先搜索</title>
-    <link href="https://www.mmz.top/posts/81841fda/"/>
-    <id>https://www.mmz.top/posts/81841fda/</id>
+    <link href="https://zzxrepository.github.io/posts/81841fda/"/>
+    <id>https://zzxrepository.github.io/posts/81841fda/</id>
     <published>2024-07-28T08:04:00.000Z</published>
     <updated>2024-08-05T00:48:17.816Z</updated>
     
@@ -246,29 +246,29 @@
     
     
     
-    <category term="算法" scheme="https://www.mmz.top/categories/%E7%AE%97%E6%B3%95/"/>
+    <category term="算法" scheme="https://zzxrepository.github.io/categories/%E7%AE%97%E6%B3%95/"/>
     
-    <category term="LeetCode" scheme="https://www.mmz.top/categories/%E7%AE%97%E6%B3%95/LeetCode/"/>
+    <category term="LeetCode" scheme="https://zzxrepository.github.io/categories/%E7%AE%97%E6%B3%95/LeetCode/"/>
     
-    <category term="二叉树" scheme="https://www.mmz.top/categories/%E7%AE%97%E6%B3%95/LeetCode/%E4%BA%8C%E5%8F%89%E6%A0%91/"/>
+    <category term="二叉树" scheme="https://zzxrepository.github.io/categories/%E7%AE%97%E6%B3%95/LeetCode/%E4%BA%8C%E5%8F%89%E6%A0%91/"/>
     
     
-    <category term="广度优先遍历" scheme="https://www.mmz.top/tags/%E5%B9%BF%E5%BA%A6%E4%BC%98%E5%85%88%E9%81%8D%E5%8E%86/"/>
+    <category term="广度优先遍历" scheme="https://zzxrepository.github.io/tags/%E5%B9%BF%E5%BA%A6%E4%BC%98%E5%85%88%E9%81%8D%E5%8E%86/"/>
     
-    <category term="深度优先遍历" scheme="https://www.mmz.top/tags/%E6%B7%B1%E5%BA%A6%E4%BC%98%E5%85%88%E9%81%8D%E5%8E%86/"/>
+    <category term="深度优先遍历" scheme="https://zzxrepository.github.io/tags/%E6%B7%B1%E5%BA%A6%E4%BC%98%E5%85%88%E9%81%8D%E5%8E%86/"/>
     
-    <category term="递归法" scheme="https://www.mmz.top/tags/%E9%80%92%E5%BD%92%E6%B3%95/"/>
+    <category term="递归法" scheme="https://zzxrepository.github.io/tags/%E9%80%92%E5%BD%92%E6%B3%95/"/>
     
-    <category term="迭代法" scheme="https://www.mmz.top/tags/%E8%BF%AD%E4%BB%A3%E6%B3%95/"/>
+    <category term="迭代法" scheme="https://zzxrepository.github.io/tags/%E8%BF%AD%E4%BB%A3%E6%B3%95/"/>
     
-    <category term="二叉树" scheme="https://www.mmz.top/tags/%E4%BA%8C%E5%8F%89%E6%A0%91/"/>
+    <category term="二叉树" scheme="https://zzxrepository.github.io/tags/%E4%BA%8C%E5%8F%89%E6%A0%91/"/>
     
   </entry>
   
   <entry>
     <title>LeetCode | 441 | 排列硬币 | 一个简单的数学题！</title>
-    <link href="https://www.mmz.top/posts/48e505a2/"/>
-    <id>https://www.mmz.top/posts/48e505a2/</id>
+    <link href="https://zzxrepository.github.io/posts/48e505a2/"/>
+    <id>https://zzxrepository.github.io/posts/48e505a2/</id>
     <published>2024-07-28T08:04:00.000Z</published>
     <updated>2024-08-05T00:48:17.814Z</updated>
     
@@ -279,16 +279,16 @@
     
     
     
-    <category term="算法" scheme="https://www.mmz.top/categories/%E7%AE%97%E6%B3%95/"/>
+    <category term="算法" scheme="https://zzxrepository.github.io/categories/%E7%AE%97%E6%B3%95/"/>
     
-    <category term="LeetCode" scheme="https://www.mmz.top/categories/%E7%AE%97%E6%B3%95/LeetCode/"/>
+    <category term="LeetCode" scheme="https://zzxrepository.github.io/categories/%E7%AE%97%E6%B3%95/LeetCode/"/>
     
-    <category term="数学" scheme="https://www.mmz.top/categories/%E7%AE%97%E6%B3%95/LeetCode/%E6%95%B0%E5%AD%A6/"/>
+    <category term="数学" scheme="https://zzxrepository.github.io/categories/%E7%AE%97%E6%B3%95/LeetCode/%E6%95%B0%E5%AD%A6/"/>
     
     
-    <category term="简单" scheme="https://www.mmz.top/tags/%E7%AE%80%E5%8D%95/"/>
+    <category term="二分法" scheme="https://zzxrepository.github.io/tags/%E4%BA%8C%E5%88%86%E6%B3%95/"/>
     
-    <category term="二分法" scheme="https://www.mmz.top/tags/%E4%BA%8C%E5%88%86%E6%B3%95/"/>
+    <category term="简单" scheme="https://zzxrepository.github.io/tags/%E7%AE%80%E5%8D%95/"/>
     
   </entry>
   
