@@ -160,31 +160,6 @@
   </entry>
   
   <entry>
-    <title>LeetCode | 643 | 子数组最大平均数 | 双指针 | 滑动窗口</title>
-    <link href="https://zzxrepository.github.io/posts/f0ac30bf/"/>
-    <id>https://zzxrepository.github.io/posts/f0ac30bf/</id>
-    <published>2024-08-02T01:48:59.000Z</published>
-    <updated>2024-08-05T00:48:17.818Z</updated>
-    
-    
-    <summary type="html">&lt;center&gt;&lt;b&gt;双指针在一定条件下可以转化成滑动窗口，这道题就是个很好的例子&lt;/b&gt;&lt;/center&gt;</summary>
-    
-    
-    
-    <category term="算法" scheme="https://zzxrepository.github.io/categories/%E7%AE%97%E6%B3%95/"/>
-    
-    <category term="LeetCode" scheme="https://zzxrepository.github.io/categories/%E7%AE%97%E6%B3%95/LeetCode/"/>
-    
-    <category term="数组" scheme="https://zzxrepository.github.io/categories/%E7%AE%97%E6%B3%95/LeetCode/%E6%95%B0%E7%BB%84/"/>
-    
-    
-    <category term="滑动窗口" scheme="https://zzxrepository.github.io/tags/%E6%BB%91%E5%8A%A8%E7%AA%97%E5%8F%A3/"/>
-    
-    <category term="双指针" scheme="https://zzxrepository.github.io/tags/%E5%8F%8C%E6%8C%87%E9%92%88/"/>
-    
-  </entry>
-  
-  <entry>
     <title>LeetCode | 203 | 移除链表元素 | 迭代法 | 虚设头节点 | 递归 | 三种方法</title>
     <link href="https://zzxrepository.github.io/posts/daf65820/"/>
     <id>https://zzxrepository.github.io/posts/daf65820/</id>
@@ -210,6 +185,31 @@
     <category term="迭代" scheme="https://zzxrepository.github.io/tags/%E8%BF%AD%E4%BB%A3/"/>
     
     <category term="虚设头节点" scheme="https://zzxrepository.github.io/tags/%E8%99%9A%E8%AE%BE%E5%A4%B4%E8%8A%82%E7%82%B9/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>LeetCode | 643 | 子数组最大平均数 | 双指针 | 滑动窗口</title>
+    <link href="https://zzxrepository.github.io/posts/f0ac30bf/"/>
+    <id>https://zzxrepository.github.io/posts/f0ac30bf/</id>
+    <published>2024-08-02T01:48:59.000Z</published>
+    <updated>2024-08-05T00:48:17.818Z</updated>
+    
+    
+    <summary type="html">&lt;center&gt;&lt;b&gt;双指针在一定条件下可以转化成滑动窗口，这道题就是个很好的例子&lt;/b&gt;&lt;/center&gt;</summary>
+    
+    
+    
+    <category term="算法" scheme="https://zzxrepository.github.io/categories/%E7%AE%97%E6%B3%95/"/>
+    
+    <category term="LeetCode" scheme="https://zzxrepository.github.io/categories/%E7%AE%97%E6%B3%95/LeetCode/"/>
+    
+    <category term="数组" scheme="https://zzxrepository.github.io/categories/%E7%AE%97%E6%B3%95/LeetCode/%E6%95%B0%E7%BB%84/"/>
+    
+    
+    <category term="滑动窗口" scheme="https://zzxrepository.github.io/tags/%E6%BB%91%E5%8A%A8%E7%AA%97%E5%8F%A3/"/>
+    
+    <category term="双指针" scheme="https://zzxrepository.github.io/tags/%E5%8F%8C%E6%8C%87%E9%92%88/"/>
     
   </entry>
   
