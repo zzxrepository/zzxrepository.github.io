@@ -108,7 +108,7 @@
 
 
 <nav class="site-nav">
-  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li><li class="menu-item menu-item-sitemap"><a href="/sitemap.xml" rel="section"><i class="fa fa-sitemap fa-fw"></i>站点地图</a></li>
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">19</span></a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">37</span></a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">88</span></a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li><li class="menu-item menu-item-sitemap"><a href="/sitemap.xml" rel="section"><i class="fa fa-sitemap fa-fw"></i>站点地图</a></li><li class="menu-item menu-item-commonweal"><a href="/404/" rel="section"><i class="fa fa-heartbeat fa-fw"></i>公益 404</a></li>
       <li class="menu-item menu-item-search">
         <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
         </a>
@@ -163,7 +163,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#lt-center-gt"><span class="nav-text">&lt;&#x2F;center&gt;</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#1-%E9%A2%98%E7%9B%AE%E6%8F%8F%E8%BF%B0"><span class="nav-text">1.题目描述</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2-%E9%A2%98%E8%A7%A3"><span class="nav-text">2.题解</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#2-1-%E6%A8%AA%E5%90%91%E6%89%AB%E6%8F%8F"><span class="nav-text">2.1 横向扫描</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-2-%E7%BA%B5%E5%90%91%E6%89%AB%E6%8F%8F"><span class="nav-text">2.2 纵向扫描</span></a></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#1-%E9%A2%98%E7%9B%AE%E6%8F%8F%E8%BF%B0"><span class="nav-text">1.题目描述</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2-%E9%A2%98%E8%A7%A3"><span class="nav-text">2.题解</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#2-1-%E6%A8%AA%E5%90%91%E6%89%AB%E6%8F%8F"><span class="nav-text">2.1 横向扫描</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-2-%E7%BA%B5%E5%90%91%E6%89%AB%E6%8F%8F"><span class="nav-text">2.2 纵向扫描</span></a></li></ol></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -365,14 +365,21 @@
     <div class="post-body" itemprop="articleBody"><center><b>这是一道一看就会，一做就错的题目！</b></center>
 
 <span id="more"></span>
+
 <hr>
-<p><center><br>    <b>LeetCode链接：<a target="_blank" rel="noopener" href="https://leetcode.cn/problems/longest-common-prefix/">14. 最长公共前缀<a/></b></p>
-<h2 id="lt-center-gt"><a href="#lt-center-gt" class="headerlink" title="&lt;/center&gt;"></a>&lt;/center&gt;</h2><h1 id="1-题目描述"><a href="#1-题目描述" class="headerlink" title="1.题目描述"></a>1.题目描述</h1><p>编写一个函数来查找字符串数组中的最长公共前缀。</p>
+<center>
+    <b>LeetCode链接：<a target="_blank" rel="noopener" href="https://leetcode.cn/problems/longest-common-prefix/">14. 最长公共前缀<a/></b>
+</center>
+---
+
+<h1 id="1-题目描述"><a href="#1-题目描述" class="headerlink" title="1.题目描述"></a>1.题目描述</h1><p>编写一个函数来查找字符串数组中的最长公共前缀。</p>
 <p>如果不存在公共前缀，返回空字符串 <code>&quot;&quot;</code>。</p>
 <p><strong>示例 1：</strong></p>
 <figure class="highlight armasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">输入：<span class="keyword">strs</span> = [<span class="string">&quot;flower&quot;</span>,<span class="string">&quot;flow&quot;</span>,<span class="string">&quot;flight&quot;</span>]</span><br><span class="line">输出：<span class="string">&quot;fl&quot;</span></span><br></pre></td></tr></table></figure>
+
 <p><strong>示例 2：</strong></p>
 <figure class="highlight armasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">输入：<span class="keyword">strs</span> = [<span class="string">&quot;dog&quot;</span>,<span class="string">&quot;racecar&quot;</span>,<span class="string">&quot;car&quot;</span>]</span><br><span class="line">输出：<span class="string">&quot;&quot;</span></span><br><span class="line">解释：输入不存在公共前缀。</span><br></pre></td></tr></table></figure>
+
 <p><strong>提示：</strong></p>
 <ul>
 <li><code>1 &lt;= strs.length &lt;= 200</code></li>
@@ -380,11 +387,13 @@
 <li><code>strs[i]</code> 仅由小写英文字母组成</li>
 </ul>
 <h1 id="2-题解"><a href="#2-题解" class="headerlink" title="2.题解"></a>2.题解</h1><h2 id="2-1-横向扫描"><a href="#2-1-横向扫描" class="headerlink" title="2.1 横向扫描"></a>2.1 横向扫描</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> String <span class="title function_">longestCommonPrefix</span><span class="params">(String[] strs)</span> &#123;</span><br><span class="line">        <span class="comment">// 如果输入数组为空，直接返回空字符串</span></span><br><span class="line">        <span class="keyword">if</span> (strs.length == <span class="number">0</span>)</span><br><span class="line">            <span class="keyword">return</span> <span class="string">&quot;&quot;</span>;</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 初始化结果为第一个字符串。我们将不断缩短这个字符串，直到找到所有字符串的公共前缀</span></span><br><span class="line">        <span class="type">String</span> <span class="variable">result</span> <span class="operator">=</span> strs[<span class="number">0</span>];</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 从第二个字符串开始遍历，和结果字符串进行比较</span></span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">1</span>; i &lt; strs.length; i++) &#123;</span><br><span class="line">            <span class="type">int</span> j;</span><br><span class="line">            <span class="comment">// 逐字符比较 result 和当前字符串 strs[i]</span></span><br><span class="line">            <span class="comment">// 比较的条件是：两个字符串都没有越界，并且字符相等</span></span><br><span class="line">            <span class="keyword">for</span> (j = <span class="number">0</span>; j &lt; result.length() &amp;&amp; j &lt; strs[i].length(); j++) &#123;</span><br><span class="line">                <span class="comment">// 一旦找到不匹配的字符，停止比较</span></span><br><span class="line">                <span class="keyword">if</span> (result.charAt(j) != strs[i].charAt(j))</span><br><span class="line">                    <span class="keyword">break</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="comment">// 更新 result 为当前匹配的最长前缀</span></span><br><span class="line">            result = result.substring(<span class="number">0</span>, j);</span><br><span class="line"></span><br><span class="line">            <span class="comment">// 如果 result 变成空字符串，意味着不存在公共前缀，直接返回空字符串</span></span><br><span class="line">            <span class="keyword">if</span> (result.equals(<span class="string">&quot;&quot;</span>))</span><br><span class="line">                <span class="keyword">return</span> result;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">// 返回找到的最长公共前缀</span></span><br><span class="line">        <span class="keyword">return</span> result;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
 <ul>
 <li>图解：</li>
 </ul>
 <p><img src="https://assets.leetcode-cn.com/solution-static/14/14_fig1.png" alt="fig1"></p>
 <h2 id="2-2-纵向扫描"><a href="#2-2-纵向扫描" class="headerlink" title="2.2 纵向扫描"></a>2.2 纵向扫描</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> String <span class="title function_">longestCommonPrefix</span><span class="params">(String[] strs)</span> &#123;</span><br><span class="line">        <span class="comment">// 如果输入为空或字符串数组长度为0，直接返回空字符串</span></span><br><span class="line">        <span class="keyword">if</span> (strs == <span class="literal">null</span> || strs.length == <span class="number">0</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="string">&quot;&quot;</span>;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 获取第一个字符串的长度，用于后续的字符比较</span></span><br><span class="line">        <span class="type">int</span> <span class="variable">length</span> <span class="operator">=</span> strs[<span class="number">0</span>].length();</span><br><span class="line">        <span class="comment">// 获取字符串数组的长度</span></span><br><span class="line">        <span class="type">int</span> <span class="variable">count</span> <span class="operator">=</span> strs.length;</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 遍历第一个字符串的每一个字符</span></span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>; i &lt; length; i++) &#123;</span><br><span class="line">            <span class="comment">// 获取第一个字符串中当前下标的字符</span></span><br><span class="line">            <span class="type">char</span> <span class="variable">c</span> <span class="operator">=</span> strs[<span class="number">0</span>].charAt(i);</span><br><span class="line"></span><br><span class="line">            <span class="comment">// 从第二个字符串开始，依次比较对应位置的字符是否一致</span></span><br><span class="line">            <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">j</span> <span class="operator">=</span> <span class="number">1</span>; j &lt; count; j++) &#123;</span><br><span class="line">                <span class="comment">// 如果到达某个字符串的末尾，或当前字符与第一个字符串的字符不匹配</span></span><br><span class="line">                <span class="keyword">if</span> (i == strs[j].length() || strs[j].charAt(i) != c) &#123;</span><br><span class="line">                    <span class="comment">// 返回第一个字符串的前缀，长度为i</span></span><br><span class="line">                    <span class="keyword">return</span> strs[<span class="number">0</span>].substring(<span class="number">0</span>, i);</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 如果循环结束，说明所有字符串的前缀一致，返回第一个字符串</span></span><br><span class="line">        <span class="keyword">return</span> strs[<span class="number">0</span>];</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
 <ul>
 <li>图解</li>
 </ul>
@@ -459,8 +468,8 @@
 
           <div class="post-nav">
             <div class="post-nav-item">
-                <a href="/2024/09/15/algorithm/leetcode/%E6%95%B0%E7%BB%84/LeetCode-56-%E5%90%88%E5%B9%B6%E5%8C%BA%E9%97%B4/" rel="prev" title="合并区间 | LeetCode-56">
-                  <i class="fa fa-angle-left"></i> 合并区间 | LeetCode-56
+                <a href="/2024/09/15/algorithm/leetcode/%E8%B4%AA%E5%BF%83%E7%AE%97%E6%B3%95/LeetCode-%E5%8C%BA%E9%97%B4%E9%97%AE%E9%A2%98/" rel="prev" title="区间问题 | LeetCode-56">
+                  <i class="fa fa-angle-left"></i> 区间问题 | LeetCode-56
                 </a>
             </div>
             <div class="post-nav-item">
@@ -500,14 +509,14 @@
       <i class="fa fa-chart-line"></i>
     </span>
       <span>站点总字数：</span>
-    <span title="站点总字数">281k</span>
+    <span title="站点总字数">282k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
       <span>站点阅读时长 &asymp;</span>
-    <span title="站点阅读时长">7:49</span>
+    <span title="站点阅读时长">7:51</span>
   </span>
 </div>
 <div class="busuanzi-count">

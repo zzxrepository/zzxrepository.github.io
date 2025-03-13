@@ -104,7 +104,7 @@
 
 
 <nav class="site-nav">
-  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li><li class="menu-item menu-item-sitemap"><a href="/sitemap.xml" rel="section"><i class="fa fa-sitemap fa-fw"></i>站点地图</a></li>
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">19</span></a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">37</span></a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">88</span></a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li><li class="menu-item menu-item-sitemap"><a href="/sitemap.xml" rel="section"><i class="fa fa-sitemap fa-fw"></i>站点地图</a></li><li class="menu-item menu-item-commonweal"><a href="/404/" rel="section"><i class="fa fa-heartbeat fa-fw"></i>公益 404</a></li>
       <li class="menu-item menu-item-search">
         <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
         </a>
@@ -362,6 +362,7 @@
 <p>贪心练习题</p>
 </blockquote>
 <span id="more"></span>
+
 <hr>
 <center>
     <b>LeetCode链接：<a target="_blank" rel="noopener" href="https://leetcode.cn/problems/wiggle-subsequence/">376. 摆动序列<a/></b>
@@ -378,10 +379,13 @@
 <p>给你一个整数数组 <code>nums</code> ，返回 <code>nums</code> 中作为 <strong>摆动序列</strong> 的 <strong>最长子序列的长度</strong> 。</p>
 <p><strong>示例 1：</strong></p>
 <figure class="highlight subunit"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">输入：nums = [1,7,4,9,2,5]</span><br><span class="line">输出：6</span><br><span class="line">解释：整个序列均为摆动序列，各元素之间的差值为 (6, <span class="string">-3</span>, 5, <span class="string">-7</span>, 3) 。</span><br></pre></td></tr></table></figure>
+
 <p><strong>示例 2：</strong></p>
 <figure class="highlight subunit"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">输入：nums = [1,17,5,10,13,15,10,5,16,8]</span><br><span class="line">输出：7</span><br><span class="line">解释：这个序列包含几个长度为 7 摆动序列。</span><br><span class="line">其中一个是 [1, 17, 10, 13, 10, 16, 8] ，各元素之间的差值为 (16, <span class="string">-7</span>, 3, <span class="string">-3</span>, 6, <span class="string">-8</span>) 。</span><br></pre></td></tr></table></figure>
+
 <p><strong>示例 3：</strong></p>
 <figure class="highlight dns"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">输入：nums = [<span class="number">1,2,3,4</span>,<span class="number">5,6,7,8</span>,<span class="number">9</span>]</span><br><span class="line">输出：<span class="number">2</span></span><br></pre></td></tr></table></figure>
+
 <p><strong>提示：</strong></p>
 <ul>
 <li><code>1 &lt;= nums.length &lt;= 1000</code></li>
@@ -389,6 +393,7 @@
 </ul>
 <p><strong>进阶：</strong>你能否用 <code>O(n)</code> 时间复杂度完成此题?</p>
 <h1 id="2-题解"><a href="#2-题解" class="headerlink" title="2.题解"></a>2.题解</h1><h2 id="2-1-贪心算法"><a href="#2-1-贪心算法" class="headerlink" title="2.1 贪心算法"></a>2.1 贪心算法</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="type">int</span> <span class="title function_">wiggleMaxLength</span><span class="params">(<span class="type">int</span>[] nums)</span> &#123;</span><br><span class="line">        <span class="comment">// 如果数组为空或长度为 0，则直接返回数组长度</span></span><br><span class="line">        <span class="keyword">if</span> (nums.length &lt;= <span class="number">0</span>) <span class="keyword">return</span> nums.length;</span><br><span class="line">        <span class="type">int</span> <span class="variable">result</span> <span class="operator">=</span> <span class="number">1</span>; <span class="comment">// 记录摆动子序列的长度，初始值为 1（至少包含第一个元素）</span></span><br><span class="line">        <span class="type">int</span> <span class="variable">curDiff</span> <span class="operator">=</span> <span class="number">0</span>; <span class="comment">// 当前元素与前一个元素的差值</span></span><br><span class="line">        <span class="type">int</span> <span class="variable">preDiff</span> <span class="operator">=</span> <span class="number">0</span>; <span class="comment">// 前一个差值，初始化为 0 表示还未开始摆动</span></span><br><span class="line">        <span class="comment">// 遍历数组，从第二个元素开始</span></span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>; i &lt; nums.length - <span class="number">1</span>; i++) &#123;</span><br><span class="line">            <span class="comment">// 计算当前元素与前一个元素的差值</span></span><br><span class="line">            curDiff = nums[i + <span class="number">1</span>] - nums[i];</span><br><span class="line">            </span><br><span class="line">            <span class="comment">// 如果当前差值与前一个差值符号相反，则形成摆动</span></span><br><span class="line">            <span class="keyword">if</span> ((preDiff &lt;= <span class="number">0</span> &amp;&amp; curDiff &gt; <span class="number">0</span>) || (preDiff &gt;= <span class="number">0</span> &amp;&amp; curDiff &lt; <span class="number">0</span>)) &#123;</span><br><span class="line">                result++; <span class="comment">// 摆动子序列的长度加 1</span></span><br><span class="line">                preDiff = curDiff; <span class="comment">// 更新前一个差值为当前差值</span></span><br><span class="line">            &#125; </span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> result; <span class="comment">// 返回摆动子序列的长度</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
 <h2 id="2-2-动态规划"><a href="#2-2-动态规划" class="headerlink" title="2.2 动态规划"></a>2.2 动态规划</h2>
     </div>
     
@@ -458,13 +463,13 @@
 
           <div class="post-nav">
             <div class="post-nav-item">
-                <a href="/2024/10/27/algorithm/leetcode/%E8%B4%AA%E5%BF%83%E7%AE%97%E6%B3%95/LeetCode-406-%E6%A0%B9%E6%8D%AE%E8%BA%AB%E9%AB%98%E9%87%8D%E5%BB%BA%E9%98%9F%E4%BC%8D/" rel="prev" title="根据身高重建队伍 | LeetCode-406 | 贪心算法">
-                  <i class="fa fa-angle-left"></i> 根据身高重建队伍 | LeetCode-406 | 贪心算法
+                <a href="/2024/10/27/algorithm/leetcode/%E8%B4%AA%E5%BF%83%E7%AE%97%E6%B3%95/LeetCode-55-%E8%B7%B3%E8%B7%83%E6%B8%B8%E6%88%8F/" rel="prev" title="跳跃游戏 | LeetCode-55 | 贪心算法">
+                  <i class="fa fa-angle-left"></i> 跳跃游戏 | LeetCode-55 | 贪心算法
                 </a>
             </div>
             <div class="post-nav-item">
-                <a href="/2024/10/27/algorithm/leetcode/%E8%B4%AA%E5%BF%83%E7%AE%97%E6%B3%95/LeetCode-135-%E5%88%86%E5%8F%91%E7%B3%96%E6%9E%9C/" rel="next" title="分发糖果 | LeetCode-135 | 贪心算法">
-                  分发糖果 | LeetCode-135 | 贪心算法 <i class="fa fa-angle-right"></i>
+                <a href="/2024/10/27/algorithm/leetcode/%E8%B4%AA%E5%BF%83%E7%AE%97%E6%B3%95/LeetCode-406-%E6%A0%B9%E6%8D%AE%E8%BA%AB%E9%AB%98%E9%87%8D%E5%BB%BA%E9%98%9F%E4%BC%8D/" rel="next" title="根据身高重建队伍 | LeetCode-406 | 贪心算法">
+                  根据身高重建队伍 | LeetCode-406 | 贪心算法 <i class="fa fa-angle-right"></i>
                 </a>
             </div>
           </div>
@@ -499,14 +504,14 @@
       <i class="fa fa-chart-line"></i>
     </span>
       <span>站点总字数：</span>
-    <span title="站点总字数">281k</span>
+    <span title="站点总字数">282k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
       <span>站点阅读时长 &asymp;</span>
-    <span title="站点阅读时长">7:49</span>
+    <span title="站点阅读时长">7:51</span>
   </span>
 </div>
 <div class="busuanzi-count">

@@ -30,8 +30,8 @@
 <meta property="article:published_time" content="2024-08-02T01:48:59.000Z">
 <meta property="article:modified_time" content="2024-11-12T16:33:45.000Z">
 <meta property="article:author" content="毛毛张">
-<meta property="article:tag" content="双指针">
 <meta property="article:tag" content="滑动窗口">
+<meta property="article:tag" content="双指针">
 <meta name="twitter:card" content="summary">
 
 
@@ -105,7 +105,7 @@
 
 
 <nav class="site-nav">
-  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li><li class="menu-item menu-item-sitemap"><a href="/sitemap.xml" rel="section"><i class="fa fa-sitemap fa-fw"></i>站点地图</a></li>
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">19</span></a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">37</span></a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">88</span></a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li><li class="menu-item menu-item-sitemap"><a href="/sitemap.xml" rel="section"><i class="fa fa-sitemap fa-fw"></i>站点地图</a></li><li class="menu-item menu-item-commonweal"><a href="/404/" rel="section"><i class="fa fa-heartbeat fa-fw"></i>公益 404</a></li>
       <li class="menu-item menu-item-search">
         <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
         </a>
@@ -160,7 +160,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#1-%E9%A2%98%E7%9B%AE%E6%8F%8F%E8%BF%B0"><span class="nav-text">1.题目描述</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2-%E9%A2%98%E8%A7%A3"><span class="nav-text">2.题解</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#2-1-%E6%9A%B4%E5%8A%9B%E8%A7%A3%E6%B3%95%EF%BC%88%E8%B6%85%E5%87%BA%E6%97%B6%E9%97%B4%E9%99%90%E5%88%B6%EF%BC%89"><span class="nav-text">2.1 暴力解法（超出时间限制）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-2-%E5%8F%8C%E6%8C%87%E9%92%88"><span class="nav-text">2.2 双指针</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-3-%E5%8F%8C%E6%8C%87%E9%92%88%E4%BC%98%E5%8C%96-gt-%E6%BB%91%E5%8A%A8%E7%AA%97%E5%8F%A3"><span class="nav-text">2.3 双指针优化&#x3D;&gt;滑动窗口</span></a></li></ol></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#1-%E9%A2%98%E7%9B%AE%E6%8F%8F%E8%BF%B0"><span class="nav-text">1.题目描述</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2-%E9%A2%98%E8%A7%A3"><span class="nav-text">2.题解</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#2-1-%E6%9A%B4%E5%8A%9B%E8%A7%A3%E6%B3%95%EF%BC%88%E8%B6%85%E5%87%BA%E6%97%B6%E9%97%B4%E9%99%90%E5%88%B6%EF%BC%89"><span class="nav-text">2.1 暴力解法（超出时间限制）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-2-%E5%8F%8C%E6%8C%87%E9%92%88"><span class="nav-text">2.2 双指针</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-3-%E5%8F%8C%E6%8C%87%E9%92%88%E4%BC%98%E5%8C%96-%E6%BB%91%E5%8A%A8%E7%AA%97%E5%8F%A3"><span class="nav-text">2.3 双指针优化&#x3D;&gt;滑动窗口</span></a></li></ol></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -362,6 +362,7 @@
     <div class="post-body" itemprop="articleBody"><center><b>双指针在一定条件下可以转化成滑动窗口，这道题就是个很好的例子</b></center>
 
 <span id="more"></span>
+
 <hr>
 <center>
     <b>LeetCode链接：<a target="_blank" rel="noopener" href="https://leetcode.cn/problems/maximum-average-subarray-i/">643. 子数组最大平均数 I<a/></b>
@@ -373,23 +374,34 @@
 <p>任何误差小于 <code>10-5</code> 的答案都将被视为正确答案。</p>
 <p><strong>示例 1：</strong></p>
 <figure class="highlight subunit"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">输入：nums = [1,12,<span class="string">-5</span>,<span class="string">-6</span>,50,3], k = 4</span><br><span class="line">输出：12.75</span><br><span class="line">解释：最大平均数 (12<span class="string">-5</span><span class="string">-6</span><span class="string">+50</span>)/4 = 51/4 = 12.75</span><br></pre></td></tr></table></figure>
+
 <p><strong>示例 2：</strong></p>
 <figure class="highlight dns"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">输入：nums = [<span class="number">5</span>], k = <span class="number">1</span></span><br><span class="line">输出：<span class="number">5.00000</span></span><br></pre></td></tr></table></figure>
+
 <p><strong>提示：</strong></p>
 <ul>
 <li><code>n == nums.length</code></li>
-<li>$1 &lt;= k &lt;= n &lt;= 10^5$</li>
-<li>$-10^4 &lt;= nums[i] &lt;= 10^4$</li>
+<li>$1 &lt;&#x3D; k &lt;&#x3D; n &lt;&#x3D; 10^5$</li>
+<li>$-10^4 &lt;&#x3D; nums[i] &lt;&#x3D; 10^4$</li>
 </ul>
 <h1 id="2-题解"><a href="#2-题解" class="headerlink" title="2.题解"></a>2.题解</h1><h2 id="2-1-暴力解法（超出时间限制）"><a href="#2-1-暴力解法（超出时间限制）" class="headerlink" title="2.1 暴力解法（超出时间限制）"></a>2.1 暴力解法（超出时间限制）</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="type">double</span> <span class="title function_">findMaxAverage</span><span class="params">(<span class="type">int</span>[] nums, <span class="type">int</span> k)</span> &#123;</span><br><span class="line">        <span class="comment">// 初始化最大平均值为负无穷</span></span><br><span class="line">        <span class="type">double</span> <span class="variable">maxAverage</span> <span class="operator">=</span> Double.NEGATIVE_INFINITY;</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 遍历数组中的所有可能的长度为 k 的连续子数组</span></span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>; i &lt;= nums.length - k; i++) &#123;</span><br><span class="line">            <span class="comment">// 计算当前子数组的和</span></span><br><span class="line">            <span class="type">int</span> <span class="variable">sum</span> <span class="operator">=</span> <span class="number">0</span>;</span><br><span class="line">            <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">j</span> <span class="operator">=</span> i; j &lt; i + k; j++) &#123;</span><br><span class="line">                sum += nums[j];</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="comment">// 计算当前子数组的平均值</span></span><br><span class="line">            <span class="type">double</span> <span class="variable">average</span> <span class="operator">=</span> (<span class="type">double</span>) sum / k;</span><br><span class="line">            <span class="comment">// 更新最大平均值</span></span><br><span class="line">            maxAverage = average &gt; maxAverage ? average : maxAverage;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 返回最大平均值</span></span><br><span class="line">        <span class="keyword">return</span> maxAverage;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
 <h2 id="2-2-双指针"><a href="#2-2-双指针" class="headerlink" title="2.2 双指针"></a>2.2 双指针</h2><ul>
 <li>由于每次都要计算平均值，所以在这里做一个处理，先求出长度为<code>k</code>的区间和的最大值，返回时再求平均</li>
 </ul>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="type">double</span> <span class="title function_">findMaxAverage</span><span class="params">(<span class="type">int</span>[] nums, <span class="type">int</span> k)</span> &#123;</span><br><span class="line">        <span class="comment">// 初始化最大和为最小整数值</span></span><br><span class="line">        <span class="type">int</span> <span class="variable">maxSum</span> <span class="operator">=</span> Integer.MIN_VALUE;</span><br><span class="line">        <span class="comment">// 左右指针初始化</span></span><br><span class="line">        <span class="type">int</span> left, right;</span><br><span class="line">        <span class="comment">// 当前窗口的和</span></span><br><span class="line">        <span class="type">int</span> <span class="variable">sum</span> <span class="operator">=</span> <span class="number">0</span>;</span><br><span class="line">        </span><br><span class="line">        <span class="comment">// 遍历数组</span></span><br><span class="line">        <span class="keyword">for</span> (left = <span class="number">0</span>, right = <span class="number">0</span>; right &lt; nums.length; right++) &#123;</span><br><span class="line">            <span class="comment">// 将当前元素加入窗口和</span></span><br><span class="line">            sum += nums[right];</span><br><span class="line">            </span><br><span class="line">            <span class="comment">// 如果当前窗口大小等于 k，更新最大和</span></span><br><span class="line">            <span class="keyword">if</span> (right - left + <span class="number">1</span> == k) &#123;</span><br><span class="line">                maxSum = Math.max(maxSum, sum);</span><br><span class="line">            &#125;</span><br><span class="line">            </span><br><span class="line">            <span class="comment">// 当窗口大小大于等于 k 时，移动左指针</span></span><br><span class="line">            <span class="keyword">while</span> (right - left + <span class="number">1</span> &gt;= k) &#123;</span><br><span class="line">                <span class="comment">// 将窗口左边界的元素移出和</span></span><br><span class="line">                sum -= nums[left];</span><br><span class="line">                <span class="comment">// 移动左指针</span></span><br><span class="line">                left++;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">        <span class="comment">// 返回最大和对应的平均值</span></span><br><span class="line">        <span class="keyword">return</span> (<span class="type">double</span>) maxSum / k;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="2-3-双指针优化-gt-滑动窗口"><a href="#2-3-双指针优化-gt-滑动窗口" class="headerlink" title="2.3 双指针优化=&gt;滑动窗口"></a>2.3 双指针优化=&gt;滑动窗口</h2><ul>
+
+<h2 id="2-3-双指针优化-滑动窗口"><a href="#2-3-双指针优化-滑动窗口" class="headerlink" title="2.3 双指针优化&#x3D;&gt;滑动窗口"></a>2.3 双指针优化&#x3D;&gt;滑动窗口</h2><ul>
 <li>由于所求的窗口的长度是固定的，因此首先计算出数组前<code>k</code>个区间的和，然后再向后滑动区间</li>
 </ul>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="type">double</span> <span class="title function_">findMaxAverage</span><span class="params">(<span class="type">int</span>[] nums, <span class="type">int</span> k)</span> &#123;</span><br><span class="line">        <span class="comment">// 计算第一个长度为 k 的子数组的和</span></span><br><span class="line">        <span class="type">int</span> <span class="variable">maxSum</span> <span class="operator">=</span> <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>; i &lt; k; i++) &#123;</span><br><span class="line">            maxSum += nums[i];</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 当前子数组的和</span></span><br><span class="line">        <span class="type">int</span> <span class="variable">currentSum</span> <span class="operator">=</span> maxSum;</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 使用滑动窗口遍历数组中的其他可能的长度为 k 的连续子数组</span></span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> k; i &lt; nums.length; i++) &#123;</span><br><span class="line">            <span class="comment">// 更新当前子数组的和</span></span><br><span class="line">            currentSum = currentSum - nums[i - k] + nums[i];</span><br><span class="line"></span><br><span class="line">            <span class="comment">// 更新最大和</span></span><br><span class="line">            <span class="keyword">if</span> (currentSum &gt; maxSum) &#123;</span><br><span class="line">                maxSum = currentSum;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 返回最大平均值</span></span><br><span class="line">        <span class="keyword">return</span> (<span class="type">double</span>) maxSum / k;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+
+
 
     </div>
     
@@ -452,8 +464,8 @@
 </div>
 
           <div class="post-tags">
-              <a href="/tags/%E5%8F%8C%E6%8C%87%E9%92%88/" rel="tag"><i class="fa fa-tag"></i> 双指针</a>
               <a href="/tags/%E6%BB%91%E5%8A%A8%E7%AA%97%E5%8F%A3/" rel="tag"><i class="fa fa-tag"></i> 滑动窗口</a>
+              <a href="/tags/%E5%8F%8C%E6%8C%87%E9%92%88/" rel="tag"><i class="fa fa-tag"></i> 双指针</a>
           </div>
 
         
@@ -465,7 +477,7 @@
                 </a>
             </div>
             <div class="post-nav-item">
-                <a href="/2024/08/02/algorithm/leetcode/%E9%93%BE%E8%A1%A8/LeetCode-707-%E8%AE%BE%E8%AE%A1%E9%93%BE%E8%A1%A8/" rel="next" title="模板">
+                <a href="/2024/08/02/algorithm/leetcode/%E9%93%BE%E8%A1%A8/LeetCode-24-%E4%B8%A4%E4%B8%A4%E4%BA%A4%E6%8D%A2%E9%93%BE%E8%A1%A8%E4%B8%AD%E7%9A%84%E7%BB%93%E7%82%B9/" rel="next" title="模板">
                   模板 <i class="fa fa-angle-right"></i>
                 </a>
             </div>
@@ -501,14 +513,14 @@
       <i class="fa fa-chart-line"></i>
     </span>
       <span>站点总字数：</span>
-    <span title="站点总字数">281k</span>
+    <span title="站点总字数">282k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
       <span>站点阅读时长 &asymp;</span>
-    <span title="站点阅读时长">7:49</span>
+    <span title="站点阅读时长">7:51</span>
   </span>
 </div>
 <div class="busuanzi-count">

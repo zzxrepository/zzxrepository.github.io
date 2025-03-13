@@ -105,7 +105,7 @@
 
 
 <nav class="site-nav">
-  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li><li class="menu-item menu-item-sitemap"><a href="/sitemap.xml" rel="section"><i class="fa fa-sitemap fa-fw"></i>站点地图</a></li>
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">19</span></a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">37</span></a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">88</span></a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li><li class="menu-item menu-item-sitemap"><a href="/sitemap.xml" rel="section"><i class="fa fa-sitemap fa-fw"></i>站点地图</a></li><li class="menu-item menu-item-commonweal"><a href="/404/" rel="section"><i class="fa fa-heartbeat fa-fw"></i>公益 404</a></li>
       <li class="menu-item menu-item-search">
         <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
         </a>
@@ -362,6 +362,7 @@
     <div class="post-body" itemprop="articleBody"><center><b>四数相加 => 两数相加</b></center>
 
 <span id="more"></span>
+
 <hr>
 <center>
     <b>LeetCode链接：<a target="_blank" rel="noopener" href="https://leetcode.cn/problems/4sum-ii/">454. 四数相加 II<a/></b>
@@ -375,8 +376,10 @@
 </ul>
 <p><strong>示例 1：</strong></p>
 <figure class="highlight gcode"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">输入：<span class="symbol">nums1</span> = [<span class="number">1</span>,<span class="number">2</span>], <span class="symbol">nums2</span> = [<span class="number">-2</span>,<span class="number">-1</span>], <span class="symbol">nums3</span> = [<span class="number">-1</span>,<span class="number">2</span>], <span class="symbol">nums4</span> = [<span class="number">0</span>,<span class="number">2</span>]</span><br><span class="line">输出：<span class="number">2</span></span><br><span class="line">解释：</span><br><span class="line">两个元组如下：</span><br><span class="line"><span class="number">1.</span> <span class="comment">(0, 0, 0, 1)</span> -&gt; <span class="symbol">nums1</span>[<span class="number">0</span>] + <span class="symbol">nums2</span>[<span class="number">0</span>] + <span class="symbol">nums3</span>[<span class="number">0</span>] + <span class="symbol">nums4</span>[<span class="number">1</span>] = <span class="number">1</span> + <span class="comment">(-2)</span> + <span class="comment">(-1)</span> + <span class="number">2</span> = <span class="number">0</span></span><br><span class="line"><span class="number">2.</span> <span class="comment">(1, 1, 0, 0)</span> -&gt; <span class="symbol">nums1</span>[<span class="number">1</span>] + <span class="symbol">nums2</span>[<span class="number">1</span>] + <span class="symbol">nums3</span>[<span class="number">0</span>] + <span class="symbol">nums4</span>[<span class="number">0</span>] = <span class="number">2</span> + <span class="comment">(-1)</span> + <span class="comment">(-1)</span> + <span class="number">0</span> = <span class="number">0</span></span><br></pre></td></tr></table></figure>
+
 <p><strong>示例 2：</strong></p>
 <figure class="highlight gcode"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">输入：<span class="symbol">nums1</span> = [<span class="number">0</span>], <span class="symbol">nums2</span> = [<span class="number">0</span>], <span class="symbol">nums3</span> = [<span class="number">0</span>], <span class="symbol">nums4</span> = [<span class="number">0</span>]</span><br><span class="line">输出：<span class="number">1</span></span><br></pre></td></tr></table></figure>
+
 <p> <strong>提示：</strong></p>
 <ul>
 <li><code>n == nums1.length</code></li>
@@ -384,9 +387,10 @@
 <li><code>n == nums3.length</code></li>
 <li><code>n == nums4.length</code></li>
 <li><code>1 &lt;= n &lt;= 200</code></li>
-<li>$-2^{28} &lt;= nums1[i], nums2[i], nums3[i], nums4[i] &lt;= 2^{28}$</li>
+<li>$-2^{28} &lt;&#x3D; nums1[i], nums2[i], nums3[i], nums4[i] &lt;&#x3D; 2^{28}$</li>
 </ul>
 <h1 id="2-题解"><a href="#2-题解" class="headerlink" title="2.题解"></a>2.题解</h1><h2 id="2-1-分组-哈希集合"><a href="#2-1-分组-哈希集合" class="headerlink" title="2.1 分组+哈希集合"></a>2.1 分组+哈希集合</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="type">int</span> <span class="title function_">fourSumCount</span><span class="params">(<span class="type">int</span>[] nums1, <span class="type">int</span>[] nums2, <span class="type">int</span>[] nums3, <span class="type">int</span>[] nums4)</span> &#123;</span><br><span class="line">        <span class="comment">// 获取数组的长度</span></span><br><span class="line">        <span class="type">int</span> <span class="variable">n</span> <span class="operator">=</span> nums1.length;</span><br><span class="line">        <span class="comment">// 创建一个 HashMap 来存储两个数组（nums1 和 nums2）元素之和出现的次数</span></span><br><span class="line">        Map&lt;Integer, Integer&gt; map = <span class="keyword">new</span> <span class="title class_">HashMap</span>&lt;&gt;();</span><br><span class="line">        <span class="comment">// 初始化计数器 count，用于存储符合条件的四元组数量</span></span><br><span class="line">        <span class="type">int</span> <span class="variable">count</span> <span class="operator">=</span> <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 双重循环遍历 nums1 和 nums2 数组中的所有元素组合</span></span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>; i &lt; n; i++) &#123;</span><br><span class="line">            <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">j</span> <span class="operator">=</span> <span class="number">0</span>; j &lt; n; j++) &#123;</span><br><span class="line">                <span class="comment">// 计算 nums1[i] 和 nums2[j] 的和</span></span><br><span class="line">                <span class="type">int</span> <span class="variable">sum</span> <span class="operator">=</span> nums1[i] + nums2[j];</span><br><span class="line"></span><br><span class="line">                <span class="comment">// 将 sum 作为键存储在 map 中，值为这个和出现的次数</span></span><br><span class="line">                <span class="comment">// 如果 sum 已经存在于 map 中，则将对应的值加 1，否则将其初始化为 1</span></span><br><span class="line">                map.put(sum, map.getOrDefault(sum, <span class="number">0</span>) + <span class="number">1</span>);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 再次使用双重循环遍历 nums3 和 nums4 数组中的所有元素组合</span></span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>; i &lt; n; i++) &#123;</span><br><span class="line">            <span class="keyword">for</span>(<span class="type">int</span> <span class="variable">j</span> <span class="operator">=</span> <span class="number">0</span>; j &lt; n; j++) &#123;</span><br><span class="line">                <span class="comment">// 计算目标差值 diff，即 0 - (nums3[i] + nums4[j])</span></span><br><span class="line">                <span class="type">int</span> <span class="variable">diff</span> <span class="operator">=</span> <span class="number">0</span> - nums3[i] - nums4[j];</span><br><span class="line">                <span class="comment">// 如果 map 中存在这个 diff，则说明存在一个四元组使得四个数组的元素之和为 0</span></span><br><span class="line">                <span class="comment">// 计数器 count 增加 map.get(diff) 次，因为 map.get(diff) 表示 nums1 和 nums2 中和为 diff 的次数</span></span><br><span class="line">                count += map.getOrDefault(diff, <span class="number">0</span>);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 返回最终计数器的值，即符合条件的四元组数量</span></span><br><span class="line">        <span class="keyword">return</span> count;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
 
     </div>
     
@@ -498,14 +502,14 @@
       <i class="fa fa-chart-line"></i>
     </span>
       <span>站点总字数：</span>
-    <span title="站点总字数">281k</span>
+    <span title="站点总字数">282k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
       <span>站点阅读时长 &asymp;</span>
-    <span title="站点阅读时长">7:49</span>
+    <span title="站点阅读时长">7:51</span>
   </span>
 </div>
 <div class="busuanzi-count">

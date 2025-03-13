@@ -106,7 +106,7 @@
 
 
 <nav class="site-nav">
-  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li><li class="menu-item menu-item-sitemap"><a href="/sitemap.xml" rel="section"><i class="fa fa-sitemap fa-fw"></i>站点地图</a></li>
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">19</span></a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">37</span></a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">88</span></a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li><li class="menu-item menu-item-sitemap"><a href="/sitemap.xml" rel="section"><i class="fa fa-sitemap fa-fw"></i>站点地图</a></li><li class="menu-item menu-item-commonweal"><a href="/404/" rel="section"><i class="fa fa-heartbeat fa-fw"></i>公益 404</a></li>
       <li class="menu-item menu-item-search">
         <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
         </a>
@@ -363,6 +363,7 @@
     <div class="post-body" itemprop="articleBody"><center><b>在字符串中，如果能使用哈希集合，那么大概率也能使用哈希数组</b></center>
 
 <span id="more"></span>
+
 <hr>
 <center>
     <b>LeetCode链接：<a target="_blank" rel="noopener" href="https://leetcode.cn/problems/ransom-note/">383. 赎金信<a/></b>
@@ -375,16 +376,20 @@
 <p><code>magazine</code> 中的每个字符只能在 <code>ransomNote</code> 中使用一次。</p>
 <p><strong>示例 1：</strong></p>
 <figure class="highlight nix"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">输入：<span class="attr">ransomNote</span> = <span class="string">&quot;a&quot;</span>, <span class="attr">magazine</span> = <span class="string">&quot;b&quot;</span></span><br><span class="line">输出：<span class="literal">false</span></span><br></pre></td></tr></table></figure>
+
 <p><strong>示例 2：</strong></p>
 <figure class="highlight nix"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">输入：<span class="attr">ransomNote</span> = <span class="string">&quot;aa&quot;</span>, <span class="attr">magazine</span> = <span class="string">&quot;ab&quot;</span></span><br><span class="line">输出：<span class="literal">false</span></span><br></pre></td></tr></table></figure>
+
 <p><strong>示例 3：</strong></p>
 <figure class="highlight nix"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">输入：<span class="attr">ransomNote</span> = <span class="string">&quot;aa&quot;</span>, <span class="attr">magazine</span> = <span class="string">&quot;aab&quot;</span></span><br><span class="line">输出：<span class="literal">true</span></span><br></pre></td></tr></table></figure>
+
 <p><strong>提示：</strong></p>
 <ul>
-<li>$1 &lt;= ransomNote.length, magazine.length &lt;= 10^5$</li>
+<li>$1 &lt;&#x3D; ransomNote.length, magazine.length &lt;&#x3D; 10^5$</li>
 <li><code>ransomNote</code> 和 <code>magazine</code> 由小写英文字母组成</li>
 </ul>
 <h1 id="2-题解"><a href="#2-题解" class="headerlink" title="2.题解"></a>2.题解</h1><h2 id="2-1-哈希集合"><a href="#2-1-哈希集合" class="headerlink" title="2.1 哈希集合"></a>2.1 哈希集合</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="type">boolean</span> <span class="title function_">canConstruct</span><span class="params">(String ransomNote, String magazine)</span> &#123;</span><br><span class="line">        <span class="comment">// 创建一个哈希表用于存储 magazine 中每个字符出现的次数</span></span><br><span class="line">        Map&lt;Character, Integer&gt; map = <span class="keyword">new</span> <span class="title class_">HashMap</span>&lt;&gt;();</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 遍历 magazine 字符串，将每个字符的出现次数记录到哈希表中</span></span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>; i &lt; magazine.length(); i++) &#123;</span><br><span class="line">            <span class="type">char</span> <span class="variable">c</span> <span class="operator">=</span> magazine.charAt(i);  <span class="comment">// 获取当前字符</span></span><br><span class="line">            map.put(c, map.getOrDefault(c, <span class="number">0</span>) + <span class="number">1</span>);  <span class="comment">// 更新字符出现的次数</span></span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 遍历 ransomNote 字符串，检查每个字符是否能够从 magazine 中取出</span></span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>; i &lt; ransomNote.length(); i++) &#123;</span><br><span class="line">            <span class="type">char</span> <span class="variable">c</span> <span class="operator">=</span> ransomNote.charAt(i);  <span class="comment">// 获取当前字符</span></span><br><span class="line">            map.put(c, map.getOrDefault(c, <span class="number">0</span>) - <span class="number">1</span>);  <span class="comment">// 将字符在哈希表中的计数减1</span></span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 遍历哈希表，检查是否有字符的计数为负数</span></span><br><span class="line">        Set&lt;Map.Entry&lt;Character, Integer&gt;&gt; entries = map.entrySet();</span><br><span class="line">        <span class="keyword">for</span> (Map.Entry&lt;Character, Integer&gt; entry : entries) &#123;</span><br><span class="line">            <span class="keyword">if</span> (entry.getValue() &lt; <span class="number">0</span>)  <span class="comment">// 如果某个字符的计数为负数，说明 ransomNote 中需要的该字符多于 magazine 提供的字符</span></span><br><span class="line">                <span class="keyword">return</span> <span class="literal">false</span>;  <span class="comment">// 返回 false 表示无法构造</span></span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 如果所有字符的计数都不为负数，返回 true 表示可以构造</span></span><br><span class="line">        <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
 <h2 id="2-2-哈希数组"><a href="#2-2-哈希数组" class="headerlink" title="2.2 哈希数组"></a>2.2 哈希数组</h2><ul>
 <li>由于这道题目具有特殊性，只有小写字母，所有转化成哈希数组来做</li>
 </ul>
@@ -501,14 +506,14 @@
       <i class="fa fa-chart-line"></i>
     </span>
       <span>站点总字数：</span>
-    <span title="站点总字数">281k</span>
+    <span title="站点总字数">282k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
       <span>站点阅读时长 &asymp;</span>
-    <span title="站点阅读时长">7:49</span>
+    <span title="站点阅读时长">7:51</span>
   </span>
 </div>
 <div class="busuanzi-count">

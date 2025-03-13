@@ -106,7 +106,7 @@
 
 
 <nav class="site-nav">
-  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li><li class="menu-item menu-item-sitemap"><a href="/sitemap.xml" rel="section"><i class="fa fa-sitemap fa-fw"></i>站点地图</a></li>
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">19</span></a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">37</span></a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">88</span></a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li><li class="menu-item menu-item-sitemap"><a href="/sitemap.xml" rel="section"><i class="fa fa-sitemap fa-fw"></i>站点地图</a></li><li class="menu-item menu-item-commonweal"><a href="/404/" rel="section"><i class="fa fa-heartbeat fa-fw"></i>公益 404</a></li>
       <li class="menu-item menu-item-search">
         <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
         </a>
@@ -363,13 +363,14 @@
     <div class="post-body" itemprop="articleBody"><center><b>双指针也有简单题！</b></center>
 
 <span id="more"></span>
+
 <hr>
 <center>
     <b>LeetCode链接：<a target="_blank" rel="noopener" href="https://leetcode.cn/problems/remove-duplicates-from-sorted-array/">26. 删除有序数组中的重复项<a/></b>
 </center>
 
 <hr>
-<h1 id="1-题目描述"><a href="#1-题目描述" class="headerlink" title="1.题目描述"></a>1.题目描述</h1><p>给你一个 <strong>非严格递增排列</strong> 的数组 <code>nums</code> ，请你<strong><a target="_blank" rel="noopener" href="http://baike.baidu.com/item/原地算法"> 原地</a></strong> 删除重复出现的元素，使每个元素 <strong>只出现一次</strong> ，返回删除后数组的新长度。元素的 <strong>相对顺序</strong> 应该保持 <strong>一致</strong> 。然后返回 <code>nums</code> 中唯一元素的个数。</p>
+<h1 id="1-题目描述"><a href="#1-题目描述" class="headerlink" title="1.题目描述"></a>1.题目描述</h1><p>给你一个 <strong>非严格递增排列</strong> 的数组 <code>nums</code> ，请你**<a target="_blank" rel="noopener" href="http://baike.baidu.com/item/%E5%8E%9F%E5%9C%B0%E7%AE%97%E6%B3%95"> 原地</a>** 删除重复出现的元素，使每个元素 <strong>只出现一次</strong> ，返回删除后数组的新长度。元素的 <strong>相对顺序</strong> 应该保持 <strong>一致</strong> 。然后返回 <code>nums</code> 中唯一元素的个数。</p>
 <p>考虑 <code>nums</code> 的唯一元素的数量为 <code>k</code> ，你需要做以下事情确保你的题解可以被通过：</p>
 <ul>
 <li>更改数组 <code>nums</code> ，使 <code>nums</code> 的前 <code>k</code> 个元素包含唯一元素，并按照它们最初在 <code>nums</code> 中出现的顺序排列。<code>nums</code> 的其余元素与 <code>nums</code> 的大小不重要。</li>
@@ -378,22 +379,29 @@
 <p><strong>判题标准:</strong></p>
 <p>系统会用下面的代码来测试你的题解:</p>
 <figure class="highlight abnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">int[] nums <span class="operator">=</span> [...]<span class="comment">; // 输入数组</span></span><br><span class="line">int[] expectedNums <span class="operator">=</span> [...]<span class="comment">; // 长度正确的期望答案</span></span><br><span class="line"></span><br><span class="line">int k <span class="operator">=</span> removeDuplicates(nums)<span class="comment">; // 调用</span></span><br><span class="line"></span><br><span class="line">assert k <span class="operator">=</span><span class="operator">=</span> expectedNums.length<span class="comment">;</span></span><br><span class="line">for (int i <span class="operator">=</span> <span class="number">0</span><span class="comment">; i &lt; k; i++) &#123;</span></span><br><span class="line">    assert nums[i] <span class="operator">=</span><span class="operator">=</span> expectedNums[i]<span class="comment">;</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
 <p>如果所有断言都通过，那么您的题解将被 <strong>通过</strong>。</p>
 <p><strong>示例 1：</strong></p>
 <figure class="highlight inform7"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">输入：nums = <span class="comment">[1,1,2]</span></span><br><span class="line">输出：2, nums = <span class="comment">[1,2,_]</span></span><br><span class="line">解释：函数应该返回新的长度 2 ，并且原数组 nums 的前两个元素被修改为 1, 2 。不需要考虑数组中超出新长度后面的元素。</span><br></pre></td></tr></table></figure>
+
 <p><strong>示例 2：</strong></p>
 <figure class="highlight dns"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">输入：nums = [<span class="number">0,0,1,1</span>,<span class="number">1,2,2,3</span>,<span class="number">3</span>,<span class="number">4</span>]</span><br><span class="line">输出：<span class="number">5</span>, nums = [<span class="number">0,1,2,3</span>,<span class="number">4</span>]</span><br><span class="line">解释：函数应该返回新的长度 <span class="number">5</span> ， 并且原数组 nums 的前五个元素被修改为 <span class="number">0</span>, <span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span> 。不需要考虑数组中超出新长度后面的元素。</span><br></pre></td></tr></table></figure>
+
 <p><strong>提示：</strong></p>
 <ul>
-<li>$1 &lt;= nums.length &lt;= 3 * 10^4$</li>
-<li>$-10^4 &lt;= nums[i] &lt;= 10^4$</li>
+<li>$1 &lt;&#x3D; nums.length &lt;&#x3D; 3 * 10^4$</li>
+<li>$-10^4 &lt;&#x3D; nums[i] &lt;&#x3D; 10^4$</li>
 <li><code>nums</code> 已按 <strong>非严格递增</strong> 排列</li>
 </ul>
 <h1 id="2-题解"><a href="#2-题解" class="headerlink" title="2.题解"></a>2.题解</h1><h2 id="2-1-双指针"><a href="#2-1-双指针" class="headerlink" title="2.1 双指针"></a>2.1 双指针</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="type">int</span> <span class="title function_">removeDuplicates</span><span class="params">(<span class="type">int</span>[] nums)</span> &#123;</span><br><span class="line">        <span class="comment">// 初始化左指针left，指向数组的第二个位置，表示下一个可以填充新元素的位置</span></span><br><span class="line">        <span class="type">int</span> <span class="variable">left</span> <span class="operator">=</span> <span class="number">1</span>;</span><br><span class="line">        <span class="comment">// 从第二个元素开始遍历数组</span></span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">right</span> <span class="operator">=</span> <span class="number">1</span>; right &lt; nums.length; right++) &#123;</span><br><span class="line">            <span class="comment">// 如果当前元素与前一个元素不同，说明找到了一个新元素</span></span><br><span class="line">            <span class="keyword">if</span> (nums[right] != nums[right - <span class="number">1</span>]) &#123;</span><br><span class="line">                 <span class="comment">// 将新元素放置到左指针位置，并移动左指针</span></span><br><span class="line">                nums[left++] = nums[right];</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">// 返回去重后数组的长度</span></span><br><span class="line">        <span class="keyword">return</span> left;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
 <ul>
 <li>优化：</li>
 </ul>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="type">int</span> <span class="title function_">removeDuplicates</span><span class="params">(<span class="type">int</span>[] nums)</span> &#123;</span><br><span class="line">        <span class="comment">// 初始化左指针left，指向数组的第二个位置，表示下一个可以填充新元素的位置</span></span><br><span class="line">        <span class="type">int</span> <span class="variable">left</span> <span class="operator">=</span> <span class="number">1</span>;</span><br><span class="line">        <span class="comment">// 从第二个元素开始遍历数组</span></span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">right</span> <span class="operator">=</span> <span class="number">1</span>; right &lt; nums.length; right++) &#123;</span><br><span class="line">            <span class="comment">// 如果当前元素与前一个元素不同，说明找到了一个新元素</span></span><br><span class="line">            <span class="keyword">if</span> (nums[right] != nums[right - <span class="number">1</span>]) &#123;</span><br><span class="line">                <span class="comment">// 如果左指针小于右指针，说明有重复元素被跳过，需要将新元素填充到左指针位置</span></span><br><span class="line">                <span class="keyword">if</span> (left &lt; right) &#123;</span><br><span class="line">                    nums[left] = nums[right];</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="comment">// 移动左指针，准备下一个可以填充新元素的位置</span></span><br><span class="line">                left++;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">// 返回去重后数组的长度</span></span><br><span class="line">        <span class="keyword">return</span> left;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
 
     </div>
     
@@ -506,14 +514,14 @@
       <i class="fa fa-chart-line"></i>
     </span>
       <span>站点总字数：</span>
-    <span title="站点总字数">281k</span>
+    <span title="站点总字数">282k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
       <span>站点阅读时长 &asymp;</span>
-    <span title="站点阅读时长">7:49</span>
+    <span title="站点阅读时长">7:51</span>
   </span>
 </div>
 <div class="busuanzi-count">

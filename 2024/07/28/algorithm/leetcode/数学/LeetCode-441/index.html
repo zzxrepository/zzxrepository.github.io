@@ -108,7 +108,7 @@
 
 
 <nav class="site-nav">
-  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li><li class="menu-item menu-item-sitemap"><a href="/sitemap.xml" rel="section"><i class="fa fa-sitemap fa-fw"></i>站点地图</a></li>
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">19</span></a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">37</span></a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">88</span></a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li><li class="menu-item menu-item-sitemap"><a href="/sitemap.xml" rel="section"><i class="fa fa-sitemap fa-fw"></i>站点地图</a></li><li class="menu-item menu-item-commonweal"><a href="/404/" rel="section"><i class="fa fa-heartbeat fa-fw"></i>公益 404</a></li>
       <li class="menu-item menu-item-search">
         <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
         </a>
@@ -366,6 +366,7 @@
 <p><b>这是LeetCode中一道标签为<font color="green">简单</font>的算法题，点击“阅读全文”即可查看题解！</b></p>
 </blockquote>
 <span id="more"></span>
+
 <center>
     <b><font color=darkorange face="楷体" size=4 >🙋大家好！我是毛毛张! </font></b>
     <hr>
@@ -379,16 +380,21 @@
 <p><strong>示例 1：</strong></p>
 <p><img src="https://assets.leetcode.com/uploads/2021/04/09/arrangecoins1-grid.jpg" alt="img"></p>
 <figure class="highlight abnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">输入：n <span class="operator">=</span> <span class="number">5</span></span><br><span class="line">输出：<span class="number">2</span></span><br><span class="line">解释：因为第三行不完整，所以返回 <span class="number">2</span> 。</span><br></pre></td></tr></table></figure>
+
 <p><strong>示例 2：</strong></p>
 <p><img src="https://assets.leetcode.com/uploads/2021/04/09/arrangecoins2-grid.jpg" alt="img"></p>
 <figure class="highlight abnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">输入：n <span class="operator">=</span> <span class="number">8</span></span><br><span class="line">输出：<span class="number">3</span></span><br><span class="line">解释：因为第四行不完整，所以返回 <span class="number">3</span> 。</span><br></pre></td></tr></table></figure>
+
 <p><strong>提示：</strong></p>
 <ul>
-<li>$1 &lt;= n &lt;= 2^{31} - 1$</li>
+<li>$1 &lt;&#x3D; n &lt;&#x3D; 2^{31} - 1$</li>
 </ul>
 <h1 id="2-题解"><a href="#2-题解" class="headerlink" title="2.题解"></a>2.题解</h1><h2 id="2-1-公式解法"><a href="#2-1-公式解法" class="headerlink" title="2.1 公式解法"></a>2.1 公式解法</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="type">int</span> <span class="title function_">arrangeCoins</span><span class="params">(<span class="type">int</span> n)</span> &#123;</span><br><span class="line">        <span class="comment">// 使用数学公式求解排列硬币问题</span></span><br><span class="line">        <span class="comment">// 使用 long 类型防止溢出</span></span><br><span class="line">        <span class="type">long</span> <span class="variable">num</span> <span class="operator">=</span> (<span class="type">long</span>) n;</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 计算公式：</span></span><br><span class="line">        <span class="comment">// 完整行数 k 满足的方程：k * (k + 1) / 2 &lt;= n</span></span><br><span class="line">        <span class="comment">// 变形成：k^2 + k &lt;= 2 * n</span></span><br><span class="line">        <span class="comment">// 转化为求解 k 的公式：k = (sqrt(8 * n + 1) - 1) / 2</span></span><br><span class="line"></span><br><span class="line">        <span class="comment">// 计算 k 的值，并将结果转换为 int 类型返回</span></span><br><span class="line">        <span class="keyword">return</span> (<span class="type">int</span>) ((Math.sqrt(<span class="number">8</span> * num + <span class="number">1</span>) - <span class="number">1</span>) / <span class="number">2</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
 <h2 id="2-2-暴力解法"><a href="#2-2-暴力解法" class="headerlink" title="2.2 暴力解法"></a>2.2 暴力解法</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="type">int</span> <span class="title function_">arrangeCoins</span><span class="params">(<span class="type">int</span> n)</span> &#123;</span><br><span class="line">        <span class="comment">// 初始化变量i为0，用于表示行数</span></span><br><span class="line">        <span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>;</span><br><span class="line">        <span class="comment">// 循环判断能够放多少行完整的硬币</span></span><br><span class="line">        <span class="keyword">while</span> (i &lt;= n) &#123;</span><br><span class="line">            <span class="comment">// 增加行数</span></span><br><span class="line">            i++;</span><br><span class="line">            <span class="comment">// 计算当前行数需要的硬币总数，使用long类型防止溢出</span></span><br><span class="line">            <span class="type">long</span> <span class="variable">coins</span> <span class="operator">=</span> (<span class="type">long</span>) i * (<span class="number">1</span> + i) / <span class="number">2</span>;</span><br><span class="line">            <span class="comment">// 如果当前行数需要的硬币总数大于n，退出循环</span></span><br><span class="line">            <span class="keyword">if</span> (coins &gt; n) <span class="keyword">break</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">// 返回完整行数的数量</span></span><br><span class="line">        <span class="keyword">return</span> i - <span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
 <h2 id="2-3-二分查找"><a href="#2-3-二分查找" class="headerlink" title="2.3 二分查找"></a>2.3 二分查找</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="type">int</span> <span class="title function_">arrangeCoins</span><span class="params">(<span class="type">int</span> n)</span> &#123;</span><br><span class="line">        <span class="comment">// 初始化二分查找的左边界和右边界</span></span><br><span class="line">        <span class="type">int</span> <span class="variable">left</span> <span class="operator">=</span> <span class="number">1</span>, right = n;</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 使用二分查找寻找最大完整行数</span></span><br><span class="line">        <span class="keyword">while</span> (left &lt;= right) &#123;</span><br><span class="line">            <span class="comment">// 计算中间位置，防止整型溢出</span></span><br><span class="line">            <span class="type">int</span> <span class="variable">mid</span> <span class="operator">=</span> left + (right - left) / <span class="number">2</span>;</span><br><span class="line"></span><br><span class="line">            <span class="comment">// 计算当前中间位置能放的硬币总数，使用 long 类型防止溢出</span></span><br><span class="line">            <span class="type">long</span> <span class="variable">num</span> <span class="operator">=</span> (<span class="type">long</span>) mid * (<span class="number">1</span> + mid) / <span class="number">2</span>;</span><br><span class="line"></span><br><span class="line">            <span class="comment">// 如果 n 小于当前总数，则说明完整行数过多，缩小右边界</span></span><br><span class="line">            <span class="keyword">if</span> (n &lt; num) &#123;</span><br><span class="line">                right = mid - <span class="number">1</span>; <span class="comment">// 修正为 right</span></span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                <span class="comment">// 否则，说明当前行数可以放下 n，增加左边界</span></span><br><span class="line">                left = mid + <span class="number">1</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 返回右边界，即最大完整行数</span></span><br><span class="line">        <span class="keyword">return</span> right; <span class="comment">// 返回完整行数</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
 
     </div>
     
@@ -459,8 +465,8 @@
 
           <div class="post-nav">
             <div class="post-nav-item">
-                <a href="/2024/07/28/algorithm/leetcode/%E6%95%B0%E7%BB%84/441-%E6%8E%92%E5%88%97%E7%A1%AC%E5%B8%81/" rel="prev" title="LeetCode | 441 | 排列硬币">
-                  <i class="fa fa-angle-left"></i> LeetCode | 441 | 排列硬币
+                <a href="/2024/07/28/algorithm/leetcode/%E6%A0%91/LeetCode%E5%88%B7%E9%A2%98%E7%AC%94%E8%AE%B01/" rel="prev" title="二叉树前序遍历、中序遍历、后序遍历和层序遍历 | 递归法 | 迭代法 | 统一迭代法 | 深度优先搜索 | 广度优先搜索">
+                  <i class="fa fa-angle-left"></i> 二叉树前序遍历、中序遍历、后序遍历和层序遍历 | 递归法 | 迭代法 | 统一迭代法 | 深度优先搜索 | 广度优先搜索
                 </a>
             </div>
             <div class="post-nav-item">
@@ -500,14 +506,14 @@
       <i class="fa fa-chart-line"></i>
     </span>
       <span>站点总字数：</span>
-    <span title="站点总字数">281k</span>
+    <span title="站点总字数">282k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
       <span>站点阅读时长 &asymp;</span>
-    <span title="站点阅读时长">7:49</span>
+    <span title="站点阅读时长">7:51</span>
   </span>
 </div>
 <div class="busuanzi-count">

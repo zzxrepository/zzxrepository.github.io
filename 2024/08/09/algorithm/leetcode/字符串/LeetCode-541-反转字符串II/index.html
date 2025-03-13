@@ -31,8 +31,8 @@
 <meta property="article:modified_time" content="2024-11-12T16:33:17.000Z">
 <meta property="article:author" content="毛毛张">
 <meta property="article:tag" content="简单">
-<meta property="article:tag" content="双指针">
 <meta property="article:tag" content="字符串">
+<meta property="article:tag" content="双指针">
 <meta name="twitter:card" content="summary">
 
 
@@ -106,7 +106,7 @@
 
 
 <nav class="site-nav">
-  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li><li class="menu-item menu-item-sitemap"><a href="/sitemap.xml" rel="section"><i class="fa fa-sitemap fa-fw"></i>站点地图</a></li>
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">19</span></a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">37</span></a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">88</span></a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li><li class="menu-item menu-item-sitemap"><a href="/sitemap.xml" rel="section"><i class="fa fa-sitemap fa-fw"></i>站点地图</a></li><li class="menu-item menu-item-commonweal"><a href="/404/" rel="section"><i class="fa fa-heartbeat fa-fw"></i>公益 404</a></li>
       <li class="menu-item menu-item-search">
         <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
         </a>
@@ -363,6 +363,7 @@
     <div class="post-body" itemprop="articleBody"><center><b>这个题目除了分类讨论就没什么了</b></center>
 
 <span id="more"></span>
+
 <hr>
 <center>
     <b>LeetCode链接：<a target="_blank" rel="noopener" href="https://leetcode.cn/problems/reverse-string-ii/">541. 反转字符串 II<a/></b>
@@ -376,16 +377,22 @@
 </ul>
 <p><strong>示例 1：</strong></p>
 <figure class="highlight nix"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">输入：<span class="attr">s</span> = <span class="string">&quot;abcdefg&quot;</span>, <span class="attr">k</span> = <span class="number">2</span></span><br><span class="line">输出：<span class="string">&quot;bacdfeg&quot;</span></span><br></pre></td></tr></table></figure>
+
 <p><strong>示例 2：</strong></p>
 <figure class="highlight nix"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">输入：<span class="attr">s</span> = <span class="string">&quot;abcd&quot;</span>, <span class="attr">k</span> = <span class="number">2</span></span><br><span class="line">输出：<span class="string">&quot;bacd&quot;</span></span><br></pre></td></tr></table></figure>
+
 <p><strong>提示：</strong></p>
 <ul>
-<li>$1 &lt;= s.length &lt;= 10^4$</li>
+<li>$1 &lt;&#x3D; s.length &lt;&#x3D; 10^4$</li>
 <li><code>s</code> 仅由小写英文组成</li>
-<li>$1 &lt;= k &lt;= 10^4$</li>
+<li>$1 &lt;&#x3D; k &lt;&#x3D; 10^4$</li>
 </ul>
 <h1 id="2-题解"><a href="#2-题解" class="headerlink" title="2.题解"></a>2.题解</h1><h2 id="2-1-直接法"><a href="#2-1-直接法" class="headerlink" title="2.1 直接法"></a>2.1 直接法</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> String <span class="title function_">reverseStr</span><span class="params">(String s, <span class="type">int</span> k)</span> &#123;</span><br><span class="line">        <span class="comment">// 将字符串转换为字符数组，方便操作</span></span><br><span class="line">        <span class="type">char</span>[] chs = s.toCharArray();</span><br><span class="line">        <span class="comment">// 计算完整的2k段的数量</span></span><br><span class="line">        <span class="type">int</span> <span class="variable">count</span> <span class="operator">=</span> chs.length / (<span class="number">2</span> * k);</span><br><span class="line">        <span class="comment">// 逐段反转每个完整的k个字符</span></span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>; i &lt; count; i++) &#123;</span><br><span class="line">            reverseStr(chs, <span class="number">2</span> * i * k, <span class="number">2</span> * i * k + k - <span class="number">1</span>);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 处理剩余的字符</span></span><br><span class="line">        <span class="type">int</span> <span class="variable">mod</span> <span class="operator">=</span> chs.length % (<span class="number">2</span> * k);</span><br><span class="line">        <span class="comment">// 如果剩余的字符数大于或等于k，反转前k个字符</span></span><br><span class="line">        <span class="keyword">if</span> (mod &gt;= k) &#123;</span><br><span class="line">            reverseStr(chs, <span class="number">2</span> * count * k, <span class="number">2</span> * count * k + k - <span class="number">1</span>);</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123; </span><br><span class="line">            <span class="comment">// 如果剩余的字符数小于k，反转所有剩余的字符</span></span><br><span class="line">            reverseStr(chs, <span class="number">2</span> * count * k, chs.length - <span class="number">1</span>);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 将字符数组转换回字符串并返回</span></span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">new</span> <span class="title class_">String</span>(chs);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 反转字符数组指定范围内的字符</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">reverseStr</span><span class="params">(<span class="type">char</span>[] chs, <span class="type">int</span> begin, <span class="type">int</span> end)</span> &#123;</span><br><span class="line">        <span class="keyword">while</span> (begin &lt; end) &#123;</span><br><span class="line">            <span class="comment">// 暂存末尾字符</span></span><br><span class="line">            <span class="type">char</span> <span class="variable">c</span> <span class="operator">=</span> chs[end];</span><br><span class="line">            <span class="comment">// 将开头字符赋值给末尾位置，同时末尾索引向前移动</span></span><br><span class="line">            chs[end--] = chs[begin];</span><br><span class="line">            <span class="comment">// 将暂存的末尾字符赋值给开头位置，同时开头索引向后移动</span></span><br><span class="line">            chs[begin++] = c;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
 <h2 id="2-2-双指针"><a href="#2-2-双指针" class="headerlink" title="2.2 双指针"></a>2.2 双指针</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> String <span class="title function_">reverseStr</span><span class="params">(String s, <span class="type">int</span> k)</span> &#123;</span><br><span class="line">        <span class="comment">// 将字符串转换为字符数组，方便对字符串进行操作</span></span><br><span class="line">        <span class="type">char</span>[] chs = s.toCharArray();</span><br><span class="line">        <span class="comment">// 初始化开始位置指针</span></span><br><span class="line">        <span class="type">int</span> <span class="variable">begin</span> <span class="operator">=</span> <span class="number">0</span>, end;</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 逐段处理字符数组</span></span><br><span class="line">        <span class="keyword">while</span> (begin &lt; chs.length) &#123;</span><br><span class="line">            <span class="comment">// 计算剩余字符的长度</span></span><br><span class="line">            <span class="type">int</span> <span class="variable">reaminLen</span> <span class="operator">=</span> chs.length - begin;</span><br><span class="line">            <span class="comment">// 确定本段反转的结束位置</span></span><br><span class="line">            end = reaminLen &gt;= k ? begin + k - <span class="number">1</span> : chs.length - <span class="number">1</span>;</span><br><span class="line">            <span class="comment">// 反转从begin到end的字符</span></span><br><span class="line">            reverseStr(chs, begin, end);</span><br><span class="line">            <span class="comment">// 将起始位置指针向后移动2k位置</span></span><br><span class="line">            begin += <span class="number">2</span> * k;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 将字符数组转换回字符串并返回</span></span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">new</span> <span class="title class_">String</span>(chs);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 反转字符数组中指定范围内的字符</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">reverseStr</span><span class="params">(<span class="type">char</span>[] chs, <span class="type">int</span> begin, <span class="type">int</span> end)</span> &#123;</span><br><span class="line">        <span class="keyword">while</span> (begin &lt; end) &#123;</span><br><span class="line">            <span class="comment">// 暂存末尾字符</span></span><br><span class="line">            <span class="type">char</span> <span class="variable">c</span> <span class="operator">=</span> chs[end];</span><br><span class="line">            <span class="comment">// 将开头字符赋值给末尾位置，同时末尾索引向前移动</span></span><br><span class="line">            chs[end--] = chs[begin];</span><br><span class="line">            <span class="comment">// 将暂存的末尾字符赋值给开头位置，同时开头索引向后移动</span></span><br><span class="line">            chs[begin++] = c;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
 
     </div>
     
@@ -449,8 +456,8 @@
 
           <div class="post-tags">
               <a href="/tags/%E7%AE%80%E5%8D%95/" rel="tag"><i class="fa fa-tag"></i> 简单</a>
-              <a href="/tags/%E5%8F%8C%E6%8C%87%E9%92%88/" rel="tag"><i class="fa fa-tag"></i> 双指针</a>
               <a href="/tags/%E5%AD%97%E7%AC%A6%E4%B8%B2/" rel="tag"><i class="fa fa-tag"></i> 字符串</a>
+              <a href="/tags/%E5%8F%8C%E6%8C%87%E9%92%88/" rel="tag"><i class="fa fa-tag"></i> 双指针</a>
           </div>
 
         
@@ -498,14 +505,14 @@
       <i class="fa fa-chart-line"></i>
     </span>
       <span>站点总字数：</span>
-    <span title="站点总字数">281k</span>
+    <span title="站点总字数">282k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
       <span>站点阅读时长 &asymp;</span>
-    <span title="站点阅读时长">7:49</span>
+    <span title="站点阅读时长">7:51</span>
   </span>
 </div>
 <div class="busuanzi-count">

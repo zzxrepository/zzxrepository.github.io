@@ -104,7 +104,7 @@
 
 
 <nav class="site-nav">
-  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li><li class="menu-item menu-item-sitemap"><a href="/sitemap.xml" rel="section"><i class="fa fa-sitemap fa-fw"></i>站点地图</a></li>
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">19</span></a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">37</span></a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">88</span></a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li><li class="menu-item menu-item-sitemap"><a href="/sitemap.xml" rel="section"><i class="fa fa-sitemap fa-fw"></i>站点地图</a></li><li class="menu-item menu-item-commonweal"><a href="/404/" rel="section"><i class="fa fa-heartbeat fa-fw"></i>公益 404</a></li>
       <li class="menu-item menu-item-search">
         <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
         </a>
@@ -362,6 +362,7 @@
 <p>贪心练习题</p>
 </blockquote>
 <span id="more"></span>
+
 <hr>
 <center>
     <b>LeetCode链接：<a target="_blank" rel="noopener" href="https://leetcode.cn/problems/maximum-subarray/">53. 最大子数组和<a/></b>
@@ -371,10 +372,13 @@
 <h1 id="1-题目描述"><a href="#1-题目描述" class="headerlink" title="1.题目描述"></a>1.题目描述</h1><p>给你一个整数数组 <code>nums</code> ，请你找出一个具有最大和的连续子数组（子数组最少包含一个元素），返回其最大和。<strong>子数组</strong>是数组中的一个连续部分。</p>
 <p><strong>示例 1：</strong></p>
 <figure class="highlight subunit"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">输入：nums = [<span class="string">-2</span>,1,<span class="string">-3</span>,4,<span class="string">-1</span>,2,1,<span class="string">-5</span>,4]</span><br><span class="line">输出：6</span><br><span class="line">解释：连续子数组 [4,<span class="string">-1</span>,2,1] 的和最大，为 6 。</span><br></pre></td></tr></table></figure>
+
 <p><strong>示例 2：</strong></p>
 <figure class="highlight abnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">输入：nums <span class="operator">=</span> [<span class="number">1</span>]</span><br><span class="line">输出：<span class="number">1</span></span><br></pre></td></tr></table></figure>
+
 <p><strong>示例 3：</strong></p>
 <figure class="highlight accesslog"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">输入：nums = <span class="string">[5,4,-1,7,8]</span></span><br><span class="line">输出：<span class="number">23</span></span><br></pre></td></tr></table></figure>
+
 <p><strong>提示：</strong></p>
 <ul>
 <li><code>1 &lt;= nums.length &lt;= 105</code></li>
@@ -382,8 +386,17 @@
 </ul>
 <p><strong>进阶：</strong>如果你已经实现复杂度为 <code>O(n)</code> 的解法，尝试使用更为精妙的 <strong>分治法</strong> 求解。</p>
 <h1 id="2-题解"><a href="#2-题解" class="headerlink" title="2.题解"></a>2.题解</h1><h2 id="2-1-贪心算法"><a href="#2-1-贪心算法" class="headerlink" title="2.1 贪心算法"></a>2.1 贪心算法</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="type">int</span> <span class="title function_">maxSubArray</span><span class="params">(<span class="type">int</span>[] nums)</span> &#123;</span><br><span class="line">        <span class="comment">// 贪心算法</span></span><br><span class="line">        <span class="type">int</span> <span class="variable">sum</span> <span class="operator">=</span> <span class="number">0</span>; <span class="comment">// 当前连续子数组的和</span></span><br><span class="line">        <span class="type">int</span> <span class="variable">result</span> <span class="operator">=</span> Integer.MIN_VALUE; <span class="comment">// 用于记录最大的子数组和，初始化为最小整数值</span></span><br><span class="line"></span><br><span class="line">        <span class="comment">// 遍历数组</span></span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>; i &lt; nums.length; i++) &#123;</span><br><span class="line">            sum += nums[i]; <span class="comment">// 将当前元素加入到当前子数组的和中</span></span><br><span class="line">            result = Math.max(result, sum); <span class="comment">// 更新最大子数组和</span></span><br><span class="line">            sum = Math.max(sum, <span class="number">0</span>); <span class="comment">// 如果当前子数组和为负数，则将其重置为 0，开始新的子数组</span></span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> result; <span class="comment">// 返回最大子数组和</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
 <h2 id="2-2-动态规划"><a href="#2-2-动态规划" class="headerlink" title="2.2 动态规划"></a>2.2 动态规划</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="type">int</span> <span class="title function_">maxSubArray</span><span class="params">(<span class="type">int</span>[] nums)</span> &#123;</span><br><span class="line">        <span class="comment">// 动态规划</span></span><br><span class="line">        <span class="type">int</span>[] dp = <span class="keyword">new</span> <span class="title class_">int</span>[nums.length]; <span class="comment">// dp[i] 表示从第 0 到第 i 个元素范围内的最大子数组和</span></span><br><span class="line">        dp[<span class="number">0</span>] = nums[<span class="number">0</span>]; <span class="comment">// 初始化 dp[0] 为第一个元素</span></span><br><span class="line">        <span class="type">int</span> <span class="variable">result</span> <span class="operator">=</span> dp[<span class="number">0</span>]; <span class="comment">// 记录最大子数组和，初始化为第一个元素的值</span></span><br><span class="line"></span><br><span class="line">        <span class="comment">// 遍历数组，从第二个元素开始</span></span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">1</span>; i &lt; nums.length; i++) &#123;</span><br><span class="line">            <span class="comment">// 状态转移：比较包含当前元素的子数组和与当前元素的值，取较大者</span></span><br><span class="line">            dp[i] = Math.max(dp[i - <span class="number">1</span>] + nums[i], nums[i]);</span><br><span class="line">            <span class="comment">// 更新最大子数组和</span></span><br><span class="line">            result = Math.max(dp[i], result);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> result; <span class="comment">// 返回最大子数组和</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
 <h2 id="2-3-分治法"><a href="#2-3-分治法" class="headerlink" title="2.3 分治法"></a>2.3 分治法</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="type">int</span> <span class="title function_">maxSubArray</span><span class="params">(<span class="type">int</span>[] nums)</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> getMaxSubSum(nums, <span class="number">0</span>, nums.length - <span class="number">1</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> <span class="type">int</span> <span class="title function_">getMaxSubSum</span><span class="params">(<span class="type">int</span>[] nums, <span class="type">int</span> left, <span class="type">int</span> right)</span> &#123;</span><br><span class="line">        <span class="keyword">if</span> (left == right) &#123;</span><br><span class="line">            <span class="keyword">return</span> nums[left];</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="type">int</span> <span class="variable">mid</span> <span class="operator">=</span> left + (right - left) / <span class="number">2</span>;</span><br><span class="line">        <span class="type">int</span> <span class="variable">leftMaxSum</span> <span class="operator">=</span> getMaxSubSum(nums, left, mid);</span><br><span class="line">        <span class="type">int</span> <span class="variable">rightMaxSum</span> <span class="operator">=</span> getMaxSubSum(nums, mid + <span class="number">1</span>, right);</span><br><span class="line">        <span class="type">int</span> <span class="variable">crossingMaxSum</span> <span class="operator">=</span> getCrossingMaxSum(nums, mid, left, right);</span><br><span class="line">        <span class="keyword">return</span> Math.max(Math.max(leftMaxSum, rightMaxSum), crossingMaxSum);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> <span class="type">int</span> <span class="title function_">getCrossingMaxSum</span><span class="params">(<span class="type">int</span>[] nums, <span class="type">int</span> mid, <span class="type">int</span> left, <span class="type">int</span> right)</span> &#123;</span><br><span class="line">        <span class="type">int</span> <span class="variable">leftMaxSum</span> <span class="operator">=</span> nums[mid];</span><br><span class="line">        <span class="type">int</span> <span class="variable">tempSum</span> <span class="operator">=</span> nums[mid];</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> mid - <span class="number">1</span>; i &gt;= left; i--) &#123;</span><br><span class="line">            tempSum += nums[i];</span><br><span class="line">            leftMaxSum = Math.max(leftMaxSum, tempSum);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="type">int</span> <span class="variable">rightMaxSum</span> <span class="operator">=</span> nums[mid + <span class="number">1</span>];</span><br><span class="line">        tempSum = nums[mid + <span class="number">1</span>];</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> mid + <span class="number">2</span>; i &lt;= right; i++) &#123;</span><br><span class="line">            tempSum += nums[i];</span><br><span class="line">            rightMaxSum = Math.max(rightMaxSum, tempSum);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> leftMaxSum + rightMaxSum;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+
+
 
     </div>
     
@@ -453,13 +466,13 @@
 
           <div class="post-nav">
             <div class="post-nav-item">
-                <a href="/2024/10/27/algorithm/leetcode/%E8%B4%AA%E5%BF%83%E7%AE%97%E6%B3%95/LeetCode-55-%E8%B7%B3%E8%B7%83%E6%B8%B8%E6%88%8F/" rel="prev" title="跳跃游戏 | LeetCode-55 | 贪心算法">
-                  <i class="fa fa-angle-left"></i> 跳跃游戏 | LeetCode-55 | 贪心算法
+                <a href="/2024/10/27/algorithm/leetcode/%E8%B4%AA%E5%BF%83%E7%AE%97%E6%B3%95/LeetCode-860-%E6%9F%A0%E6%AA%AC%E6%B0%B4%E6%89%BE%E9%9B%B6/" rel="prev" title="柠檬水找零 | LeetCode-860 | 贪心算法">
+                  <i class="fa fa-angle-left"></i> 柠檬水找零 | LeetCode-860 | 贪心算法
                 </a>
             </div>
             <div class="post-nav-item">
-                <a href="/2024/10/27/algorithm/leetcode/%E8%B4%AA%E5%BF%83%E7%AE%97%E6%B3%95/LeetCode-455-%E5%88%86%E5%8F%91%E9%A5%BC%E5%B9%B2/" rel="next" title="分发饼干 | LeetCode- | 贪心算法">
-                  分发饼干 | LeetCode- | 贪心算法 <i class="fa fa-angle-right"></i>
+                <a href="/2024/10/27/algorithm/leetcode/%E8%B4%AA%E5%BF%83%E7%AE%97%E6%B3%95/LeetCode-738-%E5%8D%95%E8%B0%83%E9%80%92%E5%A2%9E%E7%9A%84%E6%95%B0%E5%AD%97/" rel="next" title="单调递增的数字 | LeetCode-738 | 贪心算法">
+                  单调递增的数字 | LeetCode-738 | 贪心算法 <i class="fa fa-angle-right"></i>
                 </a>
             </div>
           </div>
@@ -494,14 +507,14 @@
       <i class="fa fa-chart-line"></i>
     </span>
       <span>站点总字数：</span>
-    <span title="站点总字数">281k</span>
+    <span title="站点总字数">282k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
       <span>站点阅读时长 &asymp;</span>
-    <span title="站点阅读时长">7:49</span>
+    <span title="站点阅读时长">7:51</span>
   </span>
 </div>
 <div class="busuanzi-count">

@@ -104,7 +104,7 @@
 
 
 <nav class="site-nav">
-  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li><li class="menu-item menu-item-sitemap"><a href="/sitemap.xml" rel="section"><i class="fa fa-sitemap fa-fw"></i>站点地图</a></li>
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">19</span></a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">37</span></a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">88</span></a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li><li class="menu-item menu-item-sitemap"><a href="/sitemap.xml" rel="section"><i class="fa fa-sitemap fa-fw"></i>站点地图</a></li><li class="menu-item menu-item-commonweal"><a href="/404/" rel="section"><i class="fa fa-heartbeat fa-fw"></i>公益 404</a></li>
       <li class="menu-item menu-item-search">
         <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
         </a>
@@ -348,7 +348,7 @@
         <i class="far fa-clock"></i>
       </span>
       <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>3 分钟</span>
+      <span>4 分钟</span>
     </span>
 </div>
 
@@ -365,14 +365,17 @@
 <p>判断你是否能够到达最后一个下标，如果可以，返回 <code>true</code> ；否则，返回 <code>false</code> 。</p>
 <p><strong>示例 1：</strong></p>
 <figure class="highlight tap"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">输入：nums = [2,3,1,1,4]</span><br><span class="line">输出：true</span><br><span class="line">解释：可以先跳<span class="number"> 1 </span>步，从下标<span class="number"> 0 </span>到达下标 1, 然后再从下标<span class="number"> 1 </span>跳<span class="number"> 3 </span>步到达最后一个下标。</span><br></pre></td></tr></table></figure>
+
 <p><strong>示例 2：</strong></p>
 <figure class="highlight tap"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">输入：nums = [3,2,1,0,4]</span><br><span class="line">输出：false</span><br><span class="line">解释：无论怎样，总会到达下标为<span class="number"> 3 </span>的位置。但该下标的最大跳跃长度是<span class="number"> 0 </span>， 所以永远不可能到达最后一个下标。</span><br></pre></td></tr></table></figure>
+
 <p><strong>提示：</strong></p>
 <ul>
-<li>$1 &lt;= nums.length &lt;= 10^4$</li>
-<li>$0 &lt;= nums[i] &lt;= 10^5$</li>
+<li>$1 &lt;&#x3D; nums.length &lt;&#x3D; 10^4$</li>
+<li>$0 &lt;&#x3D; nums[i] &lt;&#x3D; 10^5$</li>
 </ul>
 <h2 id="2-题解"><a href="#2-题解" class="headerlink" title="2.题解"></a>2.题解</h2><h3 id="2-1-贪心算法"><a href="#2-1-贪心算法" class="headerlink" title="2.1 贪心算法"></a>2.1 贪心算法</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="type">boolean</span> <span class="title function_">canJump</span><span class="params">(<span class="type">int</span>[] nums)</span> &#123;</span><br><span class="line">        <span class="type">int</span> <span class="variable">cover</span> <span class="operator">=</span> <span class="number">0</span>; <span class="comment">// 记录当前可以到达的最远位置</span></span><br><span class="line">        <span class="comment">// 遍历数组，直到当前索引超过 cover</span></span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>; i &lt;= cover; i++) &#123;</span><br><span class="line">            <span class="comment">// 更新可以到达的最远位置</span></span><br><span class="line">            cover = Math.max(i + nums[i], cover);</span><br><span class="line">            <span class="comment">// 如果可以到达或超过最后一个位置，直接返回 true</span></span><br><span class="line">            <span class="keyword">if</span> (cover &gt;= nums.length - <span class="number">1</span>) <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">// 如果遍历完后仍然无法到达最后位置，返回 false</span></span><br><span class="line">        <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
 <h1 id="题目2：45-跳跃游戏-II"><a href="#题目2：45-跳跃游戏-II" class="headerlink" title="题目2：45. 跳跃游戏 II"></a>题目2：<a target="_blank" rel="noopener" href="https://leetcode.cn/problems/jump-game-ii/">45. 跳跃游戏 II</a></h1><h2 id="1-题目描述-1"><a href="#1-题目描述-1" class="headerlink" title="1.题目描述"></a>1.题目描述</h2><p>给定一个长度为 <code>n</code> 的 <strong>0 索引</strong>整数数组 <code>nums</code>。初始位置为 <code>nums[0]</code>。</p>
 <p>每个元素 <code>nums[i]</code> 表示从索引 <code>i</code> 向前跳转的最大长度。换句话说，如果你在 <code>nums[i]</code> 处，你可以跳转到任意 <code>nums[i + j]</code> 处:</p>
 <ul>
@@ -382,16 +385,26 @@
 <p>返回到达 <code>nums[n - 1]</code> 的最小跳跃次数。生成的测试用例可以到达 <code>nums[n - 1]</code>。</p>
 <p><strong>示例 1:</strong></p>
 <figure class="highlight tap"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">输入: nums = [2,3,1,1,4]</span><br><span class="line">输出: 2</span><br><span class="line">解释: 跳到最后一个位置的最小跳跃数是 2。</span><br><span class="line">     从下标为<span class="number"> 0 </span>跳到下标为<span class="number"> 1 </span>的位置，跳<span class="number"> 1 </span>步，然后跳<span class="number"> 3 </span>步到达数组的最后一个位置。</span><br></pre></td></tr></table></figure>
+
 <p><strong>示例 2:</strong></p>
 <figure class="highlight makefile"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="section">输入: nums = [2,3,0,1,4]</span></span><br><span class="line"><span class="section">输出: 2</span></span><br></pre></td></tr></table></figure>
+
 <p><strong>提示:</strong></p>
 <ul>
-<li>$1 &lt;= nums.length &lt;= 10^4$</li>
+<li>$1 &lt;&#x3D; nums.length &lt;&#x3D; 10^4$</li>
 <li><code>0 &lt;= nums[i] &lt;= 1000</code></li>
 <li>题目保证可以到达 <code>nums[n-1]</code></li>
 </ul>
 <h2 id="2-题解-1"><a href="#2-题解-1" class="headerlink" title="2.题解"></a>2.题解</h2><h3 id="2-1-贪心算法-写法1"><a href="#2-1-贪心算法-写法1" class="headerlink" title="2.1 贪心算法-写法1"></a>2.1 贪心算法-写法1</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="type">int</span> <span class="title function_">jump</span><span class="params">(<span class="type">int</span>[] nums)</span> &#123;</span><br><span class="line">        <span class="comment">// 如果数组长度为 1，已经在最后一个位置，无需跳跃，返回 0</span></span><br><span class="line">        <span class="keyword">if</span> (nums.length == <span class="number">1</span>) <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">        <span class="type">int</span> <span class="variable">curDistance</span> <span class="operator">=</span> <span class="number">0</span>; <span class="comment">// 当前跳跃覆盖的最远距离下标</span></span><br><span class="line">        <span class="type">int</span> <span class="variable">count</span> <span class="operator">=</span> <span class="number">0</span>; <span class="comment">// 跳跃次数</span></span><br><span class="line">        <span class="type">int</span> <span class="variable">nextDistance</span> <span class="operator">=</span> <span class="number">0</span>; <span class="comment">// 下一跳能覆盖的最远距离下标</span></span><br><span class="line">        <span class="comment">// 遍历数组</span></span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>; i &lt; nums.length; i++) &#123;</span><br><span class="line">            <span class="comment">// 更新下一跳能覆盖的最远距离</span></span><br><span class="line">            nextDistance = Math.max(i + nums[i], nextDistance);</span><br><span class="line">            <span class="comment">// 如果遍历到当前跳跃覆盖的最远距离</span></span><br><span class="line">            <span class="keyword">if</span> (i == curDistance) &#123;</span><br><span class="line">                count++; <span class="comment">// 增加跳跃次数</span></span><br><span class="line">                curDistance = nextDistance; <span class="comment">// 更新当前跳跃覆盖的最远距离</span></span><br><span class="line"></span><br><span class="line">                <span class="comment">// 如果下一跳覆盖的最远距离已经达到或超过最后一个位置，直接跳出循环</span></span><br><span class="line">                <span class="keyword">if</span> (nextDistance &gt;= nums.length - <span class="number">1</span>) <span class="keyword">break</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> count; <span class="comment">// 返回跳跃次数</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
 <h3 id="2-2-贪心算法-写法2"><a href="#2-2-贪心算法-写法2" class="headerlink" title="2.2 贪心算法-写法2"></a>2.2 贪心算法-写法2</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 解题类：用于计算从数组的起点跳跃到终点所需的最少跳跃次数</span></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="type">int</span> <span class="title function_">jump</span><span class="params">(<span class="type">int</span>[] nums)</span> &#123;</span><br><span class="line">        <span class="comment">// 初始化跳跃次数</span></span><br><span class="line">        <span class="type">int</span> <span class="variable">result</span> <span class="operator">=</span> <span class="number">0</span>;</span><br><span class="line">        <span class="comment">// 当前跳跃范围的最远距离</span></span><br><span class="line">        <span class="type">int</span> <span class="variable">curDistance</span> <span class="operator">=</span> <span class="number">0</span>;</span><br><span class="line">        <span class="comment">// 下一跳的最大范围</span></span><br><span class="line">        <span class="type">int</span> <span class="variable">nextDistance</span> <span class="operator">=</span> <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 遍历数组（不包括最后一个元素，因为跳跃到最后一个元素即结束）</span></span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>; i &lt; nums.length - <span class="number">1</span>; i++) &#123;</span><br><span class="line">            <span class="comment">// 更新下一跳的最远距离</span></span><br><span class="line">            nextDistance = Math.max(i + nums[i], nextDistance);</span><br><span class="line"></span><br><span class="line">            <span class="comment">// 当到达当前跳跃的最远距离时，需要进行跳跃</span></span><br><span class="line">            <span class="keyword">if</span> (i == curDistance) &#123;</span><br><span class="line">                result++;               <span class="comment">// 增加跳跃次数</span></span><br><span class="line">                curDistance = nextDistance;  <span class="comment">// 更新当前跳跃的最远距离</span></span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 返回最少跳跃次数</span></span><br><span class="line">        <span class="keyword">return</span> result;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+
+
 
     </div>
     
@@ -466,8 +479,8 @@
                 </a>
             </div>
             <div class="post-nav-item">
-                <a href="/2024/10/27/algorithm/leetcode/%E8%B4%AA%E5%BF%83%E7%AE%97%E6%B3%95/LeetCode-53-%E6%9C%80%E5%A4%A7%E5%AD%90%E6%95%B0%E7%BB%84%E5%92%8C/" rel="next" title="最大子数组和 | LeetCode-53 | 贪心算法 | 动态规划">
-                  最大子数组和 | LeetCode-53 | 贪心算法 | 动态规划 <i class="fa fa-angle-right"></i>
+                <a href="/2024/10/27/algorithm/leetcode/%E8%B4%AA%E5%BF%83%E7%AE%97%E6%B3%95/LeetCode-376-%E6%91%86%E5%8A%A8%E5%BA%8F%E5%88%97/" rel="next" title="摆动序列 | LeetCode-376 | 贪心算法">
+                  摆动序列 | LeetCode-376 | 贪心算法 <i class="fa fa-angle-right"></i>
                 </a>
             </div>
           </div>
@@ -502,14 +515,14 @@
       <i class="fa fa-chart-line"></i>
     </span>
       <span>站点总字数：</span>
-    <span title="站点总字数">281k</span>
+    <span title="站点总字数">282k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
       <span>站点阅读时长 &asymp;</span>
-    <span title="站点阅读时长">7:49</span>
+    <span title="站点阅读时长">7:51</span>
   </span>
 </div>
 <div class="busuanzi-count">
