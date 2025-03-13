@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 7.3.0">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/128x128.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/32x32.ico">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/16x16.ico">
+  <link rel="mask-icon" href="/images/mmz.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.2/css/all.min.css" integrity="sha256-XOqroi11tY4EFQMR9ZYwZWKj5ZXiftSx36RRuC3anlA=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/themes/blue/pace-theme-minimal.css">
+  <script src="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/pace.min.js" integrity="sha256-gqd7YTjg/BtfqWSwsJOvndl0Bxc8gFImLEkXQT8+qj0=" crossorigin="anonymous"></script>
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"example.com","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.20.0","exturl":false,"sidebar":{"position":"left","width_expanded":400,"width_dual_column":300,"display":"post","padding":18,"offset":12},"hljswrap":true,"copycode":{"enable":true,"style":null,"show_result":true},"fold":{"enable":false,"height":500},"bookmark":{"enable":true,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":false,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content="今天毛毛张分享的是Floyd判圈算法，这是刷LeetCode必备基础算法理论！">
+<meta property="og:type" content="article">
+<meta property="og:title" content="图解Floyd判圈算法 | 判断链表或者迭代函数是否有环 | Java代码">
+<meta property="og:url" content="http://example.com/2024/08/10/algorithm/leetcode/%E6%95%B0%E5%AD%A6/Floyd%E5%88%A4%E5%9C%88%E7%AE%97%E6%B3%95/index.html">
+<meta property="og:site_name" content="神马都会亿点点的毛毛张">
+<meta property="og:description" content="今天毛毛张分享的是Floyd判圈算法，这是刷LeetCode必备基础算法理论！">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/zzxrepository/image_bed@master/floyd/image-20240809104404465.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/zzxrepository/image_bed@master/floyd/image-20240810201955223.png">
+<meta property="article:published_time" content="2024-08-10T13:21:34.000Z">
+<meta property="article:modified_time" content="2024-11-12T16:33:33.000Z">
+<meta property="article:author" content="毛毛张">
+<meta property="article:tag" content="算法笔记">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/zzxrepository/image_bed@master/floyd/image-20240809104404465.png">
+
+
+<link rel="canonical" href="http://example.com/2024/08/10/algorithm/leetcode/%E6%95%B0%E5%AD%A6/Floyd%E5%88%A4%E5%9C%88%E7%AE%97%E6%B3%95/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"http://example.com/2024/08/10/algorithm/leetcode/%E6%95%B0%E5%AD%A6/Floyd%E5%88%A4%E5%9C%88%E7%AE%97%E6%B3%95/","path":"2024/08/10/algorithm/leetcode/数学/Floyd判圈算法/","title":"图解Floyd判圈算法 | 判断链表或者迭代函数是否有环 | Java代码"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>图解Floyd判圈算法 | 判断链表或者迭代函数是否有环 | Java代码 | 神马都会亿点点的毛毛张</title>
+  
+
+
+
+
+
+
+
+<link rel="dns-prefetch" href="blogcomments-eta.vercel.app"><link rel="stylesheet" href="//cdn.jsdelivr.net/gh/theme-next/theme-next-needmoreshare2@1/needsharebutton.min.css"><style>
+#needsharebutton-postbottom {
+  cursor: pointer;
+  height: 26px;
+  margin-top: 10px;
+  position: relative;
+}
+#needsharebutton-postbottom .btn {
+  border: 1px solid $btn-default-border-color;
+  border-radius: 3px;
+  display: initial;
+  padding: 1px 4px;
+}
+</style>
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+<link rel="alternate" href="/atom.xml" title="神马都会亿点点的毛毛张" type="application/atom+xml">
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">神马都会亿点点的毛毛张</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">一万次悲伤，依然会有Dream</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="搜索" role="button">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li><li class="menu-item menu-item-sitemap"><a href="/sitemap.xml" rel="section"><i class="fa fa-sitemap fa-fw"></i>站点地图</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+      <div class="search-header">
+        <span class="search-icon">
+          <i class="fa fa-search"></i>
+        </span>
+        <div class="search-input-container">
+          <input autocomplete="off" autocapitalize="off" maxlength="80"
+                placeholder="搜索..." spellcheck="false"
+                type="search" class="search-input">
+        </div>
+        <span class="popup-btn-close" role="button">
+          <i class="fa fa-times-circle"></i>
+        </span>
+      </div>
+      <div class="search-result-container">
+        <div class="search-result-icon">
+          <i class="fa fa-spinner fa-pulse fa-5x"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#1-Floyd%E5%88%A4%E5%9C%88%E7%AE%97%E6%B3%95%E6%A6%82%E8%BF%B0%F0%9F%8D%87"><span class="nav-text">1.Floyd判圈算法概述🍇</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2-%E5%A6%82%E4%BD%95%E5%88%A4%E6%96%AD%E6%98%AF%E5%90%A6%E6%9C%89%E7%8E%AF%F0%9F%8D%89"><span class="nav-text">2.如何判断是否有环🍉</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#3-%E5%A6%82%E4%BD%95%E6%89%BE%E5%88%B0%E7%8E%AF%E7%9A%84%E8%B5%B7%E7%82%B9%F0%9F%8D%8D"><span class="nav-text">3.如何找到环的起点🍍</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#4-%E8%AE%A1%E7%AE%97%E7%8E%AF%E7%9A%84%E9%95%BF%E5%BA%A6%F0%9F%A5%AD"><span class="nav-text">4.计算环的长度🥭</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#5-%E4%BB%A3%E7%A0%81%E5%AE%9E%E7%8E%B0%F0%9F%8D%8E"><span class="nav-text">5.代码实现🍎</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%8F%82%E8%80%83%E6%96%87%E7%8C%AE"><span class="nav-text">参考文献</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="毛毛张"
+      src="/images/mmz.png">
+  <p class="site-author-name" itemprop="name">毛毛张</p>
+  <div class="site-description" itemprop="description">分享毛毛张毕生所学</div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">88</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">19</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">37</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author animated">
+      <span class="links-of-author-item">
+        <a href="https://blog.csdn.net/weixin_48235955" title="CSDN → https:&#x2F;&#x2F;blog.csdn.net&#x2F;weixin_48235955" rel="noopener me" target="_blank"><i class="fa fa-solid fa-newspaper fa-fw"></i>CSDN</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://space.bilibili.com/456166717" title="Bilibili → https:&#x2F;&#x2F;space.bilibili.com&#x2F;456166717" rel="noopener me" target="_blank"><i class="fa fa-solid fa-video fa-fw"></i>Bilibili</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://github.com/zzxrepository" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;zzxrepository" rel="noopener me" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:zzxkingdom@163.com" title="E-Mail → mailto:zzxkingdom@163.com" rel="noopener me" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+  </div>
+  <div class="cc-license animated" itemprop="license">
+    <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" class="cc-opacity" rel="noopener" target="_blank"><img src="https://cdn.jsdelivr.net/npm/@creativecommons/vocabulary@2020.11.3/assets/license_badges/small/by_nc_sa.svg" alt="Creative Commons"></a>
+  </div>
+        </div>
+        <div class="">
+          <a target="_blank" class="social-link" href="/atom.xml" style="color: burlywood;">
+            <span class="icon">
+              <i class="fa fa-rss"></i>
+            </span>
+            <span class="label">RSS</span>
+          </a>
+        </div>
+
+
+      </div>
+        <div class="back-to-top animated" role="button" aria-label="返回顶部">
+          <i class="fa fa-arrow-up"></i>
+          <span>0%</span>
+        </div>
+
+      
+
+
+      <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=1475596788&auto=1&height=66"></iframe>
+      
+    </div>
+
+    
+
+    
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2024/08/10/algorithm/leetcode/%E6%95%B0%E5%AD%A6/Floyd%E5%88%A4%E5%9C%88%E7%AE%97%E6%B3%95/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/mmz.png">
+      <meta itemprop="name" content="毛毛张">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="神马都会亿点点的毛毛张">
+      <meta itemprop="description" content="分享毛毛张毕生所学">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="图解Floyd判圈算法 | 判断链表或者迭代函数是否有环 | Java代码 | 神马都会亿点点的毛毛张">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          图解Floyd判圈算法 | 判断链表或者迭代函数是否有环 | Java代码
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2024-08-10 21:21:34" itemprop="dateCreated datePublished" datetime="2024-08-10T21:21:34+08:00">2024-08-10</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2024-11-13 00:33:33" itemprop="dateModified" datetime="2024-11-13T00:33:33+08:00">2024-11-13</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E7%AE%97%E6%B3%95/" itemprop="url" rel="index"><span itemprop="name">算法</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E7%AE%97%E6%B3%95/%E7%AE%97%E6%B3%95%E7%AC%94%E8%AE%B0/" itemprop="url" rel="index"><span itemprop="name">算法笔记</span></a>
+        </span>
+    </span>
+
+  
+    <span id="/2024/08/10/algorithm/leetcode/%E6%95%B0%E5%AD%A6/Floyd%E5%88%A4%E5%9C%88%E7%AE%97%E6%B3%95/" class="post-meta-item leancloud_visitors" data-flag-title="图解Floyd判圈算法 | 判断链表或者迭代函数是否有环 | Java代码" title="阅读次数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span class="leancloud-visitors-count"></span>
+    </span>
+    <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span id="busuanzi_value_page_pv"></span>
+    </span>
+  
+  <span class="post-meta-item">
+    
+    <span class="post-meta-item-icon">
+      <i class="far fa-comment"></i>
+    </span>
+    <span class="post-meta-item-text">Waline：</span>
+  
+    <a title="waline" href="/2024/08/10/algorithm/leetcode/%E6%95%B0%E5%AD%A6/Floyd%E5%88%A4%E5%9C%88%E7%AE%97%E6%B3%95/#waline" itemprop="discussionUrl">
+      <span class="post-comments-count waline-comment-count" data-path="/2024/08/10/algorithm/leetcode/%E6%95%B0%E5%AD%A6/Floyd%E5%88%A4%E5%9C%88%E7%AE%97%E6%B3%95/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>3.7k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>6 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><center>
+    <b>今天毛毛张分享的是Floyd判圈算法，这是刷LeetCode必备基础算法理论！</b>
+</center>
+
+<span id="more"></span>
+<h1 id="1-Floyd判圈算法概述🍇"><a href="#1-Floyd判圈算法概述🍇" class="headerlink" title="1.Floyd判圈算法概述🍇"></a>1.Floyd判圈算法概述🍇</h1><ul>
+<li>🍑<strong>定义：</strong> <code>Floyd</code>判圈算法（<code>Floyd Cycle Detection Algorithm</code>），又称龟兔赛跑算法（<code>Tortoise and Hare Algorithm</code>），是一个可以在有限状态机、迭代函数或者链表上判断是否存在环，以及判断环的起点与长度的算法🍏</li>
+<li>🍒<strong>算法思想：</strong><ol>
+<li>有限时间内快慢指针必然相遇且在相遇点在环上1️⃣</li>
+<li>相遇点和起点的等速指针将在换的入口出相遇2️⃣</li>
+</ol>
+</li>
+<li><p>🍓<strong>算法作用：</strong></p>
+<ul>
+<li>判断迭代函数或者链表上面是否有环1️⃣</li>
+<li>如果有环可以找到环的起点2️⃣</li>
+<li>如果有换可以计算环的长度3️⃣ </li>
+</ul>
+</li>
+<li><p>🫐<strong>这个算法只需要大家了解其原理就行，毛毛张在这里不做严密的逻辑推导，而是通过推介举例的方式来帮助大家理解这个算法</strong></p>
+</li>
+</ul>
+<h1 id="2-如何判断是否有环🍉"><a href="#2-如何判断是否有环🍉" class="headerlink" title="2.如何判断是否有环🍉"></a>2.如何判断是否有环🍉</h1><hr>
+<center>
+    <b>有限时间内快慢指针必然相遇且相遇点在环上</b>
+</center>
+
+<hr>
+<ul>
+<li>由于这个算法的另外一个名称是龟兔赛跑算法，因此毛毛张就拿龟兔赛跑的例子来举例说明：<ul>
+<li>假设：我们可以假设有乌龟和兔子在一个跑道上比赛跑步，我们默认兔子的跑步速度是快于乌龟的</li>
+<li>如果是直线型跑道，两者同时从起点出出发，中途乌龟是永远追不上兔子的，直到涂子到达终点</li>
+<li>如果是环形跑道，两者同时从起点出发，经过有限的时间内，兔子会追上乌龟，两者相遇，如果运动过程中兔子的速度是乌龟速度的两倍，那么两者第一次相遇时，兔子的路程就是乌龟路程的两倍</li>
+</ul>
+</li>
+<li><strong>上面这个例子是小学问题中一个很简单的相遇和追及问题，我们回到这个算法本身：</strong><ul>
+<li><strong>假设兔子就是那个快指针<code>fast</code>，每次走两步，乌龟就是那个慢指针<code>slow</code>，每次走一步</strong></li>
+<li><strong>如果链表或者迭代函数没用环，那么快指针迭代到终点，在此过程中，两个指针是不会相遇</strong></li>
+<li><strong>如果链表或者迭代函数有环，那么快指针在迭代过程中一定会追上慢指针</strong></li>
+</ul>
+</li>
+<li><strong>图解：</strong></li>
+</ul>
+<p><img src="https://cdn.jsdelivr.net/gh/zzxrepository/image_bed@master/floyd/image-20240809104404465.png" alt="image-20240809104404465"></p>
+<h1 id="3-如何找到环的起点🍍"><a href="#3-如何找到环的起点🍍" class="headerlink" title="3.如何找到环的起点🍍"></a>3.如何找到环的起点🍍</h1><hr>
+<center>
+    <b>相遇点和起点的等速指针将在换的入口出相遇</b>
+</center>
+
+<hr>
+<ul>
+<li><p>在上面的问题中，<strong>我们假设快指针的速度是慢指针的两倍</strong>，那么在相同时间内，第一次相遇的时候，<strong>快指针走过的距离为2n，慢指针走过的距离为n</strong>，因此单位时间内快指针比慢指针多走一个$n$；<strong>于是我们让慢指针回到起点，快指针还在相遇点，即让快指针先走$n$的距离；然后让两个指针的前进速度相同，区分为前指针和后指针</strong></p>
+</li>
+<li><p><strong>图解：</strong></p>
+</li>
+</ul>
+<p><img src="https://cdn.jsdelivr.net/gh/zzxrepository/image_bed@master/floyd/image-20240810201955223.png" alt="image-20240810201955223"></p>
+<h1 id="4-计算环的长度🥭"><a href="#4-计算环的长度🥭" class="headerlink" title="4.计算环的长度🥭"></a>4.计算环的长度🥭</h1><ul>
+<li><strong>顺着找到环的入口的思路</strong>，我们可以得到<strong>方式1：</strong>在找到环的入口后，一步一步遍历回到起点时，走过的距离就是环的长度</li>
+<li><strong>顺着判断是否有环的思路</strong>，我们可以得到<strong>方式2：</strong> 在找到相遇点之后，继续执行并重新对快慢指针进行计步，直到快慢指针第二次相遇，此时快指针比慢指针多走的距离就是环的长度</li>
+<li><strong>方式3：</strong> 当快慢指针相遇之后，让快指针一步一步遍历回到相遇点时，走过的距离就是环的长度</li>
+</ul>
+<h1 id="5-代码实现🍎"><a href="#5-代码实现🍎" class="headerlink" title="5.代码实现🍎"></a>5.代码实现🍎</h1><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">ListNode</span> &#123;</span><br><span class="line">    <span class="type">int</span> val;</span><br><span class="line">    ListNode next;</span><br><span class="line"></span><br><span class="line">    ListNode(<span class="type">int</span> val) &#123;</span><br><span class="line">        <span class="built_in">this</span>.val = val;</span><br><span class="line">        <span class="built_in">this</span>.next = <span class="literal">null</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">LinkedListCycle</span> &#123;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 生成一个有环的链表，环的长度为5</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> ListNode <span class="title function_">createCyclicLinkedList</span><span class="params">()</span> &#123;</span><br><span class="line">        <span class="type">ListNode</span> <span class="variable">head</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">ListNode</span>(<span class="number">1</span>);</span><br><span class="line">        <span class="type">ListNode</span> <span class="variable">second</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">ListNode</span>(<span class="number">2</span>);</span><br><span class="line">        <span class="type">ListNode</span> <span class="variable">third</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">ListNode</span>(<span class="number">3</span>);</span><br><span class="line">        <span class="type">ListNode</span> <span class="variable">fourth</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">ListNode</span>(<span class="number">4</span>);</span><br><span class="line">        <span class="type">ListNode</span> <span class="variable">fifth</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">ListNode</span>(<span class="number">5</span>);</span><br><span class="line">        <span class="type">ListNode</span> <span class="variable">sixth</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">ListNode</span>(<span class="number">6</span>);</span><br><span class="line"></span><br><span class="line">        head.next = second;</span><br><span class="line">        second.next = third;</span><br><span class="line">        third.next = fourth;</span><br><span class="line">        fourth.next = fifth;</span><br><span class="line">        fifth.next = sixth;</span><br><span class="line">        sixth.next = third; <span class="comment">// 第三个节点为环的入口，环的长度为5</span></span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> head;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 判断链表是否有环</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="type">boolean</span> <span class="title function_">hasCycle</span><span class="params">(ListNode head)</span> &#123;</span><br><span class="line">        <span class="keyword">if</span> (head == <span class="literal">null</span> || head.next == <span class="literal">null</span>) <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line"></span><br><span class="line">        <span class="type">ListNode</span> <span class="variable">slow</span> <span class="operator">=</span> head;</span><br><span class="line">        <span class="type">ListNode</span> <span class="variable">fast</span> <span class="operator">=</span> head;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">while</span> (fast != <span class="literal">null</span> &amp;&amp; fast.next != <span class="literal">null</span>) &#123;</span><br><span class="line">            slow = slow.next;</span><br><span class="line">            fast = fast.next.next;</span><br><span class="line"></span><br><span class="line">            <span class="keyword">if</span> (slow == fast) &#123;</span><br><span class="line">                <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 找到环的入口</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> ListNode <span class="title function_">detectCycle</span><span class="params">(ListNode head)</span> &#123;</span><br><span class="line">        <span class="keyword">if</span> (head == <span class="literal">null</span> || head.next == <span class="literal">null</span>) <span class="keyword">return</span> <span class="literal">null</span>;</span><br><span class="line"></span><br><span class="line">        <span class="type">ListNode</span> <span class="variable">slow</span> <span class="operator">=</span> head;</span><br><span class="line">        <span class="type">ListNode</span> <span class="variable">fast</span> <span class="operator">=</span> head;</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 先判断是否有环</span></span><br><span class="line">        <span class="type">boolean</span> <span class="variable">hasCycle</span> <span class="operator">=</span> <span class="literal">false</span>;</span><br><span class="line">        <span class="keyword">while</span> (fast != <span class="literal">null</span> &amp;&amp; fast.next != <span class="literal">null</span>) &#123;</span><br><span class="line">            slow = slow.next;</span><br><span class="line">            fast = fast.next.next;</span><br><span class="line"></span><br><span class="line">            <span class="keyword">if</span> (slow == fast) &#123;</span><br><span class="line">                hasCycle = <span class="literal">true</span>;</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 如果没有环，返回null</span></span><br><span class="line">        <span class="keyword">if</span> (!hasCycle) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">null</span>;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 找到环的入口</span></span><br><span class="line">        slow = head;</span><br><span class="line">        <span class="keyword">while</span> (slow != fast) &#123;</span><br><span class="line">            slow = slow.next;</span><br><span class="line">            fast = fast.next;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> slow;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 计算环的长度</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="type">int</span> <span class="title function_">getCycleLength</span><span class="params">(ListNode head)</span> &#123;</span><br><span class="line">        <span class="keyword">if</span> (head == <span class="literal">null</span> || head.next == <span class="literal">null</span>) <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">        <span class="type">ListNode</span> <span class="variable">slow</span> <span class="operator">=</span> head;</span><br><span class="line">        <span class="type">ListNode</span> <span class="variable">fast</span> <span class="operator">=</span> head;</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 先找到相遇点</span></span><br><span class="line">        <span class="type">boolean</span> <span class="variable">hasCycle</span> <span class="operator">=</span> <span class="literal">false</span>;</span><br><span class="line">        <span class="keyword">while</span> (fast != <span class="literal">null</span> &amp;&amp; fast.next != <span class="literal">null</span>) &#123;</span><br><span class="line">            slow = slow.next;</span><br><span class="line">            fast = fast.next.next;</span><br><span class="line"></span><br><span class="line">            <span class="keyword">if</span> (slow == fast) &#123;</span><br><span class="line">                hasCycle = <span class="literal">true</span>;</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 如果没有环，返回0</span></span><br><span class="line">        <span class="keyword">if</span> (!hasCycle) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 从相遇点开始计算环的长度</span></span><br><span class="line">        <span class="type">int</span> <span class="variable">cycleLength</span> <span class="operator">=</span> <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">do</span> &#123;</span><br><span class="line">            slow = slow.next;</span><br><span class="line">            cycleLength++;</span><br><span class="line">        &#125; <span class="keyword">while</span> (slow != fast);</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> cycleLength;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">        <span class="type">ListNode</span> <span class="variable">cyclicList</span> <span class="operator">=</span> createCyclicLinkedList();</span><br><span class="line"></span><br><span class="line">        System.out.println(<span class="string">&quot;Has cycle: &quot;</span> + hasCycle(cyclicList));</span><br><span class="line">        <span class="type">ListNode</span> <span class="variable">cycleEntry</span> <span class="operator">=</span> detectCycle(cyclicList);</span><br><span class="line">        System.out.println(<span class="string">&quot;Cycle entry node value: &quot;</span> + (cycleEntry != <span class="literal">null</span> ? cycleEntry.val : <span class="string">&quot;No cycle&quot;</span>));</span><br><span class="line">        System.out.println(<span class="string">&quot;Cycle length: &quot;</span> + getCycleLength(cyclicList));</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h1 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><ul>
+<li><a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_43919533/article/details/129991996">https://blog.csdn.net/qq_43919533/article/details/129991996</a></li>
+<li><a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_45609535/article/details/125708493">https://blog.csdn.net/weixin_45609535/article/details/125708493</a></li>
+<li><a target="_blank" rel="noopener" href="https://blog.csdn.net/m0_50344530/article/details/114225317">https://blog.csdn.net/m0_50344530/article/details/114225317</a></li>
+</ul>
+
+    </div>
+    
+
+    
+    
+    
+
+     
+    <div>
+      
+        <div>
+    
+        <div style="text-align:center;color: #ccc;font-size:14px;">-------------本文结束<i class="fa fa-paw"></i>感谢您的阅读-------------</div>
+    
+</div>
+      
+    </div>
+
+    <footer class="post-footer"><div class="post-widgets">
+      <div id="needsharebutton-postbottom">
+        <span class="btn">
+          <i class="fa fa-share-alt" aria-hidden="true"></i>
+        </span>
+      </div>
+    </div>
+          <div class="reward-container">
+  <div>请我一杯咖啡吧！</div>
+  <button>
+    赞赏
+  </button>
+  <div class="post-reward">
+      <div>
+        <img src="/images/wechatpay.png" alt="毛毛张 微信">
+        <span>微信</span>
+      </div>
+      <div>
+        <img src="/images/alipay.png" alt="毛毛张 支付宝">
+        <span>支付宝</span>
+      </div>
+
+  </div>
+</div>
+
+          
+
+<div class="post-copyright">
+<ul>
+  <li class="post-copyright-author">
+      <strong>原作者： </strong>毛毛张
+  </li>
+  <li class="post-copyright-link">
+      <strong>本文链接：</strong>
+      <a href="http://example.com/2024/08/10/algorithm/leetcode/%E6%95%B0%E5%AD%A6/Floyd%E5%88%A4%E5%9C%88%E7%AE%97%E6%B3%95/" title="图解Floyd判圈算法 | 判断链表或者迭代函数是否有环 | Java代码">http://example.com/2024/08/10/algorithm/leetcode/数学/Floyd判圈算法/</a>
+  </li>
+  <li class="post-copyright-license">
+      <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+          <div class="post-tags">
+              <a href="/tags/%E7%AE%97%E6%B3%95%E7%AC%94%E8%AE%B0/" rel="tag"><i class="fa fa-tag"></i> 算法笔记</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2024/08/10/algorithm/leetcode/%E6%95%B0%E7%BB%84/LeetCode-2080-%E5%8C%BA%E9%97%B4%E5%86%85%E6%9F%A5%E8%AF%A2%E6%95%B0%E5%AD%97%E7%9A%84%E9%A2%91%E7%8E%87/" rel="prev" title="区间内查询数字的频率 | LeetCode-2080 | 二分查找">
+                  <i class="fa fa-angle-left"></i> 区间内查询数字的频率 | LeetCode-2080 | 二分查找
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/2024/08/10/algorithm/leetcode/%E6%95%B0%E7%BB%84/LeetCode-59-%E8%9E%BA%E6%97%8B%E7%9F%A9%E9%98%B52/" rel="next" title="螺旋矩阵 | LeetCode-59 | LeetCode-54 | 分类讨论">
+                  螺旋矩阵 | LeetCode-59 | LeetCode-54 | 分类讨论 <i class="fa fa-angle-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+    <div class="comments" id="waline"></div>
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+<script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+  <div class="copyright">
+    &copy; 2024 – 
+    <span itemprop="copyrightYear">2025</span>
+    <span class="with-love">
+      <i class="fa fa-heart"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">毛毛张</span>
+  </div>
+<div class="wordcount">
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-line"></i>
+    </span>
+      <span>站点总字数：</span>
+    <span title="站点总字数">281k</span>
+  </span>
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+      <span>站点阅读时长 &asymp;</span>
+    <span title="站点阅读时长">7:49</span>
+  </span>
+</div>
+<div class="busuanzi-count">
+    <span class="post-meta-item" id="busuanzi_container_site_uv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+
+
+
+
+
+
+<!-- 网站运行时间的设置 -->
+<span id="timeDate">载入天数...</span>
+<span id="times">载入时分秒...</span>
+<script>
+    var now = new Date();
+    function createtime() {
+        var grt= new Date("06/06/2024 10:00:00"); //此处修改你的建站时间或者网站上线时间
+        now.setTime(now.getTime()+250);
+        days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days);
+        hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours);
+        if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum);
+        mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;}
+        seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum);
+        snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;}
+        document.getElementById("timeDate").innerHTML = "轻舟已过万重山：本站已安全运行 "+dnum+" 天 ";
+        document.getElementById("times").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒 ~喵~";
+    }
+setInterval("createtime()",250);
+</script>
+
+
+    </div>
+  </footer>
+
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+  <div class="sidebar-dimmer"></div>
+  <div class="reading-progress-bar"></div>
+  <a role="button" class="book-mark-link book-mark-link-fixed"></a>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+  
+  <script size="300" alpha="0.6" zIndex="-1" src="https://cdn.jsdelivr.net/npm/ribbon.js@1.0.2/dist/ribbon.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@next-theme/pjax@0.6.0/pjax.min.js" integrity="sha256-vxLn1tSKWD4dqbMRyv940UYw4sXgMtYcK6reefzZrao=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/sidebar.js"></script><script src="/js/next-boot.js"></script><script src="/js/bookmark.js"></script><script src="/js/pjax.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/hexo-generator-searchdb@1.4.1/dist/search.js" integrity="sha256-1kfA5uHPf65M5cphT2dvymhkuyHPQp5A53EGZOnOLmc=" crossorigin="anonymous"></script>
+<script src="/js/third-party/search/local-search.js"></script>
+
+
+
+
+
+  <script src="/js/third-party/pace.js"></script>
+
+
+  
+  <script data-pjax async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+  <script class="next-config" data-name="leancloud_visitors" type="application/json">{"enable":true,"app_id":"4PhbEkjStVSaf5SVgY17oqhA-MdYXbMMI","app_key":"d2Z7ZT9wrqolX8dJD2iYTt56","server_url":null,"security":true}</script>
+  <script src="/js/third-party/statistics/lean-analytics.js"></script>
+
+
+  
+
+  <script class="next-config" data-name="enableMath" type="application/json">true</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"none","js":{"url":"https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-mml-chtml.js","integrity":"sha256-MASABpB4tYktI2Oitl4t+78w/lyA+D7b/s9GEP0JOGI="}}</script>
+<script src="/js/third-party/math/mathjax.js"></script>
+
+
+<script class="next-config" data-name="waline" type="application/json">{"lang":"zh-cn","enable":true,"serverURL":"blogcomments-eta.vercel.app","cssUrl":"https://unpkg.com/@waline/client@v2/dist/waline.css","commentCount":true,"pageview":false,"placeholder":"请文明评论呀!","avatar":"mm","meta":["nick","mail","link"],"pageSize":10,"visitor":true,"comment_count":true,"requiredFields":[],"libUrl":"//unpkg.com/@waline/client@v2/dist/waline.js","el":"#waline","comment":true,"path":"/2024/08/10/algorithm/leetcode/%E6%95%B0%E5%AD%A6/Floyd%E5%88%A4%E5%9C%88%E7%AE%97%E6%B3%95/"}</script>
+<link rel="stylesheet" href="https://unpkg.com/@waline/client@v2/dist/waline.css">
+<script>
+document.addEventListener('page:loaded', () => {
+  NexT.utils.loadComments(CONFIG.waline.el).then(() =>
+    NexT.utils.getScript(CONFIG.waline.libUrl, { condition: window.Waline })
+  ).then(() => 
+    Waline.init(Object.assign({}, CONFIG.waline,{ el: document.querySelector(CONFIG.waline.el) }))
+  );
+});
+</script>
+
+  <script src="//cdn.jsdelivr.net/gh/theme-next/theme-next-needmoreshare2@1/needsharebutton.min.js"></script>
+  <script>
+      pbOptions = {};
+        pbOptions.iconStyle = "box";
+        pbOptions.boxForm = "horizontal";
+        pbOptions.position = "bottomCenter";
+        pbOptions.networks = "Wechat,QQZone,Weibo,Douban,Twitter,Facebook";
+      new needShareButton('#needsharebutton-postbottom', pbOptions);
+  </script>
+  
+  
+    <canvas class="fireworks" style="position: fixed;left: 0;top: 0;z-index: 1; pointer-events: none;" ></canvas> 
+    <script type="text/javascript" src="//cdn.bootcss.com/animejs/2.2.0/anime.min.js"></script> 
+    <script type="text/javascript" src="/js/fireworks.js"></script>
+  
+</body>
+</html>

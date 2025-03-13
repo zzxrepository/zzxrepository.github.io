@@ -1,0 +1,556 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>神马都会亿点点的毛毛张</title>
+  
+  <subtitle>一万次悲伤，依然会有Dream</subtitle>
+  <link href="http://example.com/atom.xml" rel="self"/>
+  
+  <link href="http://example.com/"/>
+  <updated>2024-11-12T16:35:20.000Z</updated>
+  <id>http://example.com/</id>
+  
+  <author>
+    <name>毛毛张</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title></title>
+    <link href="http://example.com/2025/03/13/algorithm/leetcode/%E9%93%BE%E8%A1%A8/LeetCode%E5%88%B7%E9%A2%98%E7%AC%94%E8%AE%B01/"/>
+    <id>http://example.com/2025/03/13/algorithm/leetcode/%E9%93%BE%E8%A1%A8/LeetCode%E5%88%B7%E9%A2%98%E7%AC%94%E8%AE%B01/</id>
+    <published>2025-03-13T04:16:28.465Z</published>
+    <updated>2024-11-12T16:35:20.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;毛毛张分享的本篇博客是对《代码随想录》中的链表一章的LeetCode题目解法的总结，一共包含了八道题目，毛毛张全部使用Java代码进行编写，并在第3题中给出了毛毛张递归的解法，这个题目如果清楚递归的逻辑，用递归求解是比较方便的&lt;/p&gt;
+&lt;/bloc</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>K次取反之后的最大化的数组 | LeetCode-1005 | 贪心算法</title>
+    <link href="http://example.com/2024/10/27/algorithm/leetcode/%E8%B4%AA%E5%BF%83%E7%AE%97%E6%B3%95/LeetCode-1005-K%E6%AC%A1%E5%8F%96%E5%8F%8D%E5%90%8E%E6%9C%80%E5%A4%A7%E5%8C%96%E7%9A%84%E6%95%B0%E7%BB%84/"/>
+    <id>http://example.com/2024/10/27/algorithm/leetcode/%E8%B4%AA%E5%BF%83%E7%AE%97%E6%B3%95/LeetCode-1005-K%E6%AC%A1%E5%8F%96%E5%8F%8D%E5%90%8E%E6%9C%80%E5%A4%A7%E5%8C%96%E7%9A%84%E6%95%B0%E7%BB%84/</id>
+    <published>2024-10-27T11:12:38.000Z</published>
+    <updated>2024-11-12T16:34:46.000Z</updated>
+    
+    
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;贪心练习题&lt;/p&gt;
+&lt;/blockquote&gt;</summary>
+    
+    
+    
+    <category term="算法" scheme="http://example.com/categories/%E7%AE%97%E6%B3%95/"/>
+    
+    <category term="LeetCode" scheme="http://example.com/categories/%E7%AE%97%E6%B3%95/LeetCode/"/>
+    
+    <category term="贪心算法" scheme="http://example.com/categories/%E7%AE%97%E6%B3%95/LeetCode/%E8%B4%AA%E5%BF%83%E7%AE%97%E6%B3%95/"/>
+    
+    
+    <category term="贪心算法" scheme="http://example.com/tags/%E8%B4%AA%E5%BF%83%E7%AE%97%E6%B3%95/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>加油站 | LeetCode-134 | 贪心算法</title>
+    <link href="http://example.com/2024/10/27/algorithm/leetcode/%E8%B4%AA%E5%BF%83%E7%AE%97%E6%B3%95/LeetCode-134-%E5%8A%A0%E6%B2%B9%E7%AB%99/"/>
+    <id>http://example.com/2024/10/27/algorithm/leetcode/%E8%B4%AA%E5%BF%83%E7%AE%97%E6%B3%95/LeetCode-134-%E5%8A%A0%E6%B2%B9%E7%AB%99/</id>
+    <published>2024-10-27T11:12:38.000Z</published>
+    <updated>2024-11-12T16:34:46.000Z</updated>
+    
+    
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;贪心练习题&lt;/p&gt;
+&lt;/blockquote&gt;</summary>
+    
+    
+    
+    <category term="算法" scheme="http://example.com/categories/%E7%AE%97%E6%B3%95/"/>
+    
+    <category term="LeetCode" scheme="http://example.com/categories/%E7%AE%97%E6%B3%95/LeetCode/"/>
+    
+    <category term="贪心算法" scheme="http://example.com/categories/%E7%AE%97%E6%B3%95/LeetCode/%E8%B4%AA%E5%BF%83%E7%AE%97%E6%B3%95/"/>
+    
+    
+    <category term="贪心算法" scheme="http://example.com/tags/%E8%B4%AA%E5%BF%83%E7%AE%97%E6%B3%95/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>分发糖果 | LeetCode-135 | 贪心算法</title>
+    <link href="http://example.com/2024/10/27/algorithm/leetcode/%E8%B4%AA%E5%BF%83%E7%AE%97%E6%B3%95/LeetCode-135-%E5%88%86%E5%8F%91%E7%B3%96%E6%9E%9C/"/>
+    <id>http://example.com/2024/10/27/algorithm/leetcode/%E8%B4%AA%E5%BF%83%E7%AE%97%E6%B3%95/LeetCode-135-%E5%88%86%E5%8F%91%E7%B3%96%E6%9E%9C/</id>
+    <published>2024-10-27T11:12:38.000Z</published>
+    <updated>2024-11-12T16:34:46.000Z</updated>
+    
+    
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;贪心练习题&lt;/p&gt;
+&lt;/blockquote&gt;</summary>
+    
+    
+    
+    <category term="算法" scheme="http://example.com/categories/%E7%AE%97%E6%B3%95/"/>
+    
+    <category term="LeetCode" scheme="http://example.com/categories/%E7%AE%97%E6%B3%95/LeetCode/"/>
+    
+    <category term="贪心算法" scheme="http://example.com/categories/%E7%AE%97%E6%B3%95/LeetCode/%E8%B4%AA%E5%BF%83%E7%AE%97%E6%B3%95/"/>
+    
+    
+    <category term="贪心算法" scheme="http://example.com/tags/%E8%B4%AA%E5%BF%83%E7%AE%97%E6%B3%95/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>摆动序列 | LeetCode-376 | 贪心算法</title>
+    <link href="http://example.com/2024/10/27/algorithm/leetcode/%E8%B4%AA%E5%BF%83%E7%AE%97%E6%B3%95/LeetCode-376-%E6%91%86%E5%8A%A8%E5%BA%8F%E5%88%97/"/>
+    <id>http://example.com/2024/10/27/algorithm/leetcode/%E8%B4%AA%E5%BF%83%E7%AE%97%E6%B3%95/LeetCode-376-%E6%91%86%E5%8A%A8%E5%BA%8F%E5%88%97/</id>
+    <published>2024-10-27T11:12:38.000Z</published>
+    <updated>2024-11-12T16:34:46.000Z</updated>
+    
+    
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;贪心练习题&lt;/p&gt;
+&lt;/blockquote&gt;</summary>
+    
+    
+    
+    <category term="算法" scheme="http://example.com/categories/%E7%AE%97%E6%B3%95/"/>
+    
+    <category term="LeetCode" scheme="http://example.com/categories/%E7%AE%97%E6%B3%95/LeetCode/"/>
+    
+    <category term="贪心算法" scheme="http://example.com/categories/%E7%AE%97%E6%B3%95/LeetCode/%E8%B4%AA%E5%BF%83%E7%AE%97%E6%B3%95/"/>
+    
+    
+    <category term="贪心算法" scheme="http://example.com/tags/%E8%B4%AA%E5%BF%83%E7%AE%97%E6%B3%95/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>根据身高重建队伍 | LeetCode-406 | 贪心算法</title>
+    <link href="http://example.com/2024/10/27/algorithm/leetcode/%E8%B4%AA%E5%BF%83%E7%AE%97%E6%B3%95/LeetCode-406-%E6%A0%B9%E6%8D%AE%E8%BA%AB%E9%AB%98%E9%87%8D%E5%BB%BA%E9%98%9F%E4%BC%8D/"/>
+    <id>http://example.com/2024/10/27/algorithm/leetcode/%E8%B4%AA%E5%BF%83%E7%AE%97%E6%B3%95/LeetCode-406-%E6%A0%B9%E6%8D%AE%E8%BA%AB%E9%AB%98%E9%87%8D%E5%BB%BA%E9%98%9F%E4%BC%8D/</id>
+    <published>2024-10-27T11:12:38.000Z</published>
+    <updated>2024-11-12T16:34:46.000Z</updated>
+    
+    
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;贪心练习题&lt;/p&gt;
+&lt;/blockquote&gt;</summary>
+    
+    
+    
+    <category term="算法" scheme="http://example.com/categories/%E7%AE%97%E6%B3%95/"/>
+    
+    <category term="LeetCode" scheme="http://example.com/categories/%E7%AE%97%E6%B3%95/LeetCode/"/>
+    
+    <category term="贪心算法" scheme="http://example.com/categories/%E7%AE%97%E6%B3%95/LeetCode/%E8%B4%AA%E5%BF%83%E7%AE%97%E6%B3%95/"/>
+    
+    
+    <category term="贪心算法" scheme="http://example.com/tags/%E8%B4%AA%E5%BF%83%E7%AE%97%E6%B3%95/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>分发饼干 | LeetCode- | 贪心算法</title>
+    <link href="http://example.com/2024/10/27/algorithm/leetcode/%E8%B4%AA%E5%BF%83%E7%AE%97%E6%B3%95/LeetCode-455-%E5%88%86%E5%8F%91%E9%A5%BC%E5%B9%B2/"/>
+    <id>http://example.com/2024/10/27/algorithm/leetcode/%E8%B4%AA%E5%BF%83%E7%AE%97%E6%B3%95/LeetCode-455-%E5%88%86%E5%8F%91%E9%A5%BC%E5%B9%B2/</id>
+    <published>2024-10-27T11:12:38.000Z</published>
+    <updated>2025-03-13T04:22:29.672Z</updated>
+    
+    
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;贪心练习题&lt;/p&gt;
+&lt;/blockquote&gt;</summary>
+    
+    
+    
+    <category term="算法" scheme="http://example.com/categories/%E7%AE%97%E6%B3%95/"/>
+    
+    <category term="LeetCode" scheme="http://example.com/categories/%E7%AE%97%E6%B3%95/LeetCode/"/>
+    
+    <category term="贪心算法" scheme="http://example.com/categories/%E7%AE%97%E6%B3%95/LeetCode/%E8%B4%AA%E5%BF%83%E7%AE%97%E6%B3%95/"/>
+    
+    
+    <category term="贪心算法" scheme="http://example.com/tags/%E8%B4%AA%E5%BF%83%E7%AE%97%E6%B3%95/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>最大子数组和 | LeetCode-53 | 贪心算法 | 动态规划</title>
+    <link href="http://example.com/2024/10/27/algorithm/leetcode/%E8%B4%AA%E5%BF%83%E7%AE%97%E6%B3%95/LeetCode-53-%E6%9C%80%E5%A4%A7%E5%AD%90%E6%95%B0%E7%BB%84%E5%92%8C/"/>
+    <id>http://example.com/2024/10/27/algorithm/leetcode/%E8%B4%AA%E5%BF%83%E7%AE%97%E6%B3%95/LeetCode-53-%E6%9C%80%E5%A4%A7%E5%AD%90%E6%95%B0%E7%BB%84%E5%92%8C/</id>
+    <published>2024-10-27T11:12:38.000Z</published>
+    <updated>2024-11-12T16:34:46.000Z</updated>
+    
+    
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;贪心练习题&lt;/p&gt;
+&lt;/blockquote&gt;</summary>
+    
+    
+    
+    <category term="算法" scheme="http://example.com/categories/%E7%AE%97%E6%B3%95/"/>
+    
+    <category term="LeetCode" scheme="http://example.com/categories/%E7%AE%97%E6%B3%95/LeetCode/"/>
+    
+    <category term="贪心算法" scheme="http://example.com/categories/%E7%AE%97%E6%B3%95/LeetCode/%E8%B4%AA%E5%BF%83%E7%AE%97%E6%B3%95/"/>
+    
+    
+    <category term="贪心算法" scheme="http://example.com/tags/%E8%B4%AA%E5%BF%83%E7%AE%97%E6%B3%95/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>跳跃游戏 | LeetCode-55 | 贪心算法</title>
+    <link href="http://example.com/2024/10/27/algorithm/leetcode/%E8%B4%AA%E5%BF%83%E7%AE%97%E6%B3%95/LeetCode-55-%E8%B7%B3%E8%B7%83%E6%B8%B8%E6%88%8F/"/>
+    <id>http://example.com/2024/10/27/algorithm/leetcode/%E8%B4%AA%E5%BF%83%E7%AE%97%E6%B3%95/LeetCode-55-%E8%B7%B3%E8%B7%83%E6%B8%B8%E6%88%8F/</id>
+    <published>2024-10-27T11:12:38.000Z</published>
+    <updated>2024-11-12T16:34:47.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;贪心练习题&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h1 id=&quot;题目1：55-跳跃游戏&quot;&gt;&lt;a href=&quot;#题目1：55-跳跃游戏&quot; class=&quot;headerlink&quot; title=&quot;题目1：55. 跳跃游戏&quot;&gt;&lt;/a&gt;题目1：&lt;a</summary>
+        
+      
+    
+    
+    
+    <category term="算法" scheme="http://example.com/categories/%E7%AE%97%E6%B3%95/"/>
+    
+    <category term="LeetCode" scheme="http://example.com/categories/%E7%AE%97%E6%B3%95/LeetCode/"/>
+    
+    <category term="贪心算法" scheme="http://example.com/categories/%E7%AE%97%E6%B3%95/LeetCode/%E8%B4%AA%E5%BF%83%E7%AE%97%E6%B3%95/"/>
+    
+    
+    <category term="贪心算法" scheme="http://example.com/tags/%E8%B4%AA%E5%BF%83%E7%AE%97%E6%B3%95/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>单调递增的数字 | LeetCode-738 | 贪心算法</title>
+    <link href="http://example.com/2024/10/27/algorithm/leetcode/%E8%B4%AA%E5%BF%83%E7%AE%97%E6%B3%95/LeetCode-738-%E5%8D%95%E8%B0%83%E9%80%92%E5%A2%9E%E7%9A%84%E6%95%B0%E5%AD%97/"/>
+    <id>http://example.com/2024/10/27/algorithm/leetcode/%E8%B4%AA%E5%BF%83%E7%AE%97%E6%B3%95/LeetCode-738-%E5%8D%95%E8%B0%83%E9%80%92%E5%A2%9E%E7%9A%84%E6%95%B0%E5%AD%97/</id>
+    <published>2024-10-27T11:12:38.000Z</published>
+    <updated>2024-11-12T16:34:47.000Z</updated>
+    
+    
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;贪心练习题&lt;/p&gt;
+&lt;/blockquote&gt;</summary>
+    
+    
+    
+    <category term="算法" scheme="http://example.com/categories/%E7%AE%97%E6%B3%95/"/>
+    
+    <category term="LeetCode" scheme="http://example.com/categories/%E7%AE%97%E6%B3%95/LeetCode/"/>
+    
+    <category term="贪心算法" scheme="http://example.com/categories/%E7%AE%97%E6%B3%95/LeetCode/%E8%B4%AA%E5%BF%83%E7%AE%97%E6%B3%95/"/>
+    
+    
+    <category term="贪心算法" scheme="http://example.com/tags/%E8%B4%AA%E5%BF%83%E7%AE%97%E6%B3%95/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>柠檬水找零 | LeetCode-860 | 贪心算法</title>
+    <link href="http://example.com/2024/10/27/algorithm/leetcode/%E8%B4%AA%E5%BF%83%E7%AE%97%E6%B3%95/LeetCode-860-%E6%9F%A0%E6%AA%AC%E6%B0%B4%E6%89%BE%E9%9B%B6/"/>
+    <id>http://example.com/2024/10/27/algorithm/leetcode/%E8%B4%AA%E5%BF%83%E7%AE%97%E6%B3%95/LeetCode-860-%E6%9F%A0%E6%AA%AC%E6%B0%B4%E6%89%BE%E9%9B%B6/</id>
+    <published>2024-10-27T11:12:38.000Z</published>
+    <updated>2024-11-12T16:34:47.000Z</updated>
+    
+    
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;贪心练习题&lt;/p&gt;
+&lt;/blockquote&gt;</summary>
+    
+    
+    
+    <category term="算法" scheme="http://example.com/categories/%E7%AE%97%E6%B3%95/"/>
+    
+    <category term="LeetCode" scheme="http://example.com/categories/%E7%AE%97%E6%B3%95/LeetCode/"/>
+    
+    <category term="贪心算法" scheme="http://example.com/categories/%E7%AE%97%E6%B3%95/LeetCode/%E8%B4%AA%E5%BF%83%E7%AE%97%E6%B3%95/"/>
+    
+    
+    <category term="贪心算法" scheme="http://example.com/tags/%E8%B4%AA%E5%BF%83%E7%AE%97%E6%B3%95/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>监控二叉树 | LeetCode-968 | 贪心算法</title>
+    <link href="http://example.com/2024/10/27/algorithm/leetcode/%E8%B4%AA%E5%BF%83%E7%AE%97%E6%B3%95/LeetCode-968-%E7%9B%91%E6%8E%A7%E4%BA%8C%E5%8F%89%E6%A0%91/"/>
+    <id>http://example.com/2024/10/27/algorithm/leetcode/%E8%B4%AA%E5%BF%83%E7%AE%97%E6%B3%95/LeetCode-968-%E7%9B%91%E6%8E%A7%E4%BA%8C%E5%8F%89%E6%A0%91/</id>
+    <published>2024-10-27T11:12:38.000Z</published>
+    <updated>2024-11-12T16:34:47.000Z</updated>
+    
+    
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;贪心练习题&lt;/p&gt;
+&lt;/blockquote&gt;</summary>
+    
+    
+    
+    <category term="算法" scheme="http://example.com/categories/%E7%AE%97%E6%B3%95/"/>
+    
+    <category term="LeetCode" scheme="http://example.com/categories/%E7%AE%97%E6%B3%95/LeetCode/"/>
+    
+    <category term="贪心算法" scheme="http://example.com/categories/%E7%AE%97%E6%B3%95/LeetCode/%E8%B4%AA%E5%BF%83%E7%AE%97%E6%B3%95/"/>
+    
+    
+    <category term="贪心算法" scheme="http://example.com/tags/%E8%B4%AA%E5%BF%83%E7%AE%97%E6%B3%95/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>单词拆分 | LeetCode-139 | 动态规划</title>
+    <link href="http://example.com/2024/10/08/algorithm/leetcode/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/LeetCode-139-%E5%8D%95%E8%AF%8D%E6%8B%86%E5%88%86/"/>
+    <id>http://example.com/2024/10/08/algorithm/leetcode/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/LeetCode-139-%E5%8D%95%E8%AF%8D%E6%8B%86%E5%88%86/</id>
+    <published>2024-10-08T13:48:59.000Z</published>
+    <updated>2024-11-12T16:32:49.000Z</updated>
+    
+    
+    <summary type="html">&lt;center&gt;&lt;b&gt;动态规划练习题&lt;/b&gt;&lt;/center&gt;</summary>
+    
+    
+    
+    <category term="算法" scheme="http://example.com/categories/%E7%AE%97%E6%B3%95/"/>
+    
+    <category term="LeetCode" scheme="http://example.com/categories/%E7%AE%97%E6%B3%95/LeetCode/"/>
+    
+    <category term="动态规划" scheme="http://example.com/categories/%E7%AE%97%E6%B3%95/LeetCode/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/"/>
+    
+    
+    <category term="中等" scheme="http://example.com/tags/%E4%B8%AD%E7%AD%89/"/>
+    
+    <category term="动态规划" scheme="http://example.com/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>秒股票的最佳时机系列 | LeetCode-121 | 动态规划</title>
+    <link href="http://example.com/2024/10/07/algorithm/leetcode/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/LeetCode-121-%E4%B9%B0%E8%82%A1%E7%A5%A8%E7%9A%84%E6%9C%80%E4%BD%B3%E6%97%B6%E6%9C%BA/"/>
+    <id>http://example.com/2024/10/07/algorithm/leetcode/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/LeetCode-121-%E4%B9%B0%E8%82%A1%E7%A5%A8%E7%9A%84%E6%9C%80%E4%BD%B3%E6%97%B6%E6%9C%BA/</id>
+    <published>2024-10-07T13:48:59.000Z</published>
+    <updated>2024-11-12T16:32:49.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;center&gt;&lt;b&gt;动态规划练习题&lt;/b&gt;&lt;/center&gt;
+
+&lt;h1 id=&quot;题目1：121-买卖股票的最佳时机&quot;&gt;&lt;a href=&quot;#题目1：121-买卖股票的最佳时机&quot; class=&quot;headerlink&quot; title=&quot;题目1：121.</summary>
+        
+      
+    
+    
+    
+    <category term="算法" scheme="http://example.com/categories/%E7%AE%97%E6%B3%95/"/>
+    
+    <category term="LeetCode" scheme="http://example.com/categories/%E7%AE%97%E6%B3%95/LeetCode/"/>
+    
+    <category term="动态规划" scheme="http://example.com/categories/%E7%AE%97%E6%B3%95/LeetCode/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/"/>
+    
+    
+    <category term="中等" scheme="http://example.com/tags/%E4%B8%AD%E7%AD%89/"/>
+    
+    <category term="动态规划" scheme="http://example.com/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>组合总和IV | LeetCode-377 | 动态规划</title>
+    <link href="http://example.com/2024/10/07/algorithm/leetcode/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/LeetCode-198-%E6%89%93%E5%AE%B6%E5%8A%AB%E8%88%8D/"/>
+    <id>http://example.com/2024/10/07/algorithm/leetcode/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/LeetCode-198-%E6%89%93%E5%AE%B6%E5%8A%AB%E8%88%8D/</id>
+    <published>2024-10-07T13:48:59.000Z</published>
+    <updated>2024-11-12T16:32:49.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;center&gt;&lt;b&gt;动态规划练习题&lt;/b&gt;&lt;/center&gt;
+
+
+
+
+
+&lt;h1 id=&quot;题目1：198-打家劫舍&quot;&gt;&lt;a href=&quot;#题目1：198-打家劫舍&quot; class=&quot;headerlink&quot; title=&quot;题目1：198. 打家劫舍&quot;&gt;&lt;/a&gt;题目1：&lt;a</summary>
+        
+      
+    
+    
+    
+    <category term="算法" scheme="http://example.com/categories/%E7%AE%97%E6%B3%95/"/>
+    
+    <category term="LeetCode" scheme="http://example.com/categories/%E7%AE%97%E6%B3%95/LeetCode/"/>
+    
+    <category term="动态规划" scheme="http://example.com/categories/%E7%AE%97%E6%B3%95/LeetCode/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/"/>
+    
+    
+    <category term="中等" scheme="http://example.com/tags/%E4%B8%AD%E7%AD%89/"/>
+    
+    <category term="动态规划" scheme="http://example.com/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>完全平方数 | LeetCode-279 | 动态规划</title>
+    <link href="http://example.com/2024/10/07/algorithm/leetcode/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/LeetCode-279-%E5%AE%8C%E5%85%A8%E5%B9%B3%E6%96%B9%E6%95%B0/"/>
+    <id>http://example.com/2024/10/07/algorithm/leetcode/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/LeetCode-279-%E5%AE%8C%E5%85%A8%E5%B9%B3%E6%96%B9%E6%95%B0/</id>
+    <published>2024-10-07T13:48:59.000Z</published>
+    <updated>2024-11-12T16:32:49.000Z</updated>
+    
+    
+    <summary type="html">&lt;center&gt;&lt;b&gt;动态规划练习题&lt;/b&gt;&lt;/center&gt;</summary>
+    
+    
+    
+    <category term="算法" scheme="http://example.com/categories/%E7%AE%97%E6%B3%95/"/>
+    
+    <category term="LeetCode" scheme="http://example.com/categories/%E7%AE%97%E6%B3%95/LeetCode/"/>
+    
+    <category term="动态规划" scheme="http://example.com/categories/%E7%AE%97%E6%B3%95/LeetCode/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/"/>
+    
+    
+    <category term="中等" scheme="http://example.com/tags/%E4%B8%AD%E7%AD%89/"/>
+    
+    <category term="动态规划" scheme="http://example.com/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>组合总和IV | LeetCode-377 | 动态规划</title>
+    <link href="http://example.com/2024/10/07/algorithm/leetcode/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/LeetCode-300-%E6%9C%80%E9%95%BF%E4%B8%8A%E5%8D%87%E5%AD%90%E5%BA%8F%E5%88%97/"/>
+    <id>http://example.com/2024/10/07/algorithm/leetcode/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/LeetCode-300-%E6%9C%80%E9%95%BF%E4%B8%8A%E5%8D%87%E5%AD%90%E5%BA%8F%E5%88%97/</id>
+    <published>2024-10-07T13:48:59.000Z</published>
+    <updated>2024-11-12T16:32:50.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;center&gt;&lt;b&gt;动态规划练习题&lt;/b&gt;&lt;/center&gt;
+
+
+
+
+
+&lt;h1 id=&quot;题目1：300-最长递增子序列&quot;&gt;&lt;a href=&quot;#题目1：300-最长递增子序列&quot; class=&quot;headerlink&quot; title=&quot;题目1：300.</summary>
+        
+      
+    
+    
+    
+    <category term="算法" scheme="http://example.com/categories/%E7%AE%97%E6%B3%95/"/>
+    
+    <category term="LeetCode" scheme="http://example.com/categories/%E7%AE%97%E6%B3%95/LeetCode/"/>
+    
+    <category term="动态规划" scheme="http://example.com/categories/%E7%AE%97%E6%B3%95/LeetCode/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/"/>
+    
+    
+    <category term="中等" scheme="http://example.com/tags/%E4%B8%AD%E7%AD%89/"/>
+    
+    <category term="动态规划" scheme="http://example.com/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>零钱兑换 | LeetCode-322 | 动态规划</title>
+    <link href="http://example.com/2024/10/07/algorithm/leetcode/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/LeetCode-322-%E9%9B%B6%E9%92%B1%E5%85%91%E6%8D%A2/"/>
+    <id>http://example.com/2024/10/07/algorithm/leetcode/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/LeetCode-322-%E9%9B%B6%E9%92%B1%E5%85%91%E6%8D%A2/</id>
+    <published>2024-10-07T13:48:59.000Z</published>
+    <updated>2024-11-12T16:32:50.000Z</updated>
+    
+    
+    <summary type="html">&lt;center&gt;&lt;b&gt;动态规划练习题&lt;/b&gt;&lt;/center&gt;</summary>
+    
+    
+    
+    <category term="算法" scheme="http://example.com/categories/%E7%AE%97%E6%B3%95/"/>
+    
+    <category term="LeetCode" scheme="http://example.com/categories/%E7%AE%97%E6%B3%95/LeetCode/"/>
+    
+    <category term="动态规划" scheme="http://example.com/categories/%E7%AE%97%E6%B3%95/LeetCode/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/"/>
+    
+    
+    <category term="中等" scheme="http://example.com/tags/%E4%B8%AD%E7%AD%89/"/>
+    
+    <category term="动态规划" scheme="http://example.com/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>组合总和IV | LeetCode-377 | 动态规划</title>
+    <link href="http://example.com/2024/10/07/algorithm/leetcode/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/LeetCode-377-%E7%BB%84%E5%90%88%E6%80%BB%E5%92%8CIV/"/>
+    <id>http://example.com/2024/10/07/algorithm/leetcode/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/LeetCode-377-%E7%BB%84%E5%90%88%E6%80%BB%E5%92%8CIV/</id>
+    <published>2024-10-07T13:48:59.000Z</published>
+    <updated>2024-11-12T16:32:50.000Z</updated>
+    
+    
+    <summary type="html">&lt;center&gt;&lt;b&gt;动态规划练习题&lt;/b&gt;&lt;/center&gt;</summary>
+    
+    
+    
+    <category term="算法" scheme="http://example.com/categories/%E7%AE%97%E6%B3%95/"/>
+    
+    <category term="LeetCode" scheme="http://example.com/categories/%E7%AE%97%E6%B3%95/LeetCode/"/>
+    
+    <category term="动态规划" scheme="http://example.com/categories/%E7%AE%97%E6%B3%95/LeetCode/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/"/>
+    
+    
+    <category term="中等" scheme="http://example.com/tags/%E4%B8%AD%E7%AD%89/"/>
+    
+    <category term="动态规划" scheme="http://example.com/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>最后一块石头的重量 II | LeetCode-1049 | 动态规划[. ]()</title>
+    <link href="http://example.com/2024/10/02/algorithm/leetcode/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/LeetCode-1049-%E6%9C%80%E5%90%8E%E4%B8%80%E5%9D%97%E7%9F%B3%E5%A4%B4%E7%9A%84%E9%87%8D%E9%87%8FII/"/>
+    <id>http://example.com/2024/10/02/algorithm/leetcode/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/LeetCode-1049-%E6%9C%80%E5%90%8E%E4%B8%80%E5%9D%97%E7%9F%B3%E5%A4%B4%E7%9A%84%E9%87%8D%E9%87%8FII/</id>
+    <published>2024-10-02T13:48:59.000Z</published>
+    <updated>2024-11-12T16:32:49.000Z</updated>
+    
+    
+    <summary type="html">&lt;center&gt;&lt;b&gt;动态规划练习题&lt;/b&gt;&lt;/center&gt;</summary>
+    
+    
+    
+    <category term="算法" scheme="http://example.com/categories/%E7%AE%97%E6%B3%95/"/>
+    
+    <category term="LeetCode" scheme="http://example.com/categories/%E7%AE%97%E6%B3%95/LeetCode/"/>
+    
+    <category term="动态规划" scheme="http://example.com/categories/%E7%AE%97%E6%B3%95/LeetCode/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/"/>
+    
+    
+    <category term="中等" scheme="http://example.com/tags/%E4%B8%AD%E7%AD%89/"/>
+    
+    <category term="动态规划" scheme="http://example.com/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/"/>
+    
+  </entry>
+  
+</feed>
